@@ -13,14 +13,14 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        public int Store { get; private set; }    
+        public int StoreValue { get; private set; }    
 
 
         public int Roll()
         {
             Random random = new Random();
-            Store = random.Next(1, 7);
-            return Store;
+            StoreValue = random.Next(1, 7);
+            return StoreValue;
         }
 
 
