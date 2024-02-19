@@ -8,13 +8,17 @@ namespace CMP1903_A1_2324
 {
     internal class Program
     {
+        /// <summary>
+        /// Main method to create a Game object and call its methods.
+        /// </summary>
+        
         static void Main(string[] args)
         {
             /*
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-
+            
             var input = "";
             var gameObj = new Game();
             

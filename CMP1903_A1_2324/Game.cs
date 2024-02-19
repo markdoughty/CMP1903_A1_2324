@@ -15,6 +15,10 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
 
+        /// <summary>
+        /// Game class to create three die objects, roll them, sum and report the total of the three dice rolls.
+        /// </summary>
+        
         private Die _dice1 = new Die();
         private Die _dice2 = new Die();
         private Die _dice3 = new Die();
