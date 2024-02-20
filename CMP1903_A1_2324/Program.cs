@@ -32,8 +32,6 @@ namespace CMP1903_A1_2324
                 Console.WriteLine($"First roll: {roll1}\nSecond roll: {roll2}\nThird roll: {roll3}\nSum of dice: {sum}");
                 Console.WriteLine("Press enter to continue or submit 'exit' to leave.");
                 input = Console.ReadLine();
-                Console.WriteLine(input);
-
             }
         }
     }

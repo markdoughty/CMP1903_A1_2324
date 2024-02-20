@@ -22,8 +22,11 @@ namespace CMP1903_A1_2324
         private Die _dice1 = new Die();
         private Die _dice2 = new Die();
         private Die _dice3 = new Die();
-        
-        //Methods
+
+        /// <summary>
+        /// Method to roll the three dice and return the sum of the rolls.
+        /// </summary>
+        /// <returns>Sum of the rolls, and each individual rolls</returns>
         public (int sum, int roll1, int roll2, int roll3) StartGame()
         {
             var roll1 = _dice1.Roll();

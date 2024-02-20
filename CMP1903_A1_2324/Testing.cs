@@ -7,6 +7,11 @@ using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
+    
+    /// <summary>
+    /// Class to test the game functionality, make sure values are as expected and use debug.assert() to outline any issues.
+    /// </summary>
+    
     internal class Testing
     {
         /*
@@ -17,10 +22,8 @@ namespace CMP1903_A1_2324
          */
 
         /// <summary>
-        /// Class to test the game functionality, make sure values are as expected and use debug.assert() to outline any issues.
+        /// Method to test the game functionality, make sure values are as expected and use debug.assert() to outline any issues.
         /// </summary>
-        
-        //Method
         public void RunTests()
         {
             Game game1 = new Game();

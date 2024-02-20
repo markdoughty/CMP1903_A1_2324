@@ -19,9 +19,16 @@ namespace CMP1903_A1_2324
 
         //Property
         private static Random RND = new Random();
+        
+        /// <summary>
+        /// RollVal property to hold the current die value.
+        /// </summary>
         public int RollVal { get; set; } = RND.Next(1, 6);
 
-        //Method
+        /// <summary>
+        /// Method to roll the die randomly and return the value.
+        /// </summary>
+        /// <returns>The rolled value</returns>
         public int Roll()
         {
             RollVal = RND.Next(1, 6);
