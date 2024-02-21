@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903_A1_2324
+﻿namespace CMP1903_A1_2324
 {
     internal class Game
     {
@@ -16,6 +10,19 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        public (int, int, int, int) RollDice() // Public method to instantiate three dice and roll them. Returns the first dice's value, then second, then third, and the sum of the values, all in a tuple.
+        {
+            Die FirstDice = new Die(); // Instantiates a new Die object.
+            int FirstValue = FirstDice.Roll(); // Declares an int to store the value returned from the call to the Roll() method of the Die object.
 
+            Die SecondDice = new Die(); // Instantiates a new Die object.
+            int SecondValue = SecondDice.Roll(); // Declares an int to store the value returned from the call to the Roll() method of the Die object.
+
+            Die ThirdDice = new Die(); // Instantiates a new Die object.
+            int ThirdValue = ThirdDice.Roll(); // Declares an int to store the value returned from the call to the Roll() method of the Die object.
+
+            int Total = FirstValue + SecondValue + ThirdValue; // Declares a new int to store the sum of the Roll() values added together.
+            return (FirstValue, SecondValue, ThirdValue, Total); // Constructs a tuple to return all the int values together.
+        }
     }
 }
