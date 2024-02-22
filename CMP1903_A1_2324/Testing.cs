@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,16 @@ namespace CMP1903_A1_2324
 
         //Method
         
-        for (int i = 0; i < 1000; i++)        
+        public void testDie()
+        {
+            Die die = new Die();
+
+            for (int i = 0; i < 1000; i++)
             {
-                Die die = new Die();
-                int roll = die.dieRoll();
-                Debug.Assert(roll >= 1 && roll <= 6, "Die roll is out of range");
+                int x = die.dieRoll();
+                Debug.Assert(x >= 1 && x <= 6, "Die roll is out of range");
             }
+        }
         
     }
 }
