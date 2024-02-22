@@ -18,6 +18,7 @@ namespace CMP1903_A1_2324
         
         public int dieValue { get; set; }
         static Random rnd = new Random();
+
         //Method
         public int dieRoll()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,20 +17,31 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        //make the rolls continous and the totals and other statistics could be summarised
-        public void rollDice()
-        {
-            Die die1 = new Die();
-            Die die2 = new Die();
-            Die die3 = new Die();
-            die1.dieRoll();
-            die2.dieRoll();
-            die3.dieRoll();
-            int total = die1.dieValue + die2.dieValue + die3.dieValue;
 
-            Console.WriteLine("The total of the three dice rolls is: " + total);
+        /// <summary> Rolls the dice and sums the total. </summary> 
+
+        public void rollDice(int rollAmount)
+        {
+            int i = 1;
+            int sum = 0;
+            List<int> list = new List<int>();
+
+            while (i <= rollAmount)
+            {
+                Die die = new Die();
+                int roll = die.dieRoll();
+                Console.WriteLine($"Roll {i}: {roll}");
+                list.Add(roll);
+                i++;
+                System.Threading.Thread.Sleep(1);
+            }
+
+            foreach (int item in list) { sum += item; }
+            Console.WriteLine($"\nSum: {sum}");
         }
 
-       
+
+
     }
 }
+

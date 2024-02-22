@@ -16,6 +16,13 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        //
+        
+        for (int i = 0; i < 1000; i++)        
+            {
+                Die die = new Die();
+                int roll = die.dieRoll();
+                Debug.Assert(roll >= 1 && roll <= 6, "Die roll is out of range");
+            }
+        
     }
 }

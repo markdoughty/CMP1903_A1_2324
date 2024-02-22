@@ -14,10 +14,14 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-            Game game = new Game();
-            game.rollDice();
-            Console.ReadLine();
 
+            Game game = new Game();
+            Console.WriteLine("How many dice would you like to roll..?");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            game.rollDice(x);
+            Console.ReadKey();
+            
         }
     }
 
