@@ -16,6 +16,15 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        void createDie()
+        {
+            Die d1 = new Die();
+            Die d2 = new Die();
+            Die d3 = new Die();
 
+            d1.Roll();
+            d2.Roll();
+            d3.Roll();
+        }
     }
 }
