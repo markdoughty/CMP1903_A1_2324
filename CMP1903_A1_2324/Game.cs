@@ -18,8 +18,6 @@ namespace CMP1903_A1_2324
 
         //Methods
 
-        /// <summary> Rolls the dice and sums the total. </summary> 
-
         public void rollDice(int rollAmount)
         {
             int i = 1;
