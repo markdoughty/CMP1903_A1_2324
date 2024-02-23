@@ -16,8 +16,21 @@ namespace CMP1903_A1_2324
         //Property
 
 
-        //Method
 
+
+
+        //Method
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int dice1 = Random.Next(1, 7);
+            int dice2 = Random.Next(1, 7);
+            int dice3 = Random.Next(1, 7);
+            Console.WriteLine(dice1);
+            Console.WriteLine(dice2);
+            Console.WriteLine(dice3);
+            Console.Readkey();
+        }
 
     }
 }
