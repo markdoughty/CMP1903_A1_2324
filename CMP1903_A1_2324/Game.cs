@@ -18,7 +18,6 @@ namespace CMP1903_A1_2324
          */
 
 
-
         //declare the sum total variable
         public int sumtotal = 0;
         //Methods

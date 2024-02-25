@@ -14,7 +14,6 @@ namespace CMP1903_A1_2324
          */
 
 
-
         //Property
         //rolled value property to store what the die rolled
         public int rolledvalue = 0;
