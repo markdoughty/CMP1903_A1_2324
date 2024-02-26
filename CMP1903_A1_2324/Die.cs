@@ -20,9 +20,9 @@ namespace CMP1903_A1_2324
 
 
         //Method
-        Random rng = new Random();
-        int dice1 = random.next(1, 7);
-
+    Random rng = new Random();
+    int dice = Random.next(1, 7);
+    Console.Readkey();
         
 
         
