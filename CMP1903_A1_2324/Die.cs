@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,11 +21,12 @@ namespace CMP1903_A1_2324
 
 
         //Method
-    Random rng = new Random();
-    int dice = Random.next(1, 7);
-    Console.Readkey();
+     Random rng = new Random();
+        int dice1 = rng.Next(1, 7);
+        int dice2 = rng.Next(1, 7);
+        int dice3 = rng.Next(1, 7);
         
-
+    // fucking work 
         
 
     }
