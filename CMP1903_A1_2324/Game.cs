@@ -16,6 +16,23 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        public void CreateGame()
+        {
+            Die dice1 = new Die();
+            int roll1 = dice1.RollDice();
+            Console.WriteLine($"Roll of dice 1 is {roll1}");
+
+            Die dice2 = new Die();
+            int roll2 = dice2.RollDice();
+            Console.WriteLine($"Roll of dice 2 is {roll2}");
+
+            Die dice3 = new Die();
+            int roll3 = dice3.RollDice();
+            Console.WriteLine($"Roll of dice 3 is {roll3}");
+
+            int sum = roll1 + roll2 + roll3;
+            Console.WriteLine($"Summation of 3 dice rolls is {sum}");
+        }
 
     }
 }
