@@ -21,13 +21,8 @@ namespace CMP1903_A1_2324
 
         //Method
         Random rng = new Random();
-        int dice1 = Random.next(1, 7);
-        int dice2 = Random.next(1, 7);
-        int dice3 = Random.next(1, 7);
-        Console.WriteLine(dice1);
-        Console.WriteLine(dice2);
-        Console.WriteLine(dice3);
-        Console.Readkey();
+        int dice1 = random.next(1, 7);
+
         
 
         
