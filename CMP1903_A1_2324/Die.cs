@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Die
+    internal class Dice 
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-
-        //Property
-
-
-        //Method
-
+        private int _diceVal = 0;
+        public int FinalDie
+        { 
+          get { return _diceVal; }
+          set { _diceVal = value; } 
+        }
+        Random DiceRoll = new Random();
+        public int RollDie()
+        {
+            
+            _diceVal = DiceRoll.Next(1,7);
+            Console.WriteLine($"You rolled a {_diceVal}");
+            return _diceVal;
+        }
 
     }
 }
