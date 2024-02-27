@@ -1,0 +1,8 @@
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe.config
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.pdb
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.AssemblyReference.cache
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.SuggestedBindingRedirects.cache
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.CoreCompileInputs.cache
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.exe
+C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.pdb
