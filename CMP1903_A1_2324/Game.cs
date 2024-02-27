@@ -21,6 +21,7 @@ namespace CMP1903_A1_2324
             Console.WriteLine("The second dice rolled a " + dice2);
             Console.WriteLine("The third dice rolled a " + dice3);
             Console.WriteLine("The total of value of the dice is " + dicetotal);
+            
         }
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
