@@ -21,11 +21,7 @@ namespace CMP1903_A1_2324
 
 
         //Method
-     Random rng = new Random();
-        int dice1 = rng.Next(1, 7);
-        int dice2 = rng.Next(1, 7);
-        int dice3 = rng.Next(1, 7);
-        
+    
     // fucking work 
         
 
