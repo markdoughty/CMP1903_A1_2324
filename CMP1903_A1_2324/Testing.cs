@@ -9,6 +9,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+
         public void TestGame() 
         {
             Console.WriteLine("Testing Game Object");
@@ -22,5 +23,14 @@ namespace CMP1903_A1_2324
             Debug.Assert(0<dice.FinalDie&&dice.FinalDie<7); //Checks that the dice rolls between 1 and 6
         }
       
+        /*
+         * This class should test the Game and the Die class.
+         * Create a Game object, call the methods and compare their output to expected output.
+         * Create a Die object and call its method.
+         * Use debug.assert() to make the comparisons and tests.
+         */
+
+        //Method
+
     }
 }
