@@ -10,21 +10,19 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        private int _die = 0;
+        private int _dieValue;
+        private static Random rnd = new Random();
 
-        public double DieProperty
+        public int DieValue
         {
-            get { return _die; }
-            set { _die = RollDie(); }
+            get { return _dieValue; }
+            // The setter is optional depending on your design
         }
 
-        //Method
-
-        public static int RollDie ()
+        public void RollDie()
         {
-            Random rnd = new Random();
-            int value = rnd.Next(1, 7);
-            return value;
+            _dieValue = rnd.Next(1, 7);
         }
+
     }
 }

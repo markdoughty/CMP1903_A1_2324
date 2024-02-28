@@ -14,9 +14,9 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-            int value = Die.RollDie();
-            Console.WriteLine(value);
-            Console.ReadLine();
+
+            Game DieRoller = new Game();
+            DieRoller.DieGame();
         }
     }
 }
