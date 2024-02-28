@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Dice 
+    internal class Dice //Test
     {
         public int FinalDie //Public variable encapsulates _diceVal
         { 
