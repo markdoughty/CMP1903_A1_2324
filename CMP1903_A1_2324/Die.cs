@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
@@ -14,10 +10,21 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        private int _die = 0;
 
+        public double DieProperty
+        {
+            get { return _die; }
+            set { _die = RollDie(); }
+        }
 
         //Method
 
-
+        public static int RollDie ()
+        {
+            Random rnd = new Random();
+            int value = rnd.Next(1, 7);
+            return value;
+        }
     }
 }
