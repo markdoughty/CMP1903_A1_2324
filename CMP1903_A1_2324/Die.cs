@@ -8,9 +8,10 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        public write()
+        public int Writer()
         {
-            Console.Writeline("hello");
+            Console.WriteLine("hello");
+            return 1;
         }
     }
 }

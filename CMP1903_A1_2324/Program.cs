@@ -10,10 +10,9 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Die r = new Die();
+            r.Writer();
+
         }
     }
 }
