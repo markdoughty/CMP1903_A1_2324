@@ -1,0 +1,7 @@
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.AssemblyReference.cache
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.CoreCompileInputs.cache
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe.config
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.pdb
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.exe
+C:\Users\Caitlin Mitchell\Source\Repos\Cait43\CMP1903_A1_2324\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.pdb
