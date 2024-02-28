@@ -9,19 +9,13 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        static void Main(string[] args)
-        {
-            Random random = new Random();
-            int dice1 = random.Next(1, 7);
-            int dice2 = random.Next(1, 7);
-            int dice3 = random.Next(1, 7);
-            int dicetotal = dice1 + dice2 + dice3;
+        public Die dice1 = new Die();
+        public Die dice2 = new Die();
+        public Die dice3 = new Die();
 
-            Console.WriteLine("The first dice rolled a " + dice1);
-            Console.WriteLine("The second dice rolled a " + dice2);
-            Console.WriteLine("The third dice rolled a " + dice3);
-            Console.WriteLine("The total of value of the dice is " + dicetotal);
-            
+        public int DiceSum()
+        {
+
         }
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.

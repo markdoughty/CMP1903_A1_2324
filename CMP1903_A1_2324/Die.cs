@@ -12,8 +12,8 @@ namespace CMP1903_A1_2324
     {
         public int DiceValue
         {
-            get { return DiceValue; }
-            set {  DiceValue = value; }
+            get {return DiceValue;}
+            set {DiceValue = value;}
         }
         public int Roll()
         {
@@ -21,9 +21,6 @@ namespace CMP1903_A1_2324
             int diceroll = rolling.Next(1, 7);
             int updatedice = DiceValue + diceroll;
             return updatedice;
-            
-            
-
         }
         /*
          * The Die class should contain one property to hold the current die value,
