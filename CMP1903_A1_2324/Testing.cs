@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
     internal class Testing
     {
 
-        public void TestGame() 
+        public void TestGame()  //Runs the game method and dice method
         {
             Console.WriteLine("Testing Game Object");
             Game game = new Game(); //Creates a new Game object called game
