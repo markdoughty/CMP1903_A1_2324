@@ -31,10 +31,10 @@ namespace CMP1903_A1_2324
         public static void GameTest()
         {
             Game game = new Game();
-            Console.WriteLine("Test 1");
+            Console.WriteLine("Game Test 1");
             string test1 = game.PLay(); //first game test
             Console.WriteLine(" ");
-            Console.WriteLine("Test 2");
+            Console.WriteLine("Game Test 2");
             string test2 = game.PLay(); //second game test
 
             Debug.Assert(test1 == test2, "Game test Failed"); //here they're both compared
