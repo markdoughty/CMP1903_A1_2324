@@ -14,8 +14,8 @@ namespace CMP1903_A1_2324
          * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
-
         //Methods
+        private static Testing test = new Testing();
         public void DieGame()
         {
             Die dieOne = new Die();
@@ -30,7 +30,9 @@ namespace CMP1903_A1_2324
             dieThree.Roll();
             int DieThreeValue = dieThree.DieValue;
 
+            test.GameTest(DieOneValue + DieTwoValue + DieThreeValue);
             Console.WriteLine($"The sum of three randomly rolled dice is: {DieOneValue + DieTwoValue + DieThreeValue}");
+            Console.WriteLine($"Individual rolls are: {DieOneValue}, {DieTwoValue}, {DieThreeValue}");
             Console.ReadLine();
         }
 
