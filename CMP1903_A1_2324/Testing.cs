@@ -8,6 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+        
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.
@@ -16,5 +17,28 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        public static void DieTest()
+        {
+            Die die = new Die();
+            int outcome = die.Roll();
+
+            Debug.Assert(outcome < 1 || outcome >= 7, "Die test failed");
+            
+            
+            
+        }
+
+        public static void GameTest()
+        {
+            Game game = new Game();
+            Console.WriteLine("Test 1");
+            string test1 = game.PLay();
+            Console.WriteLine(" ");
+            Console.WriteLine("Test 2");
+            string test2 = game.PLay();
+
+            Debug.Assert(test1 == test2, "Game test Failed");
+        }
+        
     }
 }
