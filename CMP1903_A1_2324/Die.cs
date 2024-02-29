@@ -13,8 +13,7 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        public int StoreValue { get; private set; }    
-
+        public int StoreValue { get; private set; } //to store the value gotten from rolling the dice
 
         public int Roll()
         {
@@ -22,7 +21,5 @@ namespace CMP1903_A1_2324
             StoreValue = random.Next(1, 7);
             return StoreValue;
         }
-
-
     }
 }
