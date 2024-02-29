@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
-{
+{   
     internal class Testing
     {
         /*
@@ -17,5 +17,12 @@ namespace CMP1903_A1_2324
 
         //Method
         //
+        public static void Main(string[] args)
+        {
+            Game gm = new Game();
+            Die die = new Die();
+            gm.myMethod();
+        }
+
     }
 }
