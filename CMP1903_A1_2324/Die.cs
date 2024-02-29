@@ -16,10 +16,9 @@ namespace CMP1903_A1_2324
         public int DieValue
         {
             get { return _dieValue; }
-            // The setter is optional depending on your design
         }
 
-        public void RollDie()
+        public void Roll()
         {
             _dieValue = rnd.Next(1, 7);
         }

@@ -19,15 +19,15 @@ namespace CMP1903_A1_2324
         public void DieGame()
         {
             Die dieOne = new Die();
-            dieOne.RollDie();
+            dieOne.Roll();
             int DieOneValue = dieOne.DieValue;
 
             Die dieTwo = new Die();
-            dieTwo.RollDie();
+            dieTwo.Roll();
             int DieTwoValue = dieTwo.DieValue;
 
             Die dieThree = new Die();
-            dieThree.RollDie();
+            dieThree.Roll();
             int DieThreeValue = dieThree.DieValue;
 
             Console.WriteLine($"The sum of three randomly rolled dice is: {DieOneValue + DieTwoValue + DieThreeValue}");
