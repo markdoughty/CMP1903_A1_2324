@@ -8,6 +8,10 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+
+
+
+
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
@@ -17,5 +21,21 @@ namespace CMP1903_A1_2324
 
         //Methods
 
+        private int _Total;
+
+        public int Total
+        {
+            get { return _Total; }
+            set
+            {
+                Die rl = new Die();
+                int roll1 = (rl.DieValue);
+                int roll2 = (rl.DieValue);
+                int roll3 = (rl.DieValue);
+                _Total = (roll1 + roll2 + roll3);
+            } 
+        }
     }
+
+    
 }
