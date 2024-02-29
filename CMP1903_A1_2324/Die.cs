@@ -10,16 +10,16 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        public int DiceValue
+        public int DiceNum
         {
-            get {return DiceValue;}
-            set {DiceValue = value;}
+            get {return DiceNum;}
+            set {DiceNum = value;}
         }
         public int Roll()
         {
             Random rolling = new Random();
             int diceroll = rolling.Next(1, 7);
-            int updatedice = DiceValue + diceroll;
+            int updatedice = DiceNum + diceroll;
             return updatedice;
         }
         /*
