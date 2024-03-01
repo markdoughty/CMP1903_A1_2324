@@ -27,10 +27,7 @@ namespace CMP1903_A1_2324
             Console.WriteLine("The third dice rolled a " + dice3);
             Console.WriteLine("The sum of the three dice is" + DiceSum);
             Console.WriteLine("The total of every dice roll is " + DiceTotal);
-
-        }
-        public void ReRoll()
-        {
+            Console.WriteLine("");
             Console.WriteLine("To re-roll the dice type 're-roll'");
             Console.WriteLine("To close the program type 'end'");
             Console.WriteLine("Any other user input will not be accepted");
@@ -51,8 +48,8 @@ namespace CMP1903_A1_2324
                     Console.WriteLine("Only 're-roll' and 'end' are accepted inputs");
                 }
             }
-            
         }
+            
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *

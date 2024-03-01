@@ -8,6 +8,13 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+        Game GameTest = new Game();
+        Die DiceTest = new Die();
+
+        public void Test()
+        {
+
+        }
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.
