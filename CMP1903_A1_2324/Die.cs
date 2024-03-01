@@ -13,11 +13,16 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        //Property
-
+        //property
+        public static Random R = new Random();
+        int currentRoll;
 
         //Method
-
+        int Roll()
+        {
+            currentRoll = R.Next(0,7)
+            return currentRoll
+        }
 
     }
 }
