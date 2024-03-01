@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+
 
         public void TestGame()  //Runs the game method and dice method
         {
@@ -22,6 +22,8 @@ namespace CMP1903_A1_2324
             dice.RollDie();
             Debug.Assert(0<dice.FinalDie&&dice.FinalDie<7); //Checks that the dice rolls between 1 and 6
         }
+
+
 
     }
 }
