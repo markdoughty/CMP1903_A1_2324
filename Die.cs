@@ -14,17 +14,16 @@ namespace CMP1903_A1_2324
         {
             Game game = new Game();
             int result = game.RollDie();
-            Console.WriteLine("Die roll value" + result);
+            Console.WriteLine("Die roll value: " + result);
         }
     }
 
     internal class Die
     {
         private int currentValue;
-        public Random random;
+        private Random random;
 
         public int Value { get { return currentValue; } }
-
 
         public Die()
         {
@@ -53,6 +52,7 @@ namespace CMP1903_A1_2324
             return die.Roll();
         }
     }
+}
 
 
 
@@ -63,10 +63,10 @@ namespace CMP1903_A1_2324
 
 
 
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
+/*
+ * The Die class should contain one property to hold the current die value,
+ * and one method that rolls the die, returns and integer and takes no parameters.
+ */
 
 //Property
 
