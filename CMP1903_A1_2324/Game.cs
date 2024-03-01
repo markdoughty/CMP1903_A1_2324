@@ -18,24 +18,25 @@ namespace CMP1903_A1_2324
 
         public int RollDice()
         {
-            dice1.DiceNum = dice1.Roll();
-            dice2.DiceNum = dice2.Roll();
-            dice3.DiceNum = dice3.Roll();
-            DiceTotal = dice1.DiceNum + dice2.DiceNum + dice3.DiceNum;
-            int DiceSum = dice1.DiceNum + dice2.DiceNum + dice3.DiceNum;
-            Console.WriteLine("The first dice rolled a " + dice1);
-            Console.WriteLine("the secind dice rolled a " + dice2);
-            Console.WriteLine("The third dice rolled a " + dice3);
-            Console.WriteLine("The sum of the three dice is" + DiceSum);
+            dice1.DiceNum = dice1.Roll1();
+            int diceA = dice1.DiceNum;
+            dice2.DiceNum = dice2.Roll2();
+            int diceB = dice2.DiceNum;
+            dice3.DiceNum = dice3.Roll3();
+            int diceC = dice3.DiceNum;
+            DiceTotal = DiceTotal + diceA + diceB + diceC;
+            int DiceSum = diceA + diceB + diceC;
+            Console.WriteLine("The first dice rolled a " + diceA);
+            Console.WriteLine("the secind dice rolled a " + diceB);
+            Console.WriteLine("The third dice rolled a " + diceC);
+            Console.WriteLine("The sum of the three dice is " + DiceSum);
             Console.WriteLine("The total of every dice roll is " + DiceTotal);
-            return DiceSum;
-        }
-        
-        public void ReRoll()
-        {
-            Console.WriteLine("");
+            string EndGame = ("Game ended, enter anything to close the window");
+            string RollAgain = ("Re-rolling dice...");
+            string Error = ("Only 're-roll' and 'end' are accepted inputs");
+            Console.WriteLine(" ");
             Console.WriteLine("To re-roll the dice type 're-roll'");
-            Console.WriteLine("To close the program type 'end'");
+            Console.WriteLine("To close the game type 'end'");
             Console.WriteLine("Any other user input will not be accepted");
             bool loop = true;
             while (loop == true)
@@ -43,17 +44,21 @@ namespace CMP1903_A1_2324
                 string UserInput = Console.ReadLine();
                 if (UserInput == "re-roll")
                 {
+                    Console.WriteLine(RollAgain);
+                    Console.WriteLine(" ");
                     RollDice();
                 }
                 else if (UserInput == "end")
                 {
-                    loop = false;
+                    Console.WriteLine(EndGame);
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Only 're-roll' and 'end' are accepted inputs");
+                    Console.WriteLine(Error);
                 }
             }
+            return DiceSum;
         }
             
         /*

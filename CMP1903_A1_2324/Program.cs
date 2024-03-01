@@ -10,11 +10,10 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            Die UseDice = new Die();
             Game PlayGame = new Game();
             Testing TestGame = new Testing();
 
-            Game.RollDice();
+            int RunGame = PlayGame.RollDice();
 
             Console.ReadLine();
             /*
