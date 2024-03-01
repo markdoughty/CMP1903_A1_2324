@@ -15,9 +15,36 @@ namespace CMP1903_A1_2324
 
         //Property
 
+        // current index value of DieNumList
+        private int _DieVal;
+        public int DieVal
+        {
+            get { return _DieVal; }
+            set { _DieVal = value; }
+
+        }
 
         //Method
 
+        public int RollDie()
+        {
+            // new list created to store dice roll values
+            List<int> DieNumList = new List<int>();
+
+            // random number from range 1 to 6
+            Random rand = new Random();
+            DieNumList.Add(rand.Next(1,7));
+
+            // debugging - checking length of list each time
+/*            Int32 length = DieNumList.Count;
+            Console.WriteLine(length);*/
+
+            // returning dice number that was stored inside list
+            return DieNumList[DieVal];
+            
+
+            
+        }
 
     }
 }
