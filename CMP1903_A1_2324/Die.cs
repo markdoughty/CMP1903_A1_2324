@@ -14,7 +14,7 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-
+        public int testingPushAndCommit
 
         //Method
 
