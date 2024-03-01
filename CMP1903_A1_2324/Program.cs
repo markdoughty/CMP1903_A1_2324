@@ -10,6 +10,13 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
+            Die UseDice = new Die();
+            Game PlayGame = new Game();
+            Testing TestGame = new Testing();
+
+            Game.RollDice();
+
+            Console.ReadLine();
             /*
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.

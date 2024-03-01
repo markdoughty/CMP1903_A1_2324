@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
@@ -15,7 +16,7 @@ namespace CMP1903_A1_2324
 
         int DiceTotal = 0;
 
-        public void RollDice()
+        public int RollDice()
         {
             dice1.DiceNum = dice1.Roll();
             dice2.DiceNum = dice2.Roll();
@@ -27,6 +28,11 @@ namespace CMP1903_A1_2324
             Console.WriteLine("The third dice rolled a " + dice3);
             Console.WriteLine("The sum of the three dice is" + DiceSum);
             Console.WriteLine("The total of every dice roll is " + DiceTotal);
+            return DiceSum;
+        }
+        
+        public void ReRoll()
+        {
             Console.WriteLine("");
             Console.WriteLine("To re-roll the dice type 're-roll'");
             Console.WriteLine("To close the program type 'end'");
