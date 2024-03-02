@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace CMP1903_A1_2324
 {
@@ -10,10 +6,19 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            // Create a new Game object
+            Game game = new Game();
+
+            // Roll the dice and sum their values
+            int total = game.RollDiceAndSum();
+
+            // Output the result
+            Console.WriteLine($"The total of all dice rolls is: {total}");
+
+            // Assuming a Testing class exists and has a method called VerifyGame
+            // Testing testing = new Testing();
+            // testing.VerifyGame(game);
+            // Note: The above lines would be how you might integrate testing, assuming a corresponding implementation.
         }
     }
 }
