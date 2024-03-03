@@ -22,11 +22,9 @@ namespace CMP1903_A1_2324
         {
             Random value = new Random();
             _DieValue = value.Next(1, 7); // Creates a random integer between 1 and 6
-            Console.WriteLine($"The value of the dice is: {_DieValue}.");
+            Console.WriteLine($"The value of the dice is: {_DieValue}."); // Ouputs the value of the dice to the user.
             return _DieValue;
-
         }
-
 
     }
 }
