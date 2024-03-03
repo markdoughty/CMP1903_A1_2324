@@ -20,20 +20,30 @@ namespace CMP1903_A1_2324
         
         public void DieCreation()
         {
+            int diceTotal = 0;
+            
             //CREATES DIE ONE, ROLLS AND DISPLAYS ROLL
             Die diceOne = new Die();
             diceOne.diceValue = diceOne.Roll();
             Console.WriteLine("Dice 1: " + diceOne.diceValue);
+            diceTotal = diceTotal + diceOne.diceValue;
+            Console.WriteLine("Current Total: " + diceTotal);
 
             //CREATES DIE TWO, ROLLS AND DISPLAYS ROLL
             Die diceTwo = new Die();
             diceTwo.diceValue = diceTwo.Roll();
             Console.WriteLine("Dice 2: " + diceTwo.diceValue);
+            diceTotal = diceTotal + diceTwo.diceValue;
+            Console.WriteLine("Current Total: " + diceTotal);
 
             //CREATES DIE THREE, ROLLS AND DISPLAYS ROLL
             Die diceThree = new Die();
             diceThree.diceValue = diceThree.Roll();
             Console.WriteLine("Dice 3: " + diceThree.diceValue);
+            diceTotal = diceTotal + diceThree.diceValue;
+            Console.WriteLine("Current Total: " + diceTotal);
+
+
         }
     }
 }
