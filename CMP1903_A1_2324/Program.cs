@@ -15,10 +15,11 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
             Game gameObject = new Game();
-            Testing test = new Testing();
+            Testing testObject = new Testing();
 
             gameObject.DieCreation();
 
+            testObject.test();
             Console.ReadKey();
         }
     }

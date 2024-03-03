@@ -17,16 +17,19 @@ namespace CMP1903_A1_2324
 
         //Methods
 
-        Die diceOne = new Die();
-        Die diceTwo = new Die();
-        Die diceThree = new Die();
+        
         public void DieCreation()
         {
-            diceOne.Roll();
-            diceTwo.Roll();
-            diceThree.Roll();
-            Console.WriteLine("Dice 1: "+ diceOne.diceValue);
+            Die diceOne = new Die();
+            diceOne.diceValue = diceOne.Roll();
+            Console.WriteLine("Dice 1: " + diceOne.diceValue);
+
+            Die diceTwo = new Die();
+            diceTwo.diceValue = diceTwo.Roll();
             Console.WriteLine("Dice 2: " + diceTwo.diceValue);
+
+            Die diceThree = new Die();
+            diceThree.diceValue = diceThree.Roll();
             Console.WriteLine("Dice 3: " + diceThree.diceValue);
         }
     }

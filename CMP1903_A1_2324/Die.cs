@@ -15,13 +15,12 @@ namespace CMP1903_A1_2324
 
         //Property
         public int diceValue;
-        
+        public Random rnd = new Random();
         //Method
         public int Roll()
         {
-            Random rnd = new Random();
-            diceValue = rnd.Next(0, 6);
-            return diceValue;
+            int randomNum = rnd.Next(1, 7);
+            return randomNum;
         }
 
     }

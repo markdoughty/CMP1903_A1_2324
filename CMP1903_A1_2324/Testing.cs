@@ -16,5 +16,16 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+
+        public void test()
+        {
+            Game testGame = new Game();
+            testGame.DieCreation();
+            Console.WriteLine(testGame);
+
+            Die testDie = new Die();
+            testDie.diceValue = testDie.Roll();
+            Console.WriteLine(testDie.diceValue);
+        }
     }
 }
