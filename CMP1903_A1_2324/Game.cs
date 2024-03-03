@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,22 +22,20 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-
         private int _Total;
 
-        public int Total
+        public int Total()
         {
-            get { return _Total; }
-            set
-            {
-                Die rl = new Die();
-                int roll1 = (rl.DieValue);
-                int roll2 = (rl.DieValue);
-                int roll3 = (rl.DieValue);
-                _Total = (roll1 + roll2 + roll3);
-            } 
-        }
-    }
+            Die rl = new Die();
+            int roll1 = (rl.DieRoll());
+            int roll2 = (rl.DieRoll());
+            int roll3 = (rl.DieRoll());
 
-    
+            int total = (roll1 + roll2 + roll3);
+            Console.WriteLine(total);
+            return total;
+        }
+
+
+    }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 
+
 namespace CMP1903_A1_2324
 {
     internal class Program
@@ -16,9 +17,9 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
 
-
             Game rn = new Game();
-            int total = (rn.Total)
+            int total = (rn.Total());
+
 
             Console.WriteLine($"The total is: {total}");
             Console.ReadKey();

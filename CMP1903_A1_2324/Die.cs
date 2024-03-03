@@ -17,25 +17,15 @@ namespace CMP1903_A1_2324
         //Property
         private int _DieValue;
 
-
-       
-
-        public int DieValue
+        //Method
+        public int DieRoll()
         {
-            get { return _DieValue; }
-            set
-            {
-                Random value = new Random();
-                _DieValue = value.Next(1, 7); } // Creates a random value between 1 and 6
-            } 
+            Random value = new();
+            _DieValue = value.Next(1, 7); // Creates a random value between 1 and 6
+            Console.WriteLine(_DieValue);
+            return _DieValue;
         }
 
-       
 
-        //Method
-        
-
-
-         
     }
 }
