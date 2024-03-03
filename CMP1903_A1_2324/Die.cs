@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
 
         //Property
         public int diceValue;
-        public Random rnd = new Random();
+        static Random rnd = new Random();
         //Method
         public int Roll()
         {

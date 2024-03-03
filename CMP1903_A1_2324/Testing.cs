@@ -21,11 +21,12 @@ namespace CMP1903_A1_2324
         {
             Game testGame = new Game();
             testGame.DieCreation();
-            Console.WriteLine(testGame);
+            //Console.WriteLine(testGame);
 
             Die testDie = new Die();
             testDie.diceValue = testDie.Roll();
-            Console.WriteLine(testDie.diceValue);
+            Console.WriteLine("Test Roll:  "+testDie.diceValue);
+            //debug.assert();
         }
     }
 }

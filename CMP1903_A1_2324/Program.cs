@@ -18,7 +18,7 @@ namespace CMP1903_A1_2324
             Testing testObject = new Testing();
 
             gameObject.DieCreation();
-
+            Console.WriteLine("\nTest:");
             testObject.test();
             Console.ReadKey();
         }
