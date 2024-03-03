@@ -17,7 +17,7 @@ namespace CMP1903_A1_2324
         private int _diceVal = 0;
 
         Random random = new Random(); //Creates a new Random object
-        public int RollDie()
+        public int Roll()
         {
             
             _diceVal = random.Next(1,7); //Generates a random number between 1 and6

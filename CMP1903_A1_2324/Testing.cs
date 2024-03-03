@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
             
             Console.WriteLine("Testing Dice Object");
             Dice dice = new Dice(); //Creates a new Dice object called dice
-            dice.RollDie();
+            dice.Roll();
             Debug.Assert(0<dice.FinalDie&&dice.FinalDie<7); //Checks that the dice rolls between 1 and 6
 
             Console.WriteLine(""); //To seperate the test from the game
