@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
@@ -10,10 +6,19 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            // At first create a Game object
+            Game game = new Game();
+
+            // Here calling the RollAndSumDice method of the Game class
+            int totalDiceSum = game.RollAndSumDice();
+
+            // Now creating a Testing object
+            Testing testing = new Testing();
+
+            // To call testing methods to verify the output and operation of other classes
+            testing.VerifyGameOutput(totalDiceSum);
+
+            Console.ReadLine(); // Keep the console window open(this is optional) 
         }
     }
 }
