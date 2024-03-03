@@ -20,10 +20,11 @@ namespace CMP1903_A1_2324
         //Method
         public int DieRoll()
         {
-            Random value = new();
+            Random value = new value();
             _DieValue = value.Next(1, 7); // Creates a random value between 1 and 6
             Console.WriteLine(_DieValue);
             return _DieValue;
+
         }
 
 
