@@ -17,13 +17,11 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
 
-            Game rn = new Game();
+            Game rn = new Game(); // Starts a new game and retrives the total.
             int total = (rn.Total());
 
-
-            Console.WriteLine($"The total is: {total}");
+            Console.WriteLine($"The total of all three die are: {total}"); // Outputs the total of all 3 die to the user.
             Console.ReadKey();
-
         }
     }
 }

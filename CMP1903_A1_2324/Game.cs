@@ -27,12 +27,13 @@ namespace CMP1903_A1_2324
         public int Total()
         {
             Die rl = new Die();
-            int roll1 = (rl.DieRoll());
-            int roll2 = (rl.DieRoll());
-            int roll3 = (rl.DieRoll());
+            int roll1 = (rl.DieRoll()); // 1st random number between 1 and 6.
+            int roll2 = (rl.DieRoll()); // 2nd random number between 1 and 6.
+            int roll3 = (rl.DieRoll()); // 3rd random number between 1 and 6.
+            
 
-            int total = (roll1 + roll2 + roll3);
-            Console.WriteLine(total);
+            int total = (roll1 + roll2 + roll3); // Adds the 3 dice rolls together.
+           
             return total;
         }
 
