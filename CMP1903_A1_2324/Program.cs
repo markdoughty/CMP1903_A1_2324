@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
            
-            Game g = new Game(); //creates an object of the game class 
+            Game g = new Game(); //initialises an object of the game class 
 
             bool show = true; //creates boolean value for if the program should display the value of each die to user
             int total = 0;
@@ -29,7 +29,7 @@ namespace CMP1903_A1_2324
             }
             Console.WriteLine($"Sum of three dice = {total}"); //displays sum of all 3 dice to user
 
-            Testing test = new Testing(); //creates an object of the Testing class
+            Testing test = new Testing(); //initialises an object of the Testing class
             test.Game_Test(); //runs method in the Testing class, testing the Game class
             test.Die_Test(); //runs method in the Testing class, testing the Die class
         }

@@ -49,7 +49,7 @@ namespace CMP1903_A1_2324
         //this method rolls all three dice and returns the sum of all 3 values
         public int game(bool show) //initialises method 'game' 
         {
-            Die d1 = new Die(); //creates 3 objects of the Die class
+            Die d1 = new Die(); //initialises 3 objects of the Die class
             Die d2 = new Die();
             Die d3 = new Die();
 

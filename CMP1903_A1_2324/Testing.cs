@@ -30,7 +30,7 @@ namespace CMP1903_A1_2324
         //this method tests the game class, testing if the sum of all three dice matches the expected value
         public void Game_Test()
         {
-            Game g_test = new Game(); //creates a new object of the Game class
+            Game g_test = new Game(); //initialises a new object of the Game class
             show = false; 
             int actual = g_test.game(show); //calls 'game' method in the Game class and stores the return value in an integer variable
             int expected = g_test.roll1 + g_test.roll2 + g_test.roll3; //stores the sum of all 3 dice from the test object of the Game class
@@ -42,7 +42,7 @@ namespace CMP1903_A1_2324
         //this method tests the Die class, testing if the values of the dice are in the correct range
         public void Die_Test()
         {
-            Die d_test = new Die(); //creates new object of the Die class
+            Die d_test = new Die(); //initialises new object of the Die class
             d_test.Roll(); //calls the 'Roll' function in the Die class
             Debug.Assert(d_test.value >= 1, "Die value is below range"); //raises a debug error if the value of the die is below the range (e.g - >1)
             Debug.Assert(d_test.value <= 6, "Die value is above range"); //raises a debug error if the value of the die is above the range (e.g - <6)
