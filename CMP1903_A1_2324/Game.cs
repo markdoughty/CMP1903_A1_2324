@@ -62,7 +62,7 @@ namespace CMP1903_A1_2324
 
             if (show == true) //checks the boolean value 'show' if the value of each die should be displayed to the user
             {
-                Console.WriteLine($"\nDie 1 = {roll1}"); //outputs the value of each die to the user
+                Console.WriteLine($"\n\nDie 1 = {roll1}"); //outputs the value of each die to the user
                 Console.WriteLine($"Die 2 = {roll2}");
                 Console.WriteLine($"Die 3 = {roll3}");
             }

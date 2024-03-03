@@ -21,23 +21,46 @@ namespace CMP1903_A1_2324
             set { _value = value; } //stores the returned value into '_value'
         }
 
-
         //Method
 
         //this method generates a random number and returns it
         public int Roll() //initialises method 'Roll'
         {
-            Random rnd = new Random(); //creates a random number 
-            value = rnd.Next(1, 6); //stores random nubmer in set range of 1-6 in public variable 'value'
+            string choice = " ";
+            bool loop = true;
+            while (loop == true)
+            {
+                Random rnd = new Random(); //creates a random number 
+                value = rnd.Next(1, 6); //stores random nubmer in set range of 1-6 in public variable 'value'
 
-            if (value > 6 || value < 1) //checks if the value of the die is out of the correct boundaries
-            {
-                throw new Exception("value of die is outside of the range"); //throws exception with error message
+                try
+                {
+                    Console.WriteLine($"number rolled = {value}");
+
+                    Console.WriteLine("Do you want to roll again? (y/n): ");
+                    choice = Console.ReadLine();
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.WriteLine("No choice entered, please try again...");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("you did not input a letter, please try again...");
+                }
+
+                if (choice == "n")
+                {
+                    loop = false;
+                }
+                else if (choice != "y" || choice != "n")
+                {
+                    Console.WriteLine("invalid input, please try again...\n");
+                    loop = false;
+                }
+
             }
-            else //if value is in range, returns value as normal
-            {
-                return value; //returns random number stored in public variable 'value'
-            }
+            return value;
         }
     }
 }
