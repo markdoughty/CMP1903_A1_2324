@@ -17,10 +17,10 @@ namespace CMP1903_A1_2324
         }
         public int Roll()// roll method, chooses random number between 1 and 6 then returns it
         {
-            Random random = new Random();
+            Random random = new Random();// creates a object called random that is thern used to generate a random number between 1 - 6
             dieval = random.Next(1, 7);
             Console.WriteLine(dieval);
-            return dieval;// returns as an integer
+            return dieval;// returns an integer from the method
         }
     }
 }
