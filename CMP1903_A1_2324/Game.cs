@@ -41,28 +41,25 @@ namespace CMP1903_A1_2324
         }
         private string RollAgain() //Asks if another dice should be rolled and handles the response
         {
-            Console.WriteLine("Do you want to roll another dice? Y/N");
-            string ConsoleResponse = Console.ReadLine();
-            Response(ConsoleResponse);
-            
-            return ConsoleResponse;
-        }
-        private void Response(string Response) //Forces the reply to be Y or N to continue
-        {
-         bool Valid = false;
-           while (Valid == false) //While loop forces a correct response to continue
+            string Response ="";
+            bool Valid = false;
+            while (Valid == false) //While loop forces a correct response to continue
             {
-             if (Response.ToUpper() != "Y" & Response.ToUpper() != "N") //Checks if the response is Y or N
-              {
-                    Console.WriteLine("Response not valid"); 
-              }
-             else
-                { 
-                 Valid = true; //Ends the while loop if the response is valid
+                Console.WriteLine("Do you want to roll another dice? Y/N");
+                Response = Console.ReadLine();
+                if (Response.ToUpper() != "Y" & Response.ToUpper() != "N") //Checks if the response is Y or N
+                {
+                    Console.WriteLine("Response not valid");
                 }
+                else
+                {
+                    Valid = true; //Ends the while loop if the response is valid
+                }
+                
             }
-         
+            return Response;
         }
+ 
     }
 }
 
