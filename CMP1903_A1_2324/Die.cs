@@ -8,10 +8,19 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        public int Writer()
+        private int dieval;
+
+        public int Dieval
         {
-            Console.WriteLine("hello");
-            return 1;
+            get { return dieval; }
+            set { dieval = value; }
+        }
+        public int Roll()
+        {
+            Random random = new Random();
+            dieval = random.Next(1, 7);
+            Console.WriteLine(dieval);
+            return dieval;
         }
     }
 }

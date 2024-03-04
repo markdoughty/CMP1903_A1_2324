@@ -10,9 +10,8 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            Die r = new Die();
-            r.Writer();
-
+            Testing testing = new Testing();
+            testing.Test();
         }
     }
 }
