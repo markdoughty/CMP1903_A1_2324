@@ -10,10 +10,12 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Game Game1 = new Game();
+
+            Game1.DieCreator();
+
+            Testing Test1 = new Testing();
+
         }
     }
 }
