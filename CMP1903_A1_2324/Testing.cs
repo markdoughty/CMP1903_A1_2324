@@ -30,7 +30,7 @@ namespace CMP1903_A1_2324
             testDie.diceValue = testDie.Roll();
             Console.WriteLine("Test Roll:  "+testDie.diceValue);
             //creates object from the class "Die" then runs its method and displays it on screen
-            //Debug.Assert(testDie.Roll() < 7 && testDie.Roll() > 0);
+            Debug.Assert(testDie.Roll() < 7 && testDie.Roll() > 0);
         }  
     }
 }
