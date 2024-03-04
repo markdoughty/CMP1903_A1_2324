@@ -29,10 +29,6 @@ namespace DieGame_Assessment_1
         // Play method
         public int Play()
         {
-            // Asks the user to roll the dice
-            Console.WriteLine("Press any button to roll the dice...");
-            Console.ReadKey();
-            
             // Creates a new integer variable to store the total value of the dice
             int total = 0;
             
