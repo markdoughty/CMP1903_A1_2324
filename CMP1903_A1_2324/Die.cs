@@ -14,9 +14,16 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        private static Random DiceValue = new Random(); // Holds current random value
 
 
         //Method
+
+        public int Roll()
+        {
+            // Rolls the dice by creating a random integer value
+            return DiceValue.Next(1,7); // Returns a random value
+        }
 
 
     }
