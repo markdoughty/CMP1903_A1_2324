@@ -14,9 +14,21 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        private int _Count;
 
+        public int Count
+        {
+            get { return Count; }
+            set { Count = value; }
+        }
 
         //Method
+        private static void Roll()
+        {
+            Random rnd = new Random();
+            Console.WriteLine(rnd.Next(1, 7)); //returns random integers < 10
+
+        }
 
 
     }
