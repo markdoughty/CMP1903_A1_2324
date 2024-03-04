@@ -11,7 +11,7 @@ namespace CMP1903_A1_2324
         private int _Roll;
         int count1 = 0;
 
-
+        private Random rand = new Random();
 
 
 
@@ -27,7 +27,7 @@ namespace CMP1903_A1_2324
         public  int Roll()
         {
 
-            int randNum = randNum.Next(1, 7);
+            int randNum = rand.Next(1, 7);
             
             return randNum;
             

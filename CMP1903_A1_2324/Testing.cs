@@ -35,6 +35,8 @@ namespace CMP1903_A1_2324
             
             
             Debug.Assert(roll1 <= 6 , "Die rolls are between 1 and 6" );
+            Debug.Assert(roll2 <= 6 , "Die rolls are between 1 and 6" );
+            Debug.Assert(roll3 <= 6 , "Die rolls are between 1 and 6" );
 
         }
 
