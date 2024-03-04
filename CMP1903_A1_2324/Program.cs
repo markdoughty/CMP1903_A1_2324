@@ -8,12 +8,10 @@ namespace CMP1903_A1_2324
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)// main runs when program is run
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Testing testing = new Testing();// creates a testing object
+            testing.Test();// calls the Test method within the newly created testing object
         }
     }
 }
