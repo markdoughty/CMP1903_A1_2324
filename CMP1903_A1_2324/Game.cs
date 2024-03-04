@@ -4,27 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
-{
-    internal class Game
-    {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+namespace CMP1903_A1_2324 {
+  internal class Game {
+    //Methods
+    public List<int> RollDie() { //New method that returns a list of integers
+      List<int> dieResults = new List<int>(); //Create a new list of integers
+      Die die; //Create a die variable
 
-        //Methods
-        void createDie()
-        {
-            Die d1 = new Die();
-            Die d2 = new Die();
-            Die d3 = new Die();
-
-            d1.Roll();
-            d2.Roll();
-            d3.Roll();
-        }
+      //Rolling the die 3 times
+      for (int i = 0; i < 3; i++) {
+        die = new Die(); //Create a new die object
+        die.DieValue = die.Roll(); //Roll the die, assign the result to the DieValue property
+        dieResults.Add(die.DieValue); //Add the die value to the list
+      }
+      
+      return dieResults; //Return the list
     }
+  }
 }
