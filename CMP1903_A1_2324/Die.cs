@@ -4,28 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace DieGame_Assessment_1
 {
     // Die Class
     public class Die
     {
-        // gets random
+        // Stores the random object for number generation
         private Random random;
 
-        // creates current value variable
+        // Creates a current value integer to store the value of a die
         public int CurrentValue; 
 
+        // Die class constructor 
         public Die(Random random)
         {
-            // assures each die is random and assigns current value to 0
+            // Initializes the random object. 
+            // Sets the current value of each die to 0
             this.random = random;
             CurrentValue = 0;
         }
 
+        // Method to roll each dice. This will then change the current value to a random number
         public int Roll()
-        {
-            // assigns current value to a random number between 1 and 6
-            CurrentValue = random.Next(1, 7); 
+        { 
+            CurrentValue = random.Next(1, 7); // Assigns current value to a random number between 1 and 6
             return CurrentValue;
         }
     }
