@@ -9,7 +9,7 @@ namespace DieGame_Assessment_1
     public class Game
     {
         // Stores the random object for number generation
-        private Random random;
+        private Random rng;
         // Creates the three public die objects
         public Die die1;
         public Die die2;
@@ -19,11 +19,11 @@ namespace DieGame_Assessment_1
         public Game()
         {
             // Initliaze the random object
-            random = new Random();
+            rng = new Random();
             // Creates the three dice objects (die1, die2 and die3)
-            die1 = new Die(random);
-            die2 = new Die(random);
-            die3 = new Die(random);
+            die1 = new Die(rng);
+            die2 = new Die(rng);
+            die3 = new Die(rng);
         }
 
         // Play method
