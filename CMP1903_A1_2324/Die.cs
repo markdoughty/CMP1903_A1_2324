@@ -14,9 +14,15 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        int die_value 
+
 
 
         //Method
+        public roll()
+        {
+            rnd.next(1,7) 
+        }
 
 
     }

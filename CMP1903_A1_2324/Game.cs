@@ -16,6 +16,10 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        Game myobj = new Game()
+        {
+            
+        }
 
     }
 }
