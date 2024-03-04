@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
@@ -14,33 +15,61 @@ namespace CMP1903_A1_2324
          */
 
         //Property
+        int count = 0;
 
-        // current index value of DieNumList
+        private Random rand = new Random();
         private int _DieVal;
         public int DieVal
         {
             get { return _DieVal; }
             set { _DieVal = value; }
-
         }
 
         //Method
 
-        public int RollDie()
+
+        public int Roll()
         {
-            // new list created to store dice roll values
-            List<int> DieNumList = new List<int>();
-
+            
             // random number from range 1 to 6
-            Random rand = new Random();
-            DieNumList.Add(rand.Next(1,7));
 
-            // debugging - checking length of list each time
-/*            Int32 length = DieNumList.Count;
-            Console.WriteLine(length);*/
+            List<int> DieList = new List<int>();
+
+            for (int i = 1; i < 4; i++)
+            {
+                DieList.Add(rand.Next(1, 7));
+            }
+
+            if (count == 0)
+            {
+                DieVal = DieList[0];
+                count = count + 1;
+                Console.WriteLine(count);
+                return DieList[0];
+            }
+
+
+            if (count == 1)
+            {
+                DieVal = DieList[1];
+                count = count + 1;
+                Console.WriteLine(count);
+                return DieList[1];
+            }
+
+
+            if (count == 2)
+            {
+                DieVal = DieList[2];
+                count = count + 1;
+                Console.WriteLine(count);
+                return DieList[2];
+            }
+
+
 
             // returning dice number that was stored inside list
-            return DieNumList[DieVal];
+            return 0;
             
 
             
