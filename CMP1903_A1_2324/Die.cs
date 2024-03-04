@@ -10,7 +10,7 @@ namespace DieGame_Assessment_1
     public class Die
     {
         // Stores the random object for number generation
-        private Random random;
+        private Random rng;
 
         // Creates a current value integer to store the value of a die
         public int CurrentValue; 
@@ -20,14 +20,14 @@ namespace DieGame_Assessment_1
         {
             // Initializes the random object. 
             // Sets the current value of each die to 0
-            this.random = random;
+            this.rng = random;
             CurrentValue = 0;
         }
 
         // Method to roll each dice. This will then change the current value to a random number
         public int Roll()
         { 
-            CurrentValue = random.Next(1, 7); // Assigns current value to a random number between 1 and 6
+            CurrentValue = rng.Next(1, 7); // Assigns current value to a random number between 1 and 6
             return CurrentValue;
         }
     }
