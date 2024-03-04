@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
         
         public void DieCreation()
         {
-            int diceTotal = 0;
+            int diceTotal = 0;  
             
             //CREATES DIE ONE, ROLLS AND DISPLAYS ROLL
             Die diceOne = new Die();
