@@ -6,8 +6,35 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Die
+    public class Die
     {
+        //the values i will use 
+        private int heldval;
+        private Random roll;
+
+        public void diceroll()
+        {
+            //rolls the dice 
+            heldval = roll.Next(1, 7);
+        }
+        public Die() 
+        { 
+            //makes an object for the dice roll
+            roll = new Random();
+            diceroll();
+
+        }
+        
+        public int fetchvalue()
+        {
+            //fetches the held value when it is needed 
+            return heldval;
+        }
+            
+        
+            
+                      
+        
         /*
          * The Die class should contain one property to hold the current die value,
          * and one method that rolls the die, returns and integer and takes no parameters.
@@ -16,8 +43,11 @@ namespace CMP1903_A1_2324
         //Property
 
 
+
         //Method
 
 
+
     }
+    
 }
