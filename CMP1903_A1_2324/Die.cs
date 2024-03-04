@@ -19,10 +19,10 @@ namespace CMP1903_A1_2324
         }
 
         //Created the Roll method to randomly roll a die three times
-        public int Roll(int count = 0)
+        public  Tuple<int, int, int> Roll()
         {
             List<int> RollList = new List<int>();
-
+            int count1 = 0;
 
             Random rand = new Random();
            
@@ -35,7 +35,7 @@ namespace CMP1903_A1_2324
 
 
             //the rolls get returned 
-            return RollList[count];
+            return new Tuple<int, int, int>(RollList[0], RollList[1], RollList[2]);
             
         }
     }
