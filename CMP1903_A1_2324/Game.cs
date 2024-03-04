@@ -44,6 +44,7 @@ namespace DieGame_Assessment_1
             Console.WriteLine("Die 3: " + die3.CurrentValue);
             Console.WriteLine("Total of the three dice rolls: " + total);
             
+            // Return the total
             return total;
         }
 

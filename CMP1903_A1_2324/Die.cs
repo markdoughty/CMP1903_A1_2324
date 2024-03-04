@@ -28,6 +28,7 @@ namespace DieGame_Assessment_1
         public int Roll()
         { 
             CurrentValue = rng.Next(1, 7); // Assigns current value to a random number between 1 and 6
+            // Return the current value
             return CurrentValue;
         }
     }
