@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace ConsoleApp2
 {
     internal class Program
     {
@@ -12,8 +12,13 @@ namespace CMP1903_A1_2324
         {
             //initialise the game and output the sum for the user 
             Game game = new Game();
+<<<<<<< HEAD
             int amount = game.Sum();
             Console.WriteLine("the total of the three rolled values are " + amount);
+=======
+            
+            
+>>>>>>> master
 
             //test the game works 
             Testing.Testings();
