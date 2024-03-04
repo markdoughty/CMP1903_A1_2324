@@ -12,19 +12,19 @@ namespace CMP1903_A1_2324
         public int DiceGame()
         {
             // 3 objects created from Die class
-            Die Die1 = new Die();
+            Die Die = new Die();
+
+
+
             // initiate roll
-            int Roll1 = Die1.Roll();
+            int Roll1 = Die.Roll();
+            int Roll2 = Die.Roll();
+            int Roll3 = Die.Roll();
+
+
             // print result
             Console.WriteLine("Die 1: " + Roll1);
-
-
-            Die Die2 = new Die();
-            int Roll2 = Die2.Roll();
             Console.WriteLine("Die 2: " + Roll2);
-
-            Die Die3 = new Die();
-            int Roll3 = Die3.Roll();
             Console.WriteLine("Die 3: " + Roll3);
 
             // sum of 3 dice rolls

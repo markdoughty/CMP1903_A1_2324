@@ -15,10 +15,11 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        int count = 0;
-
-        private Random rand = new Random();
+        
         private int _DieVal;
+        int count = 0;
+        private Random rand = new Random();
+        
         public int DieVal
         {
             get { return _DieVal; }
@@ -30,9 +31,12 @@ namespace CMP1903_A1_2324
 
         public int Roll()
         {
+            DieVal = rand.Next(1,7);
+
+            return DieVal;
             
             // random number from range 1 to 6
-
+/*
             List<int> DieList = new List<int>();
 
             for (int i = 1; i < 4; i++)
@@ -67,9 +71,9 @@ namespace CMP1903_A1_2324
             }
 
 
-
+            
             // returning dice number that was stored inside list
-            return 0;
+            return 0;*/
             
 
             
