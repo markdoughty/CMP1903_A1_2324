@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
@@ -28,7 +29,7 @@ namespace CMP1903_A1_2324
 
             Die testDie = new Die();
             testDie.diceValue = testDie.Roll();
-            Console.WriteLine("Test Roll:  "+testDie.diceValue);
+            Console.WriteLine("\nTest Roll:  "+testDie.diceValue);
             //creates object from the class "Die" then runs its method and displays it on screen
             Debug.Assert(testDie.Roll() < 7 && testDie.Roll() > 0);
         }  
