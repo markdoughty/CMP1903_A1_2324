@@ -27,19 +27,12 @@ namespace CMP1903_A1_2324
             Game gm = new Game();
             Die die = new Die();
             roll1 = gm.myMethod(0, 0);
-            // roll2 = gm.myMethod(1, 1);
-            // roll3 = gm.myMethod(2, 1);
+            roll2 = gm.myMethod(1, 1);
+            roll3 = gm.myMethod(2, 1);
 
-            try
-            {
-                roll2 = gm.myMethod(1, 1);
-                roll3 = gm.myMethod(2, 1);
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                Console.WriteLine("Hello");
-                throw;
-            }
+            
+           
+            
             
             Debug.Assert(roll1 <= 6 , "Die rolls are between 1 and 6" );
 

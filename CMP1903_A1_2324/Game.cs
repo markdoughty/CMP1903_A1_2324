@@ -15,25 +15,25 @@ namespace CMP1903_A1_2324
                 
                 List<int> RollList = new List<int>();
 
-                if (count3 == 0)
+                
+            if (count3 == 0)
                 {
                     //Created three die objects 
                     Die Die1 = new Die();
                     Die Die2 = new Die();
                     Die Die3 = new Die();
 
-                    var Roll = Die1.Roll();
 
                     
 
                     // Roll all three and saved it in roll 1, 2, 3 
                     Console.WriteLine();
-                    int Roll1 = Roll.Item1;
-                    int Roll2 = Roll.Item2;
-                    int Roll3 = Roll.Item3;
+                    int Roll1 = Die1.Roll();
+                    int Roll2 = Die1.Roll();
+                    int Roll3 = Die1.Roll();
 
-                    //Output what each die roll was
-                    Console.WriteLine("Die 1: " + Roll1);
+                //Output what each die roll was
+                Console.WriteLine("Die 1: " + Roll1);
                     Console.WriteLine("Die 2: " + Roll2);
                     Console.WriteLine("Die 3: " + Roll3);
 
@@ -41,13 +41,13 @@ namespace CMP1903_A1_2324
                     int rolltotal = Roll1 + Roll2 + Roll3;
 
                     //Displaying the total
-                    Console.WriteLine(rolltotal);
+                    Console.WriteLine("The total amoubnt is " +rolltotal);
 
                     RollList.Add(Roll1);
                     RollList.Add(Roll2);
                     RollList.Add(Roll3);
 
-                    count = count + 1;
+                    
                     
                     return RollList[count2];
 
