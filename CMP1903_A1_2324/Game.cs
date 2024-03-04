@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace ConsoleApp2
 {
     class Game
     {
         //makes an object that can interact witht the die class
-        private Die[] dicerolled;
-
         
+
+
         public int Sum()
         {
             //hold the sum value and adds the values 
@@ -21,11 +21,16 @@ namespace CMP1903_A1_2324
             Die roll2 = new Die();
             Die roll3 = new Die();
             List<int> rolls = [roll.diceroll(), roll2.diceroll(), roll3.diceroll()];
-            foreach (var die in rolls)
+            int i = 0;
+            for (i = 0; i < 3;)
             {
                 //rolls the dice and gets the value to be added
-                total += rolls[die];
+                Console.WriteLine(rolls[i]);
+                total += rolls[i];
+                i += 1;
+
             }
+            Console.WriteLine("the total of the three rolled values are " + total);
             return total;
 
 

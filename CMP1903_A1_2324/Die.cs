@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace ConsoleApp2
 {
     public class Die
     {
         //the values i will use 
         private int heldval;
-        private Random roll;
+        private Random roll = new Random();
 
         public int diceroll()
         {
@@ -18,12 +18,12 @@ namespace CMP1903_A1_2324
             heldval = roll.Next(1, 7);
             return heldval;
         }
- 
+
 
         public int fetchvalue()
         {
             //fetches the held value when it is needed 
-            Console.WriteLine(heldval);
+            
             return heldval;
         }
 
