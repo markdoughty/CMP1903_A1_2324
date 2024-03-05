@@ -13,7 +13,7 @@ namespace CMP1903_A1_2324
             Game dieGame = new Game();
             dieGame.diceGame();
             dieGame.repeat();
-
+            Testing.testGame();
         }
     }
 }

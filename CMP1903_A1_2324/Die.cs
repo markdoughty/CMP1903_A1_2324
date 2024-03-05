@@ -19,7 +19,7 @@ namespace CMP1903_A1_2324
 
         public int Roll()
         {
-            DieValue = random.Next(1, 7);
+            DieValue = random.Next(1,6);
             return DieValue;
            
         }

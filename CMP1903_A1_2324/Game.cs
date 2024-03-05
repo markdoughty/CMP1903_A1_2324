@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        public void diceGame()
+        public int diceGame()
         {
            int  die1 = new Die().Roll();
 
@@ -18,6 +18,7 @@ namespace CMP1903_A1_2324
 
             Console.WriteLine($"Dice 1:{die1}\nDice 2:{die2}\nDice 3:{die3}");
             Console.WriteLine($"The total is: {die1 + die2 + die3}");
+            return (die1 + die2 + die3);
         }
 
         public void repeat()
