@@ -22,7 +22,7 @@ namespace CMP1903_A1_2324
         public int Roll()
         { 
             int DieRoll = rnd.Next(1, 7);
-            Thread.Sleep(500);
+            Thread.Sleep(250);
             return DieRoll;
         }
 

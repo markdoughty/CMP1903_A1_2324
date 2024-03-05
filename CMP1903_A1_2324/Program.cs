@@ -16,13 +16,22 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-            Console.WriteLine("Hello World");
+            
+           
 
             Game game = new Game();
             int DieTotal = game.DieSum();
-            Console.ReadKey();  
-             
+            Console.WriteLine("Die Total: " + DieTotal);
             
+
+            Testing Test = new Testing();
+            Test.DieTestResult();
+            Test.GameTestResult();
+
+            Console.WriteLine("Press any key to end program... ");
+            Console.ReadKey();
+
+
 
         }
     }
