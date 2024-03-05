@@ -4,20 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace ConsoleApp2
 {
-    internal class Die
+    public class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
+        //the objects i will use 
+        private int heldval;
+        private Random roll = new Random();
 
-        //Property
+        public int diceroll()
+        {
+            //rolls the dice  and returns the value 
+            heldval = roll.Next(1, 7);
+            return heldval;
+        }
 
 
-        //Method
+        public int fetchvalue()
+        {
+            //fetches the held value when it is needed 
+            
+            return heldval;
+        }
+
+
+
+
+
+      
+
 
 
     }
+
 }

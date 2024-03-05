@@ -1,21 +1,43 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+namespace ConsoleApp2
 {
-    internal class Game
+    class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        //makes an object that can interact witht the die class
+        
 
-        //Methods
 
+        public int Sum()
+        {
+           //creates 3 roll values so they can be added 
+            int total = 0;  
+            Die roll = new Die();
+            Die roll2 = new Die();
+            Die roll3 = new Die();
+            List<int> rolls = [roll.diceroll(), roll2.diceroll(), roll3.diceroll()]; //list is used so the rolls are stored and can be used by the following code 
+            int i = 0;
+            for (i = 0; i < 3;) //loops 3 times 
+            {
+                //outputs the number rolled and adds that to the total 
+                Console.WriteLine(rolls[i]);
+                total += rolls[i];
+                i += 1;
+
+            }
+            //output the total of all three rolls 
+            Console.WriteLine("the total of the three rolled values are " + total);
+            return total;
+
+
+
+
+
+        }
     }
 }
