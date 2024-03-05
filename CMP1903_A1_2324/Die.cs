@@ -24,8 +24,7 @@ namespace CMP1903_A1_2324
 
 
         //Method
-        public int Roll()
-        {
+        public int Roll() {
             int randomNum = rnd.Next(1, 7);
             //creates a random number variable
 

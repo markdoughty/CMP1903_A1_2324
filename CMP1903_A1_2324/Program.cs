@@ -26,7 +26,7 @@ namespace CMP1903_A1_2324
 
 
             Console.WriteLine("\nTest:");
-            testObject.test();
+            testObject.Test();
             //runs the method within the object created
 
             Console.ReadKey();
