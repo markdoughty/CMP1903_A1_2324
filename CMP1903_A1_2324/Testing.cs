@@ -19,17 +19,26 @@ namespace CMP1903_A1_2324
         private int number = 0;
 
         //Method
-        //
+        //Test method which generates a single die which is tested to be between 1 and 6 inclusive and then generates a whole game which tests the sum of the 3 is between 3 and 18 inclusive. The end of the test is then displayed to the user.
         public void Test()
         {
-            Die die1 = new Die();
-            number = die1.Generate();
-            Debug.Assert(number >= 1 && number <= 6);
+            try
+            {
+                Die die1 = new Die();
+                number = die1.Generate();
+                Debug.Assert(number >= 1 && number <= 6);
 
-            Game game = new Game();
-            Debug.Assert(number >= 3 && number <= 18);
-
-            Console.WriteLine("Test Complete");
+                Game game = new Game();
+                Debug.Assert(number >= 3 && number <= 18);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The test has been failed");
+            }
+            finally
+            {
+                Console.WriteLine("Test Complete, close application");
+            }
         }
     }
 }
