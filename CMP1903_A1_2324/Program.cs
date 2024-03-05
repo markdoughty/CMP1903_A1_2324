@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +10,16 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            
+            Game run= new Game();
+            
+            run.Start();//initial games
+            
+            
+            Testing test = new Testing();
+            test.GameTest();// testing the game and Die
+            Console.WriteLine(" ");
+                
         }
     }
 }
