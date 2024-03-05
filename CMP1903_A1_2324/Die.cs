@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
@@ -13,9 +14,10 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        //Property
+        //Field
         private int _Roll;
 
+        //Property
         public int Roll
         {
             get { return _Roll; }
@@ -26,6 +28,7 @@ namespace CMP1903_A1_2324
         //Randomly generates and returns random integers between 1 and 6
         public int Generate()
         {
+            Thread.Sleep(600);
             Random rnd = new Random();
             int number = rnd.Next(1, 7);
             return number;
