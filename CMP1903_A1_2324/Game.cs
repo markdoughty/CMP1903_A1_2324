@@ -14,8 +14,11 @@ namespace CMP1903_A1_2324
         public int Sum = 0;
 
 
+        
         public Game()
         {
+            
+
             Die Die1 = new Die();
             Roll_Value1 = Die1.Roll();
             Console.WriteLine(Roll_Value1);
