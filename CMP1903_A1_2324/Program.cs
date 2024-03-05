@@ -23,13 +23,13 @@ namespace CMP1903_A1_2324
             {
                 //Ask the user if they want to test the dice or play the game, store their answer in a string variable and ensure its uppercase.
                 Console.WriteLine("Do you want to run the test? Y/N");
-                string Confirm = Console.ReadLine();
-                Confirm = Confirm.ToUpper();
+                string confirm = Console.ReadLine();
+                confirm = confirm.ToUpper();
                 //Exception handling, try to carry out the if statements to check if the user inputted a valid character and then throw an error if the input is invalid.
                 try
                 {
                     //If the users input is y or Y then carry out the test
-                    if (Confirm == "Y")
+                    if (confirm == "Y")
                     {
                         valid = true;
                         //Constructor to test the dice are correct values and result
@@ -37,7 +37,7 @@ namespace CMP1903_A1_2324
                         test.Test();
                     }
                     //If the users input is n or N then play the game
-                    else if (Confirm == "N")
+                    else if (confirm == "N")
                     {
                         //Constructor to create a new Game object and display it in the console.
                         valid = true;
