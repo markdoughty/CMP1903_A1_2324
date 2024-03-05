@@ -23,9 +23,9 @@ namespace CMP1903_A1_2324
 
 
             Die die = new Die();
-            int outcome = die.Roll(); //creates a die to be tested
+            int outcome = die.Roll(); //creates a die object
             
-            Debug.Assert(outcome >= 1 && outcome < 7, "Die test unsuccessful");// compares the output of the DieTEst
+            Debug.Assert(outcome >= 1 && outcome < 7, "Die test unsuccessful");// compares the output of the die
         } 
             
             
