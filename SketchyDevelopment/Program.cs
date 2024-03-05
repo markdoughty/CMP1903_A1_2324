@@ -10,15 +10,10 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-            Console.WriteLine("Hello!!!");
-            Console.ReadKey();
-=======
             Game game = new Game();
             Console.WriteLine("this is text LOL 2");
             game.Play();
             
->>>>>>> Stashed changes
             /*
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
