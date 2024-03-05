@@ -8,9 +8,9 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        public int Roll_Value1 = 0;
-        public int Roll_Value2 = 0;
-        public int Roll_Value3 = 0;
+        public readonly int Roll_Value1 = 0;
+        public readonly int Roll_Value2 = 0;
+        public readonly int Roll_Value3 = 0;
         public int Sum = 0;
 
 
