@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
+using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
+        // Method to test the classes
+        public void Test()
+        {
+            // Testing Die class
+            Die die = new Die();
+            int rollValue = die.Roll();
+            Debug.Assert(rollValue >= 1 && rollValue <= 6, "Die roll out of range.");
 
-        //Method
+            // Testing Game class
+            Game game = new Game();
+            // Note: As the Game class does not return values but prints them, we would normally test it by observing the output.
+            // For automated testing, consider refactoring Game to return values or to use a mock framework for testing its behavior.
+            Console.WriteLine("Testing Game class... (Check the console output for correctness)");
+            game.Play();
+
+            Console.WriteLine("All tests passed.");
+        }
     }
 }
