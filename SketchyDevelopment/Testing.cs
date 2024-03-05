@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CMP1903_A1_2324
 {
@@ -16,6 +17,17 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        //
+        public void test_dice()//Tests individual dice
+        {
+            for (int i=0; i>20; i++)
+            {
+                Die my_die = new Die();
+                for (int a=0; a>20; a++)
+                {
+                    int output = my_die.Roll();
+                    System.Diagnostics.Debug.Assert( output < 1 || output > 6, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
+                }
+            }
+        }
     }
 }
