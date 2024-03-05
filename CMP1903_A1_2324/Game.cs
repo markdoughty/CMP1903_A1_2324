@@ -16,6 +16,15 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        private Die dice1 = new Die();
+        private Die dice2 = new Die();
+        private Die dice3 = new Die();
 
+        int rollingDice()
+        {
+            dice1.Roll
+            dice2.Roll
+            dice3.Roll
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace CMP1903_A1_2324
          */
 
         //property
-        public static Random R = new Random();
+        private static Random R = new Random();
         int currentRoll;
 
         //Method
