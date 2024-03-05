@@ -14,6 +14,7 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
+            //Constructor to create a new Game object and display it in the console.
             Game game = new Game();
             Console.WriteLine($"Sum of Dice:  { game.Build()}");
             Console.ReadLine();

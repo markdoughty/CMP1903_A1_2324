@@ -17,6 +17,7 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
         //Methods
+        //Constructor class for 3 different die which then each generate a number which is stored in the new die class. These are then summed and returned.
         public int Build()
         {
             Die die1 = new Die();
@@ -25,11 +26,15 @@ namespace CMP1903_A1_2324
 
             int numberOne = die1.Generate();
             Console.WriteLine($"Dice One: {numberOne}");
+
             int numberTwo = die2.Generate();
             Console.WriteLine($"Dice Two: {numberTwo}");
+
             int numberThree = die3.Generate();
             Console.WriteLine($"Dice Three: {numberThree}");
+
             Sum = numberOne + numberTwo + numberThree;
+
             return Sum;
         }
 

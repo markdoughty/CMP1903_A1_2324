@@ -18,8 +18,8 @@ namespace CMP1903_A1_2324
 
         public int Roll
         {
-            get { return Roll; }
-            set { Roll = value; }
+            get { return _Roll; }
+            set { _Roll = value; }
         }
 
         //Method
