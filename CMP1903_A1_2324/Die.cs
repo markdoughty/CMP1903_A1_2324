@@ -14,20 +14,21 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        private int _Count;
+        private int _Roll;
 
-        public int Count
+        public int Roll
         {
-            get { return Count; }
-            set { Count = value; }
+            get { return Roll; }
+            set { Roll = value; }
         }
 
         //Method
-        private static void Roll()
+        //Randomly generates and returns random integers between 1 and 6
+        public int Generate()
         {
             Random rnd = new Random();
-            Console.WriteLine(rnd.Next(1, 7)); //returns random integers < 10
-
+            int number = rnd.Next(1, 7);
+            return number;
         }
 
 
