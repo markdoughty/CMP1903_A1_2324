@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +21,7 @@ namespace CMP1903_A1_2324 {
         private Die _die2;
         private Die _die3;
         /// <summary>
-        /// Constructor initialises game with 
+        /// Constructor initialises game with 3 dice
         /// </summary>
         public Game() {
             _die1 = new Die();
@@ -34,9 +36,14 @@ namespace CMP1903_A1_2324 {
         /// </returns>
         public int Play() {
             int sum=0;
-            sum += _die1.Roll();
+            sum += _die1.Roll();                    // roll all the 3 dice
             sum += _die2.Roll();
             sum += _die3.Roll();
+            // prints out all individual dice rolls
+            Console.WriteLine($"Dice 1 rolled {_die1.GetValue()}");
+            Console.WriteLine($"Dice 2 rolled {_die2.GetValue()}");
+            Console.WriteLine($"Dice 3 rolled {_die3.GetValue()}");
+            // prints out the sum of the dice rolls
             Console.WriteLine("Rolled 3 dice, total was "+sum);
             return sum;
         }
@@ -45,25 +52,63 @@ namespace CMP1903_A1_2324 {
         /// to stop.
         /// </summary>
         public void PlayContinuous() {
-            while (true) {
-                Play();                             // 1. do Play()
-                                                    // 2. ask the user if they want to roll again
-                Console.WriteLine("Do you want to roll again? (y/n)");
-                while (true) {                      // 2.1. repetetively ask until
-                                                    // 'y'/'Y' or 'n'/'N' is responded
-                    var reply = Console.ReadKey().Key;
-                    if (reply == ConsoleKey.Y) {    // "Y" (yes) was pressed then end this loop and
-                                                    // play() again
+            while (true) {                          // this method eternally repeats until the user
+                                                    // responds "no" and the if statement seen at
+                                                    // the end of this method will exit the Method 
+                Play();                             // 1. do "Play()"
+                Console.WriteLine("Do you want to roll again?");
+                string reply;
+                while (true) {                      // 2. will eternally ask the user util they
+                                                    // give a valid answer
+                    try {
+                        reply = _RespondYesOrNo();
                         break;
                     }
-                    else if (reply == ConsoleKey.N) // "N" (no) was pressed
-                    {
-                        return;                     // if "no" then end this entire function
-                    }
-                    else {                          // else, give an error message
-                        Console.WriteLine("Inalid input, Please press 'Y' or 'N'");
+                    catch (ArgumentException ex) {  // if the reply is invalid, then
+                                                    // "_RespondYesOrNo()" will pull an
+                                                    // ArgumentException before "break" is run
+                        Console.WriteLine(ex.Message);
                     }
                 }
+                if (reply == "no") {                // 3. if user responded "no", then exit this
+                                                    // function
+                    return;
+                }
+                                                    // else do nothing (and this forever loop is
+                                                    // repeated)
+            }
+        }
+        /// <summary>
+        /// This private method asks the use to respond to a yes/no question and will return "yes",
+        /// "no" or an "ArgumentException" if the responce can't be rounded to either of these
+        /// answers.
+        /// </summary>
+        /// <returns>
+        /// Rounds up the user's answer to "yes" or "no" and returns "yes" or "no"
+        /// </returns>
+        /// <exception cref="ArgumentException">
+        /// Will raise an "ArgumentException" if the input isn't "n", "y", "no" or "yes"
+        /// </exception>
+        private string _RespondYesOrNo() {
+            string reply = Console.ReadLine();
+            if (reply == string.Empty) {
+                throw new ArgumentException("ERROR: Please give an input");
+            }
+            reply = reply.ToLower();
+            if (
+                reply == "y" ||
+                reply == "yes"
+                ) {
+                    return "yes";
+                }
+            else if (
+                reply == "n" ||
+                reply == "no"
+                ) {
+                    return "no";
+                }
+            else {
+                throw new ArgumentException("ERROR: Please input \"yes\" or \"no\"");
             }
         }
     }

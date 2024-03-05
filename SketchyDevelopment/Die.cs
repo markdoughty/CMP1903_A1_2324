@@ -11,12 +11,6 @@ namespace CMP1903_A1_2324 {
         /// </value>
         private int _value;
         /// <summary>
-        /// Constructor initialises a new dice with its "_value" already pre-rolled
-        /// </summary>
-        public Die() {
-            _value = Roll();
-        }
-        /// <summary>
         /// method that rolls the die, returns and integer and takes no parameters.
         /// </summary>
         /// <returns>
@@ -24,7 +18,17 @@ namespace CMP1903_A1_2324 {
         /// </returns>
         public int Roll() {
             Random random = new Random();
-            _value = random.Next(1, 6);
+            _value = random.Next(1, 6);             // sets "_value" to a random number between 1
+                                                    // and 6
+            return _value;
+        }
+        /// <summary>
+        /// Method for external classes to get the value of the dice
+        /// </summary>
+        /// <returns>
+        /// Returns the value of the dice (an int between 1 and 6)
+        /// </returns>
+        public int GetValue() {
             return _value;
         }
     }

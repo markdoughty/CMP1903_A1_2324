@@ -16,16 +16,24 @@ namespace CMP1903_A1_2324 {
 
         //Method
         public void TestDice() {//Tests individual dice
+            Console.WriteLine("Testing Dice.Roll()...");
             int loop = 20;
             Die myDie = new Die();
             for (int a=0; a>loop; a++) {
                 int output = myDie.Roll();
-                System.Diagnostics.Debug.Assert( output < 1 || output > 6, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
+                System.Diagnostics.Debug.Assert( output >= 1 && output <= 6, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
             }
-            Console.WriteLine($"");
+            Console.WriteLine($"After {loop} tests, no annomalous results were detected.");
         }
         public void TestSum() {
-
+            Console.WriteLine("Testing Game.Play()...");
+            int loop = 20;
+            Game myGame = new Game();
+            for (int a=0; a>loop; a++) {
+                int output = myGame.Play();
+                System.Diagnostics.Debug.Assert( output >= 3 && output <= 12, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
+            }
+            Console.WriteLine($"After {loop} tests, no annomalous results were detected.");
         }
     }
 }
