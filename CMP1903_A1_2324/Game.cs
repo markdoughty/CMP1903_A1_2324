@@ -10,77 +10,34 @@ namespace ConsoleApp2
     class Game
     {
         //makes an object that can interact witht the die class
-<<<<<<< HEAD
-        private Die[] dicerolled;
-        public int Sum()
-        {
-            //hold the sum value and adds the values 
-            int total = 0;
-            foreach (var die in dicerolled)
-            {
-                //rolls the dice and gets the value to be added
-                die.diceroll();
-                total += die.fetchvalue();
-            }
-            return total;
-        }
-        public Game()
-        {
-            //loops 3 times and stores the values of the 3 dice and adds to an array for my foreach to work
-            dicerolled = new Die[3];
-            for (int i = 0; i < 3; i++)
-            {
-                dicerolled[i] = new Die();
-            }
-        }
         
-        
- 
-        
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
-=======
-        
->>>>>>> master
 
 
         public int Sum()
         {
-            //hold the sum value and adds the values 
-            int total = 0;
+           //creates 3 roll values so they can be added 
+            int total = 0;  
             Die roll = new Die();
             Die roll2 = new Die();
             Die roll3 = new Die();
-            List<int> rolls = [roll.diceroll(), roll2.diceroll(), roll3.diceroll()];
+            List<int> rolls = [roll.diceroll(), roll2.diceroll(), roll3.diceroll()]; //list is used so the rolls are stored and can be used by the following code 
             int i = 0;
-            for (i = 0; i < 3;)
+            for (i = 0; i < 3;) //loops 3 times 
             {
-                //rolls the dice and gets the value to be added
+                //outputs the number rolled and adds that to the total 
                 Console.WriteLine(rolls[i]);
                 total += rolls[i];
                 i += 1;
 
             }
+            //output the total of all three rolls 
             Console.WriteLine("the total of the three rolled values are " + total);
             return total;
 
 
 
 
-            /*
-             * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-             *
-             * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-             * rolls could be continous, and the totals and other statistics could be summarised for example.
-             */
-
-            //Methods
 
         }
     }
-    
 }

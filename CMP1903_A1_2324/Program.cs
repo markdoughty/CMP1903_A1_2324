@@ -12,21 +12,13 @@ namespace ConsoleApp2
         {
             //initialise the game and output the sum for the user 
             Game game = new Game();
-<<<<<<< HEAD
-            int amount = game.Sum();
-            Console.WriteLine("the total of the three rolled values are " + amount);
-=======
             
             
->>>>>>> master
 
             //test the game works 
             Testing.Testings();
 
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            //this is so the window will not close after the program finishes
             Console.ReadKey();
         }
     }
