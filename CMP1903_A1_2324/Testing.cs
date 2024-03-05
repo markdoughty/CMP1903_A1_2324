@@ -20,25 +20,39 @@ namespace CMP1903_A1_2324
         //
         public static void Main(string[] args)
         {
-            int roll1 = 0;
-            int roll2 = 0;
-            int roll3 = 0;
+            
+
 
             Game gm = new Game();
+            var Roll = gm.myMethod();
             Die die = new Die();
-            roll1 = gm.myMethod(0, 0);
-            roll2 = gm.myMethod(1, 1);
-            roll3 = gm.myMethod(2, 1);
 
-            
-           
-            
-            
-            Debug.Assert(roll1 <= 6 , "Die rolls are between 1 and 6" );
-            Debug.Assert(roll2 <= 6 , "Die rolls are between 1 and 6" );
-            Debug.Assert(roll3 <= 6 , "Die rolls are between 1 and 6" );
+
+            Console.WriteLine(Roll.Item1);
+            Console.WriteLine(Roll.Item2);
+            Console.WriteLine(Roll.Item3);
+
+
+
+            int totalroll = Roll.Item1 + Roll.Item2 + Roll.Item3;
+            Console.WriteLine(totalroll);
+
+
+
+
+
+            Debug.Assert(Roll.Item1 < 6 && Roll.Item1 > -1, "Roll 1 is between 1 and 6");
+
+
+
+            Debug.Assert(Roll.Item2 < 6 && Roll.Item2 > -1, "Roll 2 is between 1 and 6" );
+
+            Debug.Assert(Roll.Item3 < 6 && Roll.Item3 > -1, "Roll 3 is between 1 and 6");
+
+
 
         }
+
 
     }
 }

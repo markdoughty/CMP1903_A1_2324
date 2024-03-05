@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     class Game
     {
-        public  int myMethod(int count2, int count3)
+        public  Tuple<int, int, int> myMethod()
         {
                 
             int count = 0;
@@ -16,12 +16,10 @@ namespace CMP1903_A1_2324
             List<int> RollList = new List<int>();
 
                 
-            if (count3 == 0)
-            {
+            
                 //Created three die objects 
                 Die Die1 = new Die();
-                Die Die2 = new Die();
-                Die Die3 = new Die();
+               
 
 
                     
@@ -47,17 +45,14 @@ namespace CMP1903_A1_2324
                 RollList.Add(Roll2);
                 RollList.Add(Roll3);
 
-                    
-                    
-                return RollList[count2];
 
-                    
-            }
-            else
-            {
-                return RollList[count2];
 
-            }
+                return new Tuple<int, int, int>(RollList[0], RollList[1], RollList[2]);
+
+
+
+
+            
         }
     }
 }
