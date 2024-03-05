@@ -31,6 +31,11 @@ namespace CMP1903_A1_2324
             return total;// returns the sum of the rolls
 
         }
+        // <black-eye-inc>
+        // I'd recommend also adding EXTRA functionality "continuous roll method" -- this is basically
+        // a function that runs your "Start()" method and then asks the user if they'd like to roll
+        // again or exit the function.
+        // </black-eye-inc>
 
     }
 }
