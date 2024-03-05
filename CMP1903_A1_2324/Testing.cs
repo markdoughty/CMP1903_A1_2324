@@ -9,9 +9,11 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        public static void RunTests()
+        
+        public static void RunTests(Game game)
         {
-            Game game = new Game();
+            
+            Testing testing = new Testing();
 
             Debug.Assert(game.Roll_Value1 >= 1 && game.Roll_Value1 <= 6, "Die 1 roll is out of range.");
             Debug.Assert(game.Roll_Value2 >= 1 && game.Roll_Value2 <= 6, "Die 2 roll is out of range.");
@@ -23,6 +25,7 @@ namespace CMP1903_A1_2324
 
             
             Console.WriteLine("Tests passed successfully.");
+            
         }
 
         /*
