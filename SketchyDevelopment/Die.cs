@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
-{
-    internal class Die
-    {
+namespace CMP1903_A1_2324 {
+    internal class Die {
         /// <Value>
         /// The Die class should contain one property to hold the current die value.
         /// </value>
@@ -15,8 +13,7 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// Constructor initialises a new dice with its "_value" already pre-rolled
         /// </summary>
-        public Die()
-        {
+        public Die() {
             _value = Roll();
         }
         /// <summary>
@@ -25,8 +22,7 @@ namespace CMP1903_A1_2324
         /// <returns>
         /// Returns the new value of the die (an intager between 1 and 6 inclusive)
         /// </returns>
-        public int Roll()
-        {
+        public int Roll() {
             Random random = new Random();
             _value = random.Next(1, 6);
             return _value;

@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
-{
-    internal class Game
-    {
+namespace CMP1903_A1_2324 {
+    internal class Game {
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
@@ -17,12 +15,13 @@ namespace CMP1903_A1_2324
         /// <value>
         /// "die1", "die2" and "die3" are all instantiations of the dice this program will use to simulate dice rolls
         /// </value>
-        private Die _die1, _die2, _die3;
+        private Die _die1;
+        private Die _die2;
+        private Die _die3;
         /// <summary>
         /// Constructor initialises game with 
         /// </summary>
-        public Game()
-        {
+        public Game() {
             _die1 = new Die();
             _die2 = new Die();
             _die3 = new Die();
@@ -33,8 +32,7 @@ namespace CMP1903_A1_2324
         /// <returns>
         /// Returns the sum of the 3 dice rolls (an intager between 3 and 18)
         /// </returns>
-        public int Play()
-        {
+        public int Play() {
             int sum=0;
             sum += _die1.Roll();
             sum += _die2.Roll();
@@ -46,28 +44,23 @@ namespace CMP1903_A1_2324
         /// Method continually executes "Play()" (see <see cref="Play"/> ) until the user specifies
         /// to stop.
         /// </summary>
-        public void PlayContinuous()
-        {
-            while (true)
-            {
+        public void PlayContinuous() {
+            while (true) {
                 Play();                             // 1. do Play()
                                                     // 2. ask the user if they want to roll again
                 Console.WriteLine("Do you want to roll again? (y/n)");
-                while (true)                        // 2.1. repetetively ask until
+                while (true) {                      // 2.1. repetetively ask until
                                                     // 'y'/'Y' or 'n'/'N' is responded
-                {
                     var reply = Console.ReadKey().Key;
-                    if (reply == ConsoleKey.Y)      // "Y" (yes) was pressed then end this loop and
+                    if (reply == ConsoleKey.Y) {    // "Y" (yes) was pressed then end this loop and
                                                     // play() again
-                    {
                         break;
                     }
                     else if (reply == ConsoleKey.N) // "N" (no) was pressed
                     {
                         return;                     // if "no" then end this entire function
                     }
-                    else                            // else, give an error message
-                    {
+                    else {                          // else, give an error message
                         Console.WriteLine("Inalid input, Please press 'Y' or 'N'");
                     }
                 }

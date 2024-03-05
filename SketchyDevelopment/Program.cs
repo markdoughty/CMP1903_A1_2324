@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+namespace CMP1903_A1_2324 {
+    internal class Program {
+        static void Main(string[] args) {
             Game game = new Game();
             Console.WriteLine("this is text LOL 2");
             game.Play();
