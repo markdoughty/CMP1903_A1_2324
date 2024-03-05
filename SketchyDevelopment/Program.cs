@@ -15,8 +15,8 @@ namespace CMP1903_A1_2324 {
             Console.WriteLine("Continuous game has finished");
 
             Testing testing = new Testing();        // Create a Testing object to verify the output
-                                                    //  and operation of the other classes.
-            testing.TestDice();                     // tests if Dice.Roll() is functioning as
+                                                    // and operation of the other classes.
+            testing.TestDie();                      // tests if Dice.Roll() is functioning as
                                                     // intended
             testing.TestSum();                      // checks the sum returned by Game.Play() is
                                                     // functioning as intended

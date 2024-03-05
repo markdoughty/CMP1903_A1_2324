@@ -8,12 +8,6 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324 {
     internal class Game {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
         /// <value>
         /// "die1", "die2" and "die3" are all instantiations of the dice this program will use to simulate dice rolls
         /// </value>
@@ -90,24 +84,26 @@ namespace CMP1903_A1_2324 {
         /// Will raise an "ArgumentException" if the input isn't "n", "y", "no" or "yes"
         /// </exception>
         private string _RespondYesOrNo() {
-            string reply = Console.ReadLine();
-            if (reply == string.Empty) {
+            string reply = Console.ReadLine();      // get response from user
+            if (reply == string.Empty) {            // throw an error if they give no reply
                 throw new ArgumentException("ERROR: Please give an input");
             }
-            reply = reply.ToLower();
-            if (
-                reply == "y" ||
+            reply = reply.ToLower();                // convert string to lower case letters to
+                                                    // simplify the coming "if" statements
+            if (                                    // if responce can be rounded to "yes" then
+                reply == "y" ||                     // return "yes"
                 reply == "yes"
                 ) {
                     return "yes";
                 }
-            else if (
-                reply == "n" ||
+            else if (                               // if responce can be rounded to "no" then
+                reply == "n" ||                     // return "no"
                 reply == "no"
                 ) {
                     return "no";
                 }
-            else {
+            else {                                  // else it couldn't be rounded to anything, so
+                                                    // return/throw an error
                 throw new ArgumentException("ERROR: Please input \"yes\" or \"no\"");
             }
         }
