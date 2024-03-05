@@ -14,10 +14,16 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-
-
+        private int Roll_Value { get; set; } // Encapsulated
+        List<int> Die_Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
+        static Random random = new Random();
         //Method
-
+        public int Roll()
+        {
+            int i = random.Next(Die_Faces.Count);
+            Roll_Value = Die_Faces[i];
+            return Roll_Value;
+        }
 
     }
 }
