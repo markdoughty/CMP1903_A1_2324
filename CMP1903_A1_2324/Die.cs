@@ -19,7 +19,7 @@ namespace CMP1903_A1_2324
             random = new Random();
         }
 
-        // Method to roll the die and return the result
+        // Method that rolls the die and return the result
         public int Roll()
         {
             // Generates a random number between 1 and 6. Next is a method of the Random class in .Net
@@ -27,7 +27,7 @@ namespace CMP1903_A1_2324
             return currentValue;
         }
 
-        // Property to get the current value of the die
+        // Gets the current value of the die
         public int CurrentValue
         {
             get { return currentValue; }

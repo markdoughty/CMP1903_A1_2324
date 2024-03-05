@@ -16,23 +16,30 @@ namespace CMP1903_A1_2324
             diceRolls = new List<int>();
         }
 
-        // Method to roll the dice
+        // Rolls the dice
         public void RollDice()
         {
             Random random = new Random();
-            diceRolls.Clear(); // Clear any previous rolls
+            diceRolls.Clear(); // Clears any previous rolls
 
             for (int i = 0; i < 3; i++)
             {
-                int roll = random.Next(1, 7); // Generate a random number between 1 and 6
+                int roll = random.Next(1, 7); // Generates a random number between 1 and 6
                 diceRolls.Add(roll); // Store the roll result
             }
         }
 
-        // Method to get the list of dice rolls
+        // Method that gets the list of dice rolls
         public List<int> GetDiceRolls()
         {
             return diceRolls;
+        }
+
+        // Method that calculates and report the total of the three dice rolls
+        public int ReportTotal()
+        {
+            int total = diceRolls.Sum(); // Calculate the sum of the dice rolls
+            return total;
         }
     }
 }

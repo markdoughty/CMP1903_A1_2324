@@ -27,6 +27,10 @@ namespace CMP1903_A1_2324
             {
                 Console.WriteLine(roll);
             }
+
+            // Reports the total of the three dice rolls
+            int total = game.ReportTotal();
+            Console.WriteLine("Total of the three dice rolls: " + total);
         }
     }
 }
