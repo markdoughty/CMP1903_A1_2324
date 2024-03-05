@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +8,19 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-
-        //Property
-
+        
 
         //Method
+        public int HoldValue { get; private set; } //to store the value gotten from rolling the dice
+
+        public int Roll()
+        {
+            Random rand = new Random();
+            //create a random number between 1 and 6 then stores it in holdValue
+            HoldValue = rand.Next(1, 7); 
+            
+            return HoldValue;
+        }
 
 
     }
