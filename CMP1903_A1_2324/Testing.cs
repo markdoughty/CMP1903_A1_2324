@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
@@ -16,5 +17,13 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        Game rn = new Game();
+    
+        public void Main()
+        {
+            int total = rn.Total(); // Retrives the total of the three die.
+            Debug.Assert(total >= 3 && total <= 18, "The total is invalid."); // Checks that the total of all three die are between 3 and 18 as this is the minimum and maximum number the three die should total to.
+        }
+
     }
 }
