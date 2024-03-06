@@ -39,7 +39,7 @@ namespace CMP1903_A1_2324
                 int rolltotal = Roll1 + Roll2 + Roll3;
 
                 //Displaying the total
-                Console.WriteLine("The total amoubnt is " +rolltotal);
+                Console.WriteLine("The total amount is " +rolltotal);
 
                 RollList.Add(Roll1);
                 RollList.Add(Roll2);

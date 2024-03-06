@@ -6,10 +6,3 @@ C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP19
 C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.CoreCompileInputs.cache
 C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.exe
 C:\Users\matth\OneDrive\Documents\GitHub\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.pdb
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe.config
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.exe
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\bin\Debug\CMP1903_A1_2324.pdb
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.AssemblyReference.cache
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.csproj.CoreCompileInputs.cache
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.exe
-C:\Users\Computing\Source\Repos\CMP1903_A1_2324-Matthew-Soledolu-\CMP1903_A1_2324\obj\Debug\CMP1903_A1_2324.pdb
