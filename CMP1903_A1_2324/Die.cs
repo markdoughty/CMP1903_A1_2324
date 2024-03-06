@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
 
         private int _DiceRoll;
 
-        public int DiceRoll { get { return _DiceRoll; } set { _DiceRoll = DiceRoll } }
+        public int DiceRoll { get { return _DiceRoll; } set { _DiceRoll = DiceRoll; } }
 
         //Property
 
@@ -25,6 +25,7 @@ namespace CMP1903_A1_2324
         {
             Random rnd = new Random();
             int DiceRoll = rnd.Next(1, 7);
+            Console.WriteLine("Dice Result: " + DiceRoll);
             return (DiceRoll);
         }
 
