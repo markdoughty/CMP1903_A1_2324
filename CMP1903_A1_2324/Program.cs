@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
+
 
 namespace CMP1903_A1_2324
 {
@@ -14,6 +16,12 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
+            
+
+            Game rn = new Game(); // Starts a new game and retrives the total.
+            Testing st = new Testing(); 
+            st.Main(); // Starts the testing.
+            Console.ReadKey();
         }
     }
 }
