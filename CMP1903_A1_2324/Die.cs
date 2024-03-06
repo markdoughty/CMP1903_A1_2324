@@ -23,7 +23,7 @@ namespace CMP1903_A1_2324
             set { _Roll = value; }
         }
 
-        //Created the Roll method to randomly roll a die three times
+        //Created the Roll method to randomly roll a die three times as it gets called 3 times in the game class
         public  int Roll()
         {
 

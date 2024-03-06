@@ -22,32 +22,23 @@ namespace CMP1903_A1_2324
         {
             
 
-
+            //Created a Game object
             Game gm = new Game();
+
+
+            //Call the myMethod method and saving its return in Roll which is a tuple
             var Roll = gm.myMethod();
-            Die die = new Die();
 
-
-            Console.WriteLine(Roll.Item1);
-            Console.WriteLine(Roll.Item2);
-            Console.WriteLine(Roll.Item3);
-
-
-
+            //Getting the total so I can verify it in the Debug.Assert
             int totalroll = Roll.Item1 + Roll.Item2 + Roll.Item3;
-            Console.WriteLine(totalroll);
 
+            //Debugging
 
+            Debug.Assert(Roll.Item1 < 7 && Roll.Item1 > 0, "Roll 1 is not between 1 and 6");
 
+            Debug.Assert(Roll.Item2 < 7 && Roll.Item2 > 0, "Roll 2 is not between 1 and 6" );
 
-
-            Debug.Assert(Roll.Item1 < 6 && Roll.Item1 > -1, "Roll 1 is between 1 and 6");
-
-
-
-            Debug.Assert(Roll.Item2 < 6 && Roll.Item2 > -1, "Roll 2 is between 1 and 6" );
-
-            Debug.Assert(Roll.Item3 < 6 && Roll.Item3 > -1, "Roll 3 is between 1 and 6");
+            Debug.Assert(Roll.Item3 < 7 && Roll.Item3 > 0, "Roll 3 is not between 1 and 6");
 
 
 
