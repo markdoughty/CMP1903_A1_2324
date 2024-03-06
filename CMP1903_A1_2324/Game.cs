@@ -19,7 +19,8 @@ namespace CMP1903_A1_2324
         int _numOfRolls = 0; 
 
         Die _die = new Die(); 
-        
+
+        public int 
 
     }
 }
