@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
@@ -10,10 +11,26 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Testing.TestDieClass();
+            // Create a Game object
+            Game game = new Game();
+
+            // Roll the dice
+            game.RollDice();
+
+            // Get the list of dice rolls
+            var diceRolls = game.GetDiceRolls();
+
+            // Print the dice rolls
+            Console.WriteLine("Dice Rolls:");
+            foreach (var roll in diceRolls)
+            {
+                Console.WriteLine(roll);
+            }
+
+            // Reports the total of the three dice rolls
+            int total = game.ReportTotal();
+            Console.WriteLine("Total of the three dice rolls: " + total);
         }
     }
 }
