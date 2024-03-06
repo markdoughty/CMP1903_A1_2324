@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
     internal class Testing
     {
 
-        /* the die test works the same way as the test game*/
+        /* the die test works the same way as the testGame but checks a single die*/
         private void testDie()
         {
             Die die = new Die();
