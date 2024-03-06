@@ -28,7 +28,7 @@ namespace CMP1903_A1_2324
             Test.DieTestResult();
             Test.GameTestResult();
 
-            Console.WriteLine("Press any key to end program... ");
+            Console.WriteLine("Press any key to end program...");
             Console.ReadKey();
 
 
