@@ -16,10 +16,15 @@ namespace CMP1903_A1_2324
              */
              Game game = new Game();
              Testing test = new Testing();
+             string input = "";
 
-             Game.rollingDice
+             while (input.Tolower() != "exit")
+             {
+                game.rollingDice();
+                input = Console.Readline;
+             }
 
-             
+
         }
     }
 }
