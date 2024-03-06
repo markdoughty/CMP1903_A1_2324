@@ -18,7 +18,6 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// Rolls the die and returns the result.
         /// </summary>
-        /// <returns>The value rolled on the die.</returns>
         public int Roll()
         {
             // Generate a random index to select a face from the list of die faces

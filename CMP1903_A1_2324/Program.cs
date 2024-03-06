@@ -11,7 +11,6 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// Main entry point of the program.
         /// </summary>
-        /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
             // Prompt user whether they want to roll the die more than once
@@ -53,7 +52,6 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// Writes the specified text to the console.
         /// </summary>
-        /// <param name="text">Text to be written.</param>
         public static void Write(string text)
         {
             Console.WriteLine(text);
@@ -61,9 +59,9 @@ namespace CMP1903_A1_2324
 
         /// <summary>
         /// Writes the summary of rolls, total sum, and average roll to a file.
+        /// "rolls" Array containing the individual roll values.
+        /// "totalSum" Total sum of all roll values.
         /// </summary>
-        /// <param name="rolls">Array containing the individual roll values.</param>
-        /// <param name="totalSum">Total sum of all roll values.</param>
         public static void WriteToFile(int[] rolls, int totalSum)
         {
             string filePath = "output.txt";

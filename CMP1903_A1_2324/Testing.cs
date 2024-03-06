@@ -31,7 +31,7 @@ namespace CMP1903_A1_2324
 
             // Verify that the sum of die rolls is as expected
             int expectedSum = rollValue1 + rollValue2 + rollValue3;
-            Debug.Assert(expectedSum == expectedSum, $"Sum is not as expected. Expected: {expectedSum}, Actual: {expectedSum}");
+            Debug.Assert(expectedSum == expectedSum, $"Sum is not as expected... \'Expected: {expectedSum}, Actual: {expectedSum}");
 
             Console.WriteLine("Tests passed successfully."); // Display success message
         }
