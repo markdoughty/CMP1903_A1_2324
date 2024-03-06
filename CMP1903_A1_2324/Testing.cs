@@ -15,6 +15,22 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
-        //Method
+        // Method
+        public static void Test()
+        {
+            Game game = new Game();
+            int total = game.RollDiceAndReportTotal();
+
+            // Testing die rolls are between 1 and 6 (inclusive)
+            for (int i = 0; i < 100; i++)
+            {
+                Die die = new Die();
+                int faceValue = die.Roll();
+                Debug.Assert(faceValue >= 1 && faceValue <= 6, "Die roll is out of range.");
+            }
+
+            // Testing the sum of the three values
+            Debug.Assert(total >= 3 && total <= 18, "Total sum of three dice rolls is out of expected range.");
+        }
     }
 }

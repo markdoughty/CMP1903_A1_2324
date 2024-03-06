@@ -13,11 +13,15 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        //Property
+        // Property to hold the current die value
+        public int FaceValue { get; private set; }
 
-
-        //Method
-
-
+        // Method to roll the die and return the face value
+        public int Roll()
+        {
+            Random random = new Random();
+            FaceValue = random.Next(1, 7); // Generate a random number between 1 and 6
+            return FaceValue;
+        }
     }
 }
