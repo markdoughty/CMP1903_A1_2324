@@ -8,18 +8,20 @@ namespace CMP1903_A1_2324
 {
     public void Program()
     {
-        int total = 0; //Sets the total of the combined dice to 0 so it has a value
+        int total = 0; //Sets the initial total to 0 to have a value
 
-        Console.WriteLine("The following amount of Dice are being rolled..."); //Allows the user to see that the following dice are being rolled
+        Console.WriteLine($"Rolling {numberOfDice} dice..."); //specifies the total number of dice to the user
 
-        for (int x = 0; x < 3; x++) //For loop to run the dice rolls until the specified number has been met which is 3 dice
+        for (int x = 0; x < num_Dice; x++) //For loop to make sure that it does not roll over or under the specified amount of dice
         {
-            int roll_value = dice[x].Roll(); //Sets the roll_value equal to the result of the roll function in the Die class
-            Console.WriteLine($"Die {x + 1} Value: {roll_value}"); //Displays which die rolled what value for the user
-            total += roll_value; //Totals up the value of all the dice combined and gives a accumulative sum
+            int rollValue = dice[x].Roll(); //Sets the roll value equal to the value that each die has been rolled
+            Console.WriteLine($"Die {x + 1} Value: {rollValue}"); //Specifies to the user what each die rolled
+            total += rollValue; //Totals up the value of all the dice combined and gives a accumulative sum
         }
 
-        Console.WriteLine($"Total sum of all dice rolls combined: {total}"); //Displays the total to the user so they can see the score
-        Debug.Assert(total >= 3 && total <= 18, "Total is greater or less than the possible combination of totals."); //Checks to make sure that the value cannot be creater than 18 or less that 3 as its not in the possible combination of die roll totals
+        Console.WriteLine($"Total sum of all dice rolls combined: {total}"); //displays the total to the user
+
+        Debug.Assert(total >= numberOfDice && total <= numberOfDice * 6,
+                     $"Total is greater or less than the possible combination of totals ({numberOfDice} to {numberOfDice * 6})."); //Checks to make sure that the value cannot be creater than 18 or less that 3 as its not in the possible combination of die roll totals
     }
 }
