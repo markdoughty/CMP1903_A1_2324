@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
         int _rollValue;
         int _total;
 
-        public int Roll(Random _rand)
+        public int _roll(Random _rand)
         { 
             _rollValue = int _rand.Next(1, 7, 1);
             return _rollValue;
