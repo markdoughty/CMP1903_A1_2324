@@ -1,10 +1,14 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO; // For WriteToFile exception handling to work.
 
 namespace CMP1903_A1_2324
 {
     /// <summary>
-    /// Main class responsible for user interaction and control flow.
+    /// Main class responsible for user input and control flow.
     /// </summary>
     internal class Program
     {
@@ -13,18 +17,26 @@ namespace CMP1903_A1_2324
         /// </summary>
         static void Main(string[] args)
         {
-            // Prompt user whether they want to roll the die more than once
-            Console.WriteLine("Do you want to roll the die more than once? (Yes/No):");
+            // Lets the user choose if they want to roll the die continously or not.
+            Console.WriteLine("Do you want to roll the die continously? (Yes/No):");
             string userInput = Console.ReadLine().ToLower();
 
-            // If user chooses not to roll more than once
+            // If statement for if the user chooses not to roll continously
             if (userInput == "no" || userInput == "n")
             {
-                Die die = new Die();
-                int rollValue = die.Roll();
-                Console.WriteLine("You Rolled A: " + rollValue);
+                Die die = new Die(); // Creates a new die roller instances*
+                int rollValue1 = die.Roll();
+                int rollValue2 = die.Roll();
+                int rollValue3 = die.Roll();
+
+                // Output the rolls and their sum
+                Console.WriteLine("You Rolled:");
+                Console.WriteLine("Roll 1: " + rollValue1);
+                Console.WriteLine("Roll 2: " + rollValue2);
+                Console.WriteLine("Roll 3: " + rollValue3);
+                Console.WriteLine("Sum: " + (rollValue1 + rollValue2 + rollValue3));
             }
-            // If user chooses to roll more than once
+            // If user chooses to roll continously.
             else if (userInput == "yes" || userInput == "y")
             {
                 DiceRoller diceRoller = new DiceRoller();
@@ -36,9 +48,11 @@ namespace CMP1903_A1_2324
                 Console.WriteLine("Invalid input. Please enter 'Yes' or 'No'.");
             }
 
-            /*
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+
+            /// <summary>
+            /// Create a Testing object to verify the output and operation of the other classes.
+            /// </summary>
+
             Testing testing = new Testing();
             testing.RunTests();
         }
@@ -81,7 +95,7 @@ namespace CMP1903_A1_2324
                 }
                 Console.WriteLine($"Data written to file {filePath}");
             }
-            catch (IOException ex)
+            catch (IOException ex) // Exception handling
             {
                 Console.WriteLine($"An error occurred while writing to the file: {ex.Message}");
             }

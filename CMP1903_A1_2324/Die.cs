@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
     /// <summary>
-    /// Represents a die with faces numbered from 1 to 6.
+    /// Represents a die with faces numbered from 1 to 6. *
     /// </summary>
     internal class Die
     {
-        // Property to hold the current die value
+        // Property to hold the current die value *
         private int Roll_Value { get; set; } // Getters and Setters for Encapsulation
-        // List of possible faces of the die
-        private List<int> Die_Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
-        // Random number generator
+        // List of possible faces of the die *
+        private List<int> _dieFaces = new List<int> { 1, 2, 3, 4, 5, 6 };
+        // Random number generator *
         private static Random random = new Random();
 
         /// <summary>
@@ -21,9 +24,9 @@ namespace CMP1903_A1_2324
         public int Roll()
         {
             // Generate a random index to select a face from the list of die faces
-            int i = random.Next(Die_Faces.Count);
-            Roll_Value = Die_Faces[i]; // Assign the rolled value to the Roll_Value property
-            return Roll_Value; // Return the rolled value
+            int i = random.Next(_dieFaces.Count);
+            Roll_Value = _dieFaces[i]; // Assign the rolled value to the Roll_Value property
+            return Roll_Value; // Returns the rolled value
         }
     }
 
@@ -32,13 +35,13 @@ namespace CMP1903_A1_2324
     /// </summary>
     internal class DiceRoller
     {
-        // List to store the rolls
+        // List to store the rolls *
         private List<int> Rolls = new List<int>();
-        // Sum of all rolls
+        // Sum of all rolls *
         private int SumOfRolls = 0;
 
         /// <summary>
-        /// Rolls the dice continuously until the user chooses to stop.
+        /// Rolls the dice continuously until the user chooses to stop by typing 'n' or 'no'
         /// </summary>
         public void RollContinuous()
         {
