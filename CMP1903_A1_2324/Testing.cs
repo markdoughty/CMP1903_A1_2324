@@ -23,10 +23,12 @@ namespace CMP1903_A1_2324
         Debug.Assert(_roll1 >= 1 and _roll1 <= 6);
         Debug.Assert(_roll2 >= 1 and _roll2 <=6);
         Debug.Assert(_roll3 >= 1 and _roll3 <=6);
+        Console.Writeline($"Boundary error: Invalid value for the die")
 
         //tests boundaries of the roll values to ensure all values are between 1 and 6
 
         Debug.Assert((_roll1 + _roll2 + _roll3) == Game._dieTotal()); 
+        Console.Writeline($"Unexpected error: Invalid error for die")
 
         //tests that the sum of the die is as expected
     }
