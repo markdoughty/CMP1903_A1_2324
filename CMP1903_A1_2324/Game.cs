@@ -30,7 +30,13 @@ namespace CMP1903_A1_2324
 
         //assigned the roll value to each die
         //values assigned to private variables
-        
+
+        public int _dieTotal = int _roll1 + int _roll2 + int _roll3;
+
+        Console.WriteLine($"Die 1 Value: {_roll1}");
+        Console.WriteLine($"Die 2 Value: {_roll2}");
+        Console.WriteLine($"Die 3 Value: {_roll3}");
+        Console.WriteLine($"Total of the three die: {_dieTotal}")
 
 
     }
