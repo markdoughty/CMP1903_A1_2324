@@ -24,7 +24,7 @@ namespace CMP1903_A1_2324
             // If statement for if the user chooses not to roll continously
             if (userInput == "no" || userInput == "n")
             {
-                Die die = new Die(); // Creates a new die roller instances*
+                Die die = new Die(); // Creates a new die roller instances
                 int rollValue1 = die.Roll();
                 int rollValue2 = die.Roll();
                 int rollValue3 = die.Roll();
