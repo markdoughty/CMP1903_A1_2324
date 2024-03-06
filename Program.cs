@@ -10,10 +10,12 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Game game = new Game(); /// Creates a new game object
+            game.dice_Display(); /// Calls the display dice method
+
+            Testing test = new Testing(); /// Creates a new test object
+            test.test_Game(); /// Calls the test game method
+            test.test_Die(); /// Calls the test die method 
         }
     }
 }
