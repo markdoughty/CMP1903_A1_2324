@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,37 +12,44 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
+            // new instance of  Game class
             Game game = new Game();
+            // Roll one die and store the result
             int result = game.RollDie();
+            // Prints the result of the die roll
             Console.WriteLine("Die roll value: " + result);
 
-            game.RollThreeDice(); // Call the method to roll three dice
+            // method to roll three dice
+            game.RollThreeDice();
         }
     }
 
     internal class Game
     {
-        private Die dice1 = new Die();
-        private Die dice2 = new Die();
-        private Die dice3 = new Die();
+        private Die dice1 = new Die(); 
 
+        // Method to roll one die
         public int RollDie()
         {
-            return dice1.Roll();
+            return dice1.Roll(); // rolls the first die
         }
 
+        // Method to roll three dice
         public void RollThreeDice()
         {
+            // Roll each die then stores results
             int x = dice1.Roll();
-            int y = dice2.Roll();
-            int z = dice3.Roll();
+            int y = dice1.Roll();
+            int z = dice1.Roll();
 
-            Console.WriteLine($"first die roll result: {x}");
-            Console.WriteLine($"second die roll result: {y}");
-            Console.WriteLine($"third die roll result: {z}");
+            // Print result after each die roll
+            Console.WriteLine($"First die roll result: {x}");
+            Console.WriteLine($"Second die roll result: {y}");
+            Console.WriteLine($"Third die roll result: {z}");
 
+            // calculates sum of three die rolls then prints result of sum
             int sum = x + y + z;
-            Console.WriteLine($"The sum of the three rolls of die is " + sum);
+            Console.WriteLine($"The sum of the three rolls of the die is " + sum);
         }
     }
 
@@ -48,17 +57,20 @@ namespace CMP1903_A1_2324
     {
         private Random random;
 
+       
         public Die()
         {
-            random = new Random();
+            random = new Random(); 
         }
 
+        // Method to roll the die then return result
         public int Roll()
         {
-            return random.Next(1, 7);
+            return random.Next(1, 7); // random number between 1 and 7 generated
         }
     }
 }
+
 
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
