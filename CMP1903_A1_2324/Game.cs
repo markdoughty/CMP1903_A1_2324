@@ -22,9 +22,9 @@ namespace CMP1903_A1_2324
 
         int rollingDice()
         {
-            dice1.Roll
-            dice2.Roll
-            dice3.Roll
+            int roll1 = dice1.Roll()
+            int roll2 = dice2.Roll()
+            int roll3 = dice3.Roll()
         }
     }
 }

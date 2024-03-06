@@ -15,7 +15,10 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
+        //properties
+
         //Method
-        //
+
+        }
     }
 }
