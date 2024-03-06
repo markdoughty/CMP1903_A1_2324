@@ -15,24 +15,24 @@ namespace CMP1903_A1_2324
          */
 
         //Field
-        private int _Roll;
+        private int _Number;
 
         //Property
-        public int Roll
+        public int Number
         {
-            get { return _Roll; }
-            set { _Roll = value; }
+            get { return _Number; }
+            set { _Number = value; }
         }
 
         //Method
         //Randomly generates and returns random integers between 1 and 6.
         //System must pause between generations otherwise all dice will be the same number.
-        public int Generate()
+        public int Roll()
         {
             Thread.Sleep(600);
             Random rnd = new Random();
-            int Roll = rnd.Next(1, 7);
-            return Roll;
+            int Generate = rnd.Next(1, 7);
+            return Generate;
         }
     }
 }

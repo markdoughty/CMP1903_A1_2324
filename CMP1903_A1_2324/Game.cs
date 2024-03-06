@@ -25,13 +25,13 @@ namespace CMP1903_A1_2324
             Die die2 = new Die();
             Die die3 = new Die();
 
-            int numberOne = die1.Generate();
+            int numberOne = die1.Roll();
             Console.WriteLine($"Dice One: {numberOne}");
 
-            int numberTwo = die2.Generate();
+            int numberTwo = die2.Roll();
             Console.WriteLine($"Dice Two: {numberTwo}");
 
-            int numberThree = die3.Generate();
+            int numberThree = die3.Roll();
             Console.WriteLine($"Dice Three: {numberThree}");
 
             sum = numberOne + numberTwo + numberThree;

@@ -27,7 +27,7 @@ namespace CMP1903_A1_2324
             try
             {
                 Die die = new Die();
-                number = die.Generate();
+                number = die.Roll();
                 Debug.Assert(number >= 1 && number <= 6);
 
                 Game game = new Game();
