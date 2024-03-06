@@ -20,6 +20,12 @@ namespace CMP1903_A1_2324
 
         //creates a new game and die class
 
-        Debug.Assert(
+        Debug.Assert(_roll1 >= 1 and _roll1 <= 6);
+        Debug.Assert(_roll2 >= 1 and _roll2 <=6);
+        Debug.Assert(_roll3 >= 1 and _roll3 <=6);
+
+        //tests boundaries of the roll values to ensure all values are between 1 and 6
+
+        Debug.Assert((_roll1 + _roll2 + _roll3) == 
     }
 }
