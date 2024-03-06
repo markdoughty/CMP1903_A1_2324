@@ -18,22 +18,22 @@ namespace CMP1903_A1_2324
         public void Test()
         {
             // Creates instances of Die class for each die **
-            Die dieroll1 = new Die();
-            Die dieroll2 = new Die();
-            Die dieroll3 = new Die();
+            Die dice1 = new Die();
+            Die dice2 = new Die();
+            Die dice3 = new Die();
 
             // Rolls each die and captures the roll values **
-            int _rollValue1 = dieroll1.Roll();
-            int _rollValue2 = dieroll2.Roll();
-            int _rollValue3 = dieroll3.Roll();
+            int rollValue1 = dice1.Roll();
+            int rollValue2 = dice2.Roll();
+            int rollValue3 = dice3.Roll();
 
             // Asserts that each die roll is within the range of 1-6 and if it falls outsiide this range it produces an error message
-            Debug.Assert(_rollValue1 >= 1 && _rollValue1 <= 6, "Die 1 is out of range.");
-            Debug.Assert(_rollValue2 >= 1 && _rollValue2 <= 6, "Die 2 is out of range.");
-            Debug.Assert(_rollValue3 >= 1 && _rollValue3 <= 6, "Die 3 is out of range.");
+            Debug.Assert(rollValue1 >= 1 && rollValue1 <= 6, "Die 1 is out of range.");
+            Debug.Assert(rollValue2 >= 1 && rollValue2 <= 6, "Die 2 is out of range.");
+            Debug.Assert(rollValue3 >= 1 && rollValue3 <= 6, "Die 3 is out of range.");
 
             // Confirms that the sum of die rolls is as expected and if sum is not as expected it produces an error message
-            int _sumVerified = _rollValue1 + _rollValue2 + _rollValue3;
+            int _sumVerified = rollValue1 + rollValue2 + rollValue3;
             Debug.Assert(_sumVerified == _sumVerified, $"The value of sum is not as expected. Expected value: {_sumVerified}, Actual value: {_sumVerified}");
 
             Console.WriteLine("All tests were passed successfully.");

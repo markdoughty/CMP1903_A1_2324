@@ -18,7 +18,7 @@ namespace CMP1903_A1_2324
         private static Random random = new Random();
 
         /// <summary>
-        /// Method to roll the die and return the roll value(s).
+        /// Method to roll the die and return the roll value(s). 
         /// </summary>
         public int Roll()
         {
@@ -90,9 +90,10 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// A method to get the sum of all rolls.
         /// </summary>
+        /// <returns>The sum of all rolls.</returns>
         public int ValueSum()
         {
-            return SumOfRolls;        /// <returns>The sum of all rolls.</returns>
+            return SumOfRolls;  
         }
     }
 }

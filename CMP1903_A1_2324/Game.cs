@@ -11,15 +11,17 @@ namespace CMP1903_A1_2324
     /// </summary>
     internal class Game
     {
-        public int Sum_of_Rolls { get; private set; }
+        private int _sumOfRolls { get;  set; }
 
         /// <summary>
-        /// Initialises the game with the sum of die rolls.
+        /// Initialises the game with the sum of die rolls. 
         /// </summary>
 
-        public Game(int _rollValue1, int _rollValue2, int _rollValue3)
+
+        //This is a constructor
+        public Game(int rollValue1, int rollValue2, int rollValue3)
         {
-            Sum_of_Rolls = _rollValue1 + _rollValue2 + _rollValue3;
+            _sumOfRolls = rollValue1 + rollValue2 + rollValue3;
         }
     }
 }
