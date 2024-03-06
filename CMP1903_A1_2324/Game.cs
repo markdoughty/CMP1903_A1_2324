@@ -20,13 +20,13 @@ namespace CMP1903_A1_2324
         //Methods
 
 
-        public int DieSum() 
+        public int DieSum() // create public method called DieSum
         {
-            Die die = new Die();
-            int DieRoll = die.Roll();
+            Die die = new Die(); // Create instance of the Die class
+            int DieRoll = die.Roll(); // use method Roll() found in the Die class and save result to DieRoll
 
 
-            Die die1 = new Die();
+            Die die1 = new Die(); // same as previous 2 lines but creates new instance and variable 
             int DieRoll1 = die.Roll();
 
             
@@ -34,10 +34,10 @@ namespace CMP1903_A1_2324
             int DieRoll2 = die.Roll();
      
 
-            int DieTotal = DieRoll + DieRoll1 + DieRoll2;
+            int DieTotal = DieRoll + DieRoll1 + DieRoll2; // combines the three DieRoll variables together and saves result to DieTotal
             
 
-            return DieTotal;
+            return DieTotal; // returns the Die total when method is called
         }
     }
 }

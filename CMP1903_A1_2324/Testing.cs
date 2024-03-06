@@ -20,27 +20,27 @@ namespace CMP1903_A1_2324
         
        
 
-        public void DieTestResult()
+        public void DieTestResult()  // Creates a public method called DieTestResult, void is used as no return value needed 
         {
-            Die die = new Die();
-            int DieRoll = die.Roll();
+            Die die = new Die(); // New instance of Die class created 
+            int DieRoll = die.Roll(); // runs the Roll method in Die class and saves result to varible DieRoll
             
             
-            Debug.Assert(DieRoll > 0, "Die roll is less than 0");
+            Debug.Assert(DieRoll > 0, "Die roll is less than 0"); // Use of Debug.Assert to ensure the rolled die value is between 1,6 (As die used is D6)
             Debug.Assert(DieRoll < 7, "Die roll is more than 7");
 
 
         }
 
-        public void GameTestResult()
+        public void GameTestResult() // Creates public method GameTestResult and use of void due to no return value
         {
 
-            Game game = new Game();
-            int DieTotal = game.DieSum();
+            Game game = new Game(); // create instance of Game class
+            int DieTotal = game.DieSum(); // save the result from DieSum method in Game class to variable DieTotal
             
 
 
-            Debug.Assert(DieTotal > 2, "Die sum is < 3 ");
+            Debug.Assert(DieTotal > 2, "Die sum is < 3 "); // Debug.Assert used to ensure the DieSum is between 3 and 18 as that is highest/lowest possible combination of die numbers
             Debug.Assert(DieTotal < 19, "Die sum is > 18 ");
 
         }

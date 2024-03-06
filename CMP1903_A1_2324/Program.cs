@@ -19,17 +19,17 @@ namespace CMP1903_A1_2324
             
            
 
-            Game game = new Game();
-            int DieTotal = game.DieSum();
+            Game game = new Game(); // Creates an instance of the Game class 
+            int DieTotal = game.DieSum(); // Runs the DieSum Method located the Game class and saves variable to DieTotal
             Console.WriteLine("Die Total: " + DieTotal);
             
 
-            Testing Test = new Testing();
-            Test.DieTestResult();
-            Test.GameTestResult();
+            Testing Test = new Testing(); // Creates an instance of the Testing class
+            Test.DieTestResult(); // Runs the DieTestResult method in Testing class
+            Test.GameTestResult();  // Runs the GameTestReult method in Testing class
 
             Console.WriteLine("Press any key to end program...");
-            Console.ReadKey();
+            Console.ReadKey(); // ensures the program doesn't quit out before the user can see DieTotal result 
 
 
 
