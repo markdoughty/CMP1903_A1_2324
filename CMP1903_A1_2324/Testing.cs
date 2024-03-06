@@ -8,11 +8,18 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        // Method to test the Die and Game classes
+        /*
+         * This class should test the Game and the Die class.
+         * Create a Game object, call the methods and compare their output to expected output.
+         * Create a Die object and call its method.
+         * Use debug.assert() to make the comparisons and tests.
+         */
+
+        // Method
         public static void Test()
         {
             Game game = new Game();
-            game.RollDiceAndReportTotal();
+            int total = game.RollDiceAndReportTotal();
 
             // Testing die rolls are between 1 and 6 (inclusive)
             for (int i = 0; i < 100; i++)
@@ -23,7 +30,7 @@ namespace CMP1903_A1_2324
             }
 
             // Testing the sum of the three values
-            Debug.Assert(game.Total >= 3 && game.Total <= 18, "Total sum of three dice rolls is out of expected range.");
+            Debug.Assert(total >= 3 && total <= 18, "Total sum of three dice rolls is out of expected range.");
         }
     }
 }
