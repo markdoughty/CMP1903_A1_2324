@@ -24,6 +24,10 @@ namespace CMP1903_A1_2324
             //Testing the Dice
             Testing testDie = new Testing();
             testGame.TestDie();
+
+            //To stop the window from closing
+            Console.WriteLine("Press the ENTER key to close window...");
+            Console.ReadLine();
         }
     }
 }
