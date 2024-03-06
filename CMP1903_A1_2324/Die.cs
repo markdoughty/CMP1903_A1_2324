@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
@@ -14,10 +15,16 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-
+        Random rnd = new Random();
+        
 
         //Method
-
+        public int Roll()
+        { 
+            int DieRoll = rnd.Next(1, 7);
+            Thread.Sleep(250);
+            return DieRoll;
+        }
 
     }
 }
