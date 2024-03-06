@@ -16,27 +16,28 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        
-        public game_start()
+        die value1 = new die()
         {
-            die roll1 = new die()
-            {
-                int value = die.roll();
-            }
+            int value = Die.roll()
+        }
+
+        die value2 = new die()
+        {
+            int value = Die.roll()
+        }
+
+        die value3 = new die()
+        {
+            int value = Die.roll()
+        }
+
+
         
-            die roll2 = new die()
-            {
-                int value = die.roll();
-            }
+        public int game_start()
+        { 
 
-
-            die roll3 = new die()
-            {
-                int value = die.roll();
-            }
-
-             public int roll_total = roll1.die_value + roll2.die_value + roll3.die.value;
-
+            public int roll_total = value1 + value2 + value3;
+            return roll_total
         }
 
 

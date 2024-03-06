@@ -16,5 +16,10 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+
+        Game game_test = new Game()
+        {
+            if (roll1.value > 6 or roll2.value > 6 or roll3.value > 6 or roll1.value < 1 or roll2.value < 1 or roll3.value < 1)
+        }
     }
 }

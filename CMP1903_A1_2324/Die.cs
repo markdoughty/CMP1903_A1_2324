@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
 
 
         //Method
-        public roll()        //creates a function and assigns the result to the variable I declared earlier
+        public int roll()        //creates a function and assigns the result to the variable I declared earlier
         {
             die_value = rnd.next(1,7) //creates a random integer between 1 and 6 and assigns it to a variable
 
