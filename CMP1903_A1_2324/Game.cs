@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +16,20 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+
+        public Die die1 = new Die();
+        public Die die2 = new Die();
+        public Die die3 = new Die();
+
+        private int _TotalRoll;
+
+        public int TotalRoll { get { return _TotalRoll; } set { _TotalRoll = TotalRoll } }
+
+        public int Sum()
+        {
+            int _TotalRoll = die1 + die2 + die3 ;
+            return _TotalRoll; 
+        }
 
     }
 }
