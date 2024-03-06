@@ -21,7 +21,5 @@ namespace CMP1903_A1_2324
 
         Console.WriteLine($"Total sum of all dice rolls combined: {total}"); //displays the total to the user
 
-        Debug.Assert(total >= numberOfDice && total <= numberOfDice * 6,
-                     $"Total is greater or less than the possible combination of totals ({numberOfDice} to {numberOfDice * 6})."); //Checks to make sure that the value cannot be creater than 18 or less that 3 as its not in the possible combination of die roll totals
     }
 }
