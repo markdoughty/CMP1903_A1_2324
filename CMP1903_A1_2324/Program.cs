@@ -19,6 +19,12 @@ namespace CMP1903_A1_2324
 
             Testing testing = new Testing();
 
+            Console.WriteLine(game.Sum());
+
+            testing.Test();
+
+            Console.ReadKey();
+
 
         }
     }
