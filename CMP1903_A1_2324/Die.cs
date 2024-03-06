@@ -13,7 +13,7 @@ namespace CMP1903_A1_2324
     {
         //This sections holds the value of the dice
         private int _RollsValues { get; set; }
-        // Lists faces of the die (1-6)
+        // Lists faces of the die (1-6) 
         private List<int> _Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
         private static Random random = new Random();
 
