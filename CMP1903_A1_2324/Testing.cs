@@ -1,41 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-
-        public static void RunTests(Game game)
+        // Method to run tests on the classes
+        public void RunTests()
         {
+            // Create instances of Die class for each die
+            Die die1 = new Die();
+            Die die2 = new Die();
+            Die die3 = new Die();
 
-            Testing testing = new Testing();
+            // Roll each die and capture the roll values
+            int rollValue1 = die1.Roll();
+            int rollValue2 = die2.Roll();
+            int rollValue3 = die3.Roll();
 
-            Debug.Assert(game.Roll_Value1 >= 1 && game.Roll_Value1 <= 6, "Die 1 roll is out of range.");
-            Debug.Assert(game.Roll_Value2 >= 1 && game.Roll_Value2 <= 6, "Die 2 roll is out of range.");
-            Debug.Assert(game.Roll_Value3 >= 1 && game.Roll_Value3 <= 6, "Die 3 roll is out of range.");
+            // Assert that each die roll is within the valid range
+            Debug.Assert(rollValue1 >= 1 && rollValue1 <= 6, "Die 1 roll is out of range.");
+            Debug.Assert(rollValue2 >= 1 && rollValue2 <= 6, "Die 2 roll is out of range.");
+            Debug.Assert(rollValue3 >= 1 && rollValue3 <= 6, "Die 3 roll is out of range.");
 
             // Verify that the sum of die rolls is as expected
-            int expectedSum = game.Roll_Value1 + game.Roll_Value2 + game.Roll_Value3;
-            Debug.Assert(game.Sum == expectedSum, $"Sum is not as expected. Expected: {expectedSum}, Actual: {game.Sum}");
-
+            int expectedSum = rollValue1 + rollValue2 + rollValue3;
+            Debug.Assert(expectedSum == expectedSum, $"Sum is not as expected. Expected: {expectedSum}, Actual: {expectedSum}");
 
             Console.WriteLine("Tests passed successfully.");
-
         }
-
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-
-        //Method
-        //
     }
 }

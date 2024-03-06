@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
@@ -11,48 +6,34 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-
-
+            // Prompt user whether they want to roll the die more than once
             Console.WriteLine("Do you want to roll the die more than once? (Yes/No):");
             string userInput = Console.ReadLine().ToLower();
 
+            // If user chooses not to roll more than once
             if (userInput == "no" || userInput == "n")
             {
                 Die die = new Die();
                 int rollValue = die.Roll();
                 Console.WriteLine("You Rolled A: " + rollValue);
             }
+            // If user chooses to roll more than once
             else if (userInput == "yes" || userInput == "y")
             {
-                DiceRoller DiceRoller = new DiceRoller();
-                DiceRoller.RollContinuous();
+                DiceRoller diceRoller = new DiceRoller();
+                diceRoller.RollContinuous();
             }
+            // If user provides invalid input
             else
             {
                 Console.WriteLine("Invalid input. Please enter 'Yes' or 'No'.");
-
             }
 
-            Game game = new Game();
-
-            Console.WriteLine($"Total Sum is: {game.Sum}");
-
-
-
-            Testing testing = new Testing();
-            Testing.RunTests(game);
-
-
-
-
-
             /*
-             * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
+            Testing testing = new Testing();
+            testing.RunTests();
         }
     }
-
-
-
 }

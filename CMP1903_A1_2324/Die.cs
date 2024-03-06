@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +8,14 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns an integer, and takes no parameters.
-         */
-
-        //Property
-        private int Roll_Value { get; set; } // Encapsulated
+        // Property to hold the current die value
+        private int Roll_Value { get; set; }
+        // List of possible faces of the die
         private List<int> Die_Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
+        // Random number generator
         private static Random random = new Random();
 
-        //Method
+        // Method to roll the die
         public int Roll()
         {
             int i = random.Next(Die_Faces.Count);
@@ -30,9 +26,12 @@ namespace CMP1903_A1_2324
 
     internal class DiceRoller
     {
+        // List to store the rolls
         private List<int> Rolls = new List<int>();
+        // Sum of all rolls
         private int SumOfRolls = 0;
 
+        // Method to continuously roll dice until user chooses to stop
         public void RollContinuous()
         {
             while (true)
@@ -53,6 +52,7 @@ namespace CMP1903_A1_2324
             SummarizeResults();
         }
 
+        // Method to summarize the results of all rolls
         private void SummarizeResults()
         {
             Console.WriteLine("Summary of Rolls:");
@@ -61,6 +61,7 @@ namespace CMP1903_A1_2324
                 Console.WriteLine(roll);
             }
             Console.WriteLine("Total Sum: " + SumOfRolls);
+            // Calculate and print the average roll
             Console.WriteLine("Average Roll: " + (SumOfRolls / Rolls.Count));
         }
     }
