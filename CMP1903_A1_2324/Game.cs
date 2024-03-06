@@ -25,6 +25,10 @@ namespace CMP1903_A1_2324
             int roll1 = dice1.Roll()
             int roll2 = dice2.Roll()
             int roll3 = dice3.Roll()
+            
+            Console.Writeline("roll one = " + roll1)
+            Console.Writline("roll two = " + roll2)
+            Console.Writeline("roll three = " + roll3)
         }
     }
 }
