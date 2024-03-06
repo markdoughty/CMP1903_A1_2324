@@ -15,6 +15,11 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
-        //Method
+        public Game _testGame = new Game();
+        public Die _testDie = new Die();
+
+        //creates a new game and die class
+
+        Debug.Assert(
     }
 }
