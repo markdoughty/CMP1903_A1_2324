@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    static void Main(string[] args)
-    {
+    static void Main(string[] args){
         Console.WriteLine("The dice roll game"); //displays to the user the game has started
 
         Console.Write("Enter the number of dice to roll: "); //Allows the user to enter number of dice to be rolled
@@ -19,24 +18,25 @@ namespace CMP1903_A1_2324
 
         bool reroll = true; //Initially sets the reroll as true 
 
-         while (reroll)
-        {
+         while (reroll){
             Console.WriteLine("\nDice set"); 
             game.Program();
 
             string rerollInput; //allows the user to input the reroll choice
 
-            do
-            {
+            do{
                 Console.Write("Do you want to reroll? (Y/N): ");
                 rerollInput = Console.ReadLine().ToLower(); 
             } while (rerollInput != "Y" && rerollInput != "N"); //if user inputs something other than "Y" or "N" it loops back
 
             reroll = rerollInput == "Y"; //Rolls if Y
-
+             
+            Debug.Assert(Value >= 1 && Value <= 6, "Die roll out of expected range (1-6)."); //Checks to make sure that the dice cannot have a greater value than 6 or a lower value than 1
             
             Debug.Assert(total >= numberOfDice && total <= numberOfDice * 6,
                 $"Total is greater or less than the possible combination of totals ({numberOfDice} to {numberOfDice * 6})."); //Checks to make sure that the value cannot be creater than 18 or less that 3 as its not in the possible combination of die roll totals
+
+             
         }
     }
 }
