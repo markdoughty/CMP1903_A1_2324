@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903_A1_2324
+public class Dice
 {
-    internal class Die
+    private Random random;
+    public int FaceValue { get; private set; }
+
+    public Dice()
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
+        random = new Random();
+    }
 
-        //Property
-
-
-        //Method
-
-
+    public int Roll()
+    {
+        FaceValue = random.Next(1, 7); // Generates a random number between 1 and 6
+        return FaceValue;
     }
 }
