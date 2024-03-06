@@ -11,10 +11,11 @@ namespace CMP1903_A1_2324
     internal class Game
     {
         //calling the Die class
-        private Die Dice;
+        
         //creating a new function taking die as a perameter
         public int[] newDice(int die)
         {
+            var Dice = new Die();
             //declating a new List
             var terms = new List<int>();
             //creating a for loop that loops for the amount of die
