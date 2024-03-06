@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Represents a die with faces numbered from 1 to 6.
+    /// </summary>
     internal class Die
     {
         // Property to hold the current die value
@@ -15,15 +15,22 @@ namespace CMP1903_A1_2324
         // Random number generator
         private static Random random = new Random();
 
-        // Method to roll the die
+        /// <summary>
+        /// Rolls the die and returns the result.
+        /// </summary>
+        /// <returns>The value rolled on the die.</returns>
         public int Roll()
         {
+            // Generate a random index to select a face from the list of die faces
             int i = random.Next(Die_Faces.Count);
-            Roll_Value = Die_Faces[i];
-            return Roll_Value;
+            Roll_Value = Die_Faces[i]; // Assign the rolled value to the Roll_Value property
+            return Roll_Value; // Return the rolled value
         }
     }
 
+    /// <summary>
+    /// Represents a dice roller that allows continuous rolling of dice.
+    /// </summary>
     internal class DiceRoller
     {
         // List to store the rolls
@@ -31,38 +38,47 @@ namespace CMP1903_A1_2324
         // Sum of all rolls
         private int SumOfRolls = 0;
 
-        // Method to continuously roll dice until user chooses to stop
+        /// <summary>
+        /// Rolls the dice continuously until the user chooses to stop.
+        /// </summary>
         public void RollContinuous()
         {
             while (true)
             {
-                Die die = new Die();
-                int rollValue = die.Roll();
-                Rolls.Add(rollValue);
-                Console.WriteLine("You rolled a: " + rollValue);
+                Die die = new Die(); // Create a new instance of the Die class
+                int rollValue = die.Roll(); // Roll the die and get the roll value
+                Rolls.Add(rollValue); // Add the roll value to the list of rolls
+                Console.WriteLine("You rolled a: " + rollValue); // Display the roll value to the user
 
-                SumOfRolls += rollValue;
+                SumOfRolls += rollValue; // Add the roll value to the total sum
 
-                Console.WriteLine("Do you want to roll again? (Y/N):");
-                string choice = Console.ReadLine().ToUpper();
+                Console.WriteLine("Do you want to roll again? (Y/N):"); // Prompt the user to roll again
+                string choice = Console.ReadLine().ToUpper(); // Read the user's choice
                 if (choice == "N" || choice == "n")
-                    break;
+                    break; // Exit the loop if the user chooses not to roll again
             }
 
-            SummarizeResults();
+            SummarizeResults(); // Summarize the results after all rolls
         }
 
-        // Method to summarize the results of all rolls
+        /// <summary>
+        /// Summarizes the results of all rolls, calculates the total sum, and prints the average roll.
+        /// </summary>
         private void SummarizeResults()
         {
             Console.WriteLine("Summary of Rolls:");
             foreach (int roll in Rolls)
             {
-                Console.WriteLine(roll);
+                Console.WriteLine(roll); // Display each roll value
             }
-            Console.WriteLine("Total Sum: " + SumOfRolls);
+            Console.WriteLine("Total Sum: " + SumOfRolls); // Display the total sum of all rolls
+
             // Calculate and print the average roll
-            Console.WriteLine("Average Roll: " + (SumOfRolls / Rolls.Count));
+            double averageRoll = (double)SumOfRolls / Rolls.Count;
+            Console.WriteLine("Average Roll: " + averageRoll);
+
+            // Call WriteToFile method to write the summary to a file
+            Print.WriteToFile(Rolls.ToArray(), SumOfRolls);
         }
     }
 }

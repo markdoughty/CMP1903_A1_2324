@@ -1,9 +1,17 @@
 ﻿using System;
+using System.IO;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Main class responsible for user interaction and control flow.
+    /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// Main entry point of the program.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
             // Prompt user whether they want to roll the die more than once
@@ -34,6 +42,51 @@ namespace CMP1903_A1_2324
              */
             Testing testing = new Testing();
             testing.RunTests();
+        }
+    }
+
+    /// <summary>
+    /// Class responsible for printing output to console and file.
+    /// </summary>
+    internal class Print
+    {
+        /// <summary>
+        /// Writes the specified text to the console.
+        /// </summary>
+        /// <param name="text">Text to be written.</param>
+        public static void Write(string text)
+        {
+            Console.WriteLine(text);
+        }
+
+        /// <summary>
+        /// Writes the summary of rolls, total sum, and average roll to a file.
+        /// </summary>
+        /// <param name="rolls">Array containing the individual roll values.</param>
+        /// <param name="totalSum">Total sum of all roll values.</param>
+        public static void WriteToFile(int[] rolls, int totalSum)
+        {
+            string filePath = "output.txt";
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                {
+                    writer.WriteLine("Summary of Rolls:");
+                    foreach (int roll in rolls)
+                    {
+                        writer.WriteLine(roll);
+                    }
+                    writer.WriteLine("Total Sum: " + totalSum);
+                    // Format the average roll to 2 decimal places
+                    double averageRoll = (double)totalSum / rolls.Length;
+                    writer.WriteLine("Average Roll: " + averageRoll.ToString("F2"));
+                }
+                Console.WriteLine($"Data written to file {filePath}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"An error occurred while writing to the file: {ex.Message}");
+            }
         }
     }
 }

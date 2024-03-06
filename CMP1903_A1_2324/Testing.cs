@@ -3,9 +3,15 @@ using System.Diagnostics;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Class responsible for testing the functionality of other classes.
+    /// </summary>
     internal class Testing
     {
         // Method to run tests on the classes
+        /// <summary>
+        /// Runs tests on the Die class.
+        /// </summary>
         public void RunTests()
         {
             // Create instances of Die class for each die
@@ -27,7 +33,7 @@ namespace CMP1903_A1_2324
             int expectedSum = rollValue1 + rollValue2 + rollValue3;
             Debug.Assert(expectedSum == expectedSum, $"Sum is not as expected. Expected: {expectedSum}, Actual: {expectedSum}");
 
-            Console.WriteLine("Tests passed successfully.");
+            Console.WriteLine("Tests passed successfully."); // Display success message
         }
     }
 }
