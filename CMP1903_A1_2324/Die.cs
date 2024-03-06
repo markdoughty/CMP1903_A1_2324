@@ -9,7 +9,7 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         // Property to hold the current die value
-        private int Roll_Value { get; set; }
+        private int Roll_Value { get; set; } // Getters and Setters for Encapsulation
         // List of possible faces of the die
         private List<int> Die_Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
         // Random number generator
