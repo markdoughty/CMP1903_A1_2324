@@ -25,3 +25,17 @@ namespace CMP1903_A1_2324 {
         }
     }
 }
+/*<Harry Paul> code review:
+* code has all functions listed in brief including the optional tasks
+* There is a slight logical error in that the die class only rolls between  and 5 due to 
+* random.next excluding the end value
+* 
+* code follows the style guidelines with methods and variables being in the appropriate cases
+* and comments formatted correctly
+*
+* code is easy to read and is thoroughly commented
+*
+* code handles erroneous inputs from users and prompts them to input something valid
+*
+* in summary I see no issues with the code. Good Job!
+*/
