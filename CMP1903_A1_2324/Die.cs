@@ -18,7 +18,7 @@ namespace CMP1903_A1_2324
         //Property
         
         private int _DieVal;
-        private Random rand = new Random();
+        private Random random = new Random();
         
         public int DieVal
         {
@@ -30,7 +30,7 @@ namespace CMP1903_A1_2324
 
         public int Roll()
         {
-            DieVal = rand.Next(1,7);
+            DieVal = random .Next(1,7);
 
             // checks to make sure that the current value is between expected range
 
