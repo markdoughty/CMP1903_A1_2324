@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace CMP1903_A1_2324
 {
     /// <summary>
-    /// Represents a die with faces numbered from 1 to 6. *
+    /// Represents a die with faces numbered from 1 to 6.
     /// </summary>
     internal class Die
     {
-        // Property to hold the current die value *
+        // Property to hold the current die value
         private int Roll_Value { get; set; } // Getters and Setters for Encapsulation
-        // List of possible faces of the die *
+        // List of possible faces of the die
         private List<int> _dieFaces = new List<int> { 1, 2, 3, 4, 5, 6 };
-        // Random number generator *
+        // Random number generator
         private static Random random = new Random();
 
         /// <summary>
@@ -35,9 +35,9 @@ namespace CMP1903_A1_2324
     /// </summary>
     internal class DiceRoller
     {
-        // List to store the rolls *
+        // List to store the rolls
         private List<int> Rolls = new List<int>();
-        // Sum of all rolls *
+        // Sum of all rolls
         private int SumOfRolls = 0;
 
         /// <summary>
