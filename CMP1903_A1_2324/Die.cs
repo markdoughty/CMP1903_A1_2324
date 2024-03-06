@@ -24,7 +24,7 @@ namespace CMP1903_A1_2324
 
 
             /*
-             * The Die class should contain one property to hold the current die value,
+             * The  Die class should contain one property to hold the current die value,
              * and one method that rolls the die, returns and integer and takes no parameters.
              */
 
