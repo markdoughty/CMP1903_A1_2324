@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
+    internal class Die
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-
-        //Method
+        private static Random random = new Random();
+        public int die_Value = null; /// Stores the current die value
+        public int die_Roll(); /// Die roll method
+        {
+            die_Value = random.Next(1,7); /// Assigns a random integer between 1 and 6
+            return die_Value /// Returns the new die value
+        }
     }
 }
