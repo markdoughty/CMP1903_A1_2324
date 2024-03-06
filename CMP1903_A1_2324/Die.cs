@@ -1,48 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Represents a six-sided die with methods for rolling and retrieving the roll value(s).
+    /// </summary>
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns an integer, and takes no parameters.
-         */
-
-        //Property
-        private int Roll_Value { get; set; } // Encapsulated
-        private List<int> Die_Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
+        //This sections holds the value of the dice
+        private int _RollsValues { get; set; }
+        // Lists faces of the die (1-6)
+        private List<int> _Faces = new List<int> { 1, 2, 3, 4, 5, 6 };
         private static Random random = new Random();
 
-        //Method
+        /// <summary>
+        /// Method to roll the die and return the roll value(s).
+        /// </summary>
         public int Roll()
         {
-            int i = random.Next(Die_Faces.Count);
-            Roll_Value = Die_Faces[i];
-            return Roll_Value;
+            int i = random.Next(_Faces.Count);
+            _RollsValues = _Faces[i];
+            return _RollsValues;/// <returns>The value rolled on the die.</returns>
         }
     }
 
+    /// <summary>
+    /// This code represents a dice roller with methods used for rolling the die once or continuously, and summarises the results.
+    /// </summary>
     internal class DiceRoller
     {
         private List<int> Rolls = new List<int>();
         private int SumOfRolls = 0;
 
-        public void RollContinuous()
+        /// <summary>
+        /// A method to roll the die once and update the rolls list and sum.
+        /// </summary>
+        public int DiceRollOnce()
+        {
+            Die die = new Die();
+            int _valueOfRoll = die.Roll();
+            Rolls.Add(_valueOfRoll);
+            SumOfRolls += _valueOfRoll;  // Update the sum with each roll
+            return _valueOfRoll;  /// <returns>The value rolled on the die.</returns>
+        }
+
+        
+
+        /// <summary>
+        /// A Method to summarise the results of all rolls
+        /// </summary>
+        private void DiceRollerSummariseResults()
+        {
+            Console.WriteLine("Here is the summary of your rolls:");
+            foreach (int roll in Rolls)
+            {
+                Console.WriteLine(roll);
+            }
+            Console.WriteLine("The total Sum of your rolls is: " + SumOfRolls);
+            // Calculates and prints the average roll
+            if (Rolls.Count > 0)
+            {
+                Console.WriteLine("Your average roll was: " + (SumOfRolls / Rolls.Count));
+            }
+        }
+
+        /// <summary>
+        /// A method to continuously roll dice until the user chooses to stop. It will then summarise the results.
+        /// </summary>
+        public void ContinuousDieRoller()
         {
             while (true)
             {
-                Die die = new Die();
-                int rollValue = die.Roll();
-                Rolls.Add(rollValue);
-                Console.WriteLine("You rolled a: " + rollValue);
-
-                SumOfRolls += rollValue;
+                int _rollValue = DiceRollOnce();
+                Console.WriteLine("You rolled a: " + _rollValue);
 
                 Console.WriteLine("Do you want to roll again? (Y/N):");
                 string choice = Console.ReadLine().ToUpper();
@@ -50,18 +84,16 @@ namespace CMP1903_A1_2324
                     break;
             }
 
-            SummarizeResults();
+            DiceRollerSummariseResults();
         }
 
-        private void SummarizeResults()
+        /// <summary>
+        /// A method to get the sum of all rolls.
+        /// </summary>
+        public int ValueSum()
         {
-            Console.WriteLine("Summary of Rolls:");
-            foreach (int roll in Rolls)
-            {
-                Console.WriteLine(roll);
-            }
-            Console.WriteLine("Total Sum: " + SumOfRolls);
-            Console.WriteLine("Average Roll: " + (SumOfRolls / Rolls.Count));
+            return SumOfRolls;        /// <returns>The sum of all rolls.</returns>
         }
     }
 }
+

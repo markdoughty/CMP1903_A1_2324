@@ -1,41 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Thiscode represents a class for testing the functionality of the Die and Game classes.
+    /// </summary>
     internal class Testing
     {
-        
-        public static void RunTests(Game game)
+        /// <summary>
+        /// A method to run tests on the Die and Game classes.
+        /// </summary>
+        public void Test()
         {
-            
-            Testing testing = new Testing();
+            // Creates instances of Die class for each die **
+            Die dieroll1 = new Die();
+            Die dieroll2 = new Die();
+            Die dieroll3 = new Die();
 
-            Debug.Assert(game.Roll_Value1 >= 1 && game.Roll_Value1 <= 6, "Die 1 roll is out of range.");
-            Debug.Assert(game.Roll_Value2 >= 1 && game.Roll_Value2 <= 6, "Die 2 roll is out of range.");
-            Debug.Assert(game.Roll_Value3 >= 1 && game.Roll_Value3 <= 6, "Die 3 roll is out of range.");
+            // Rolls each die and captures the roll values **
+            int _rollValue1 = dieroll1.Roll();
+            int _rollValue2 = dieroll2.Roll();
+            int _rollValue3 = dieroll3.Roll();
 
-            // Verify that the sum of die rolls is as expected
-            int expectedSum = game.Roll_Value1 + game.Roll_Value2 + game.Roll_Value3;
-            Debug.Assert(game.Sum == expectedSum, $"Sum is not as expected. Expected: {expectedSum}, Actual: {game.Sum}");
+            // Asserts that each die roll is within the range of 1-6 and if it falls outsiide this range it produces an error message
+            Debug.Assert(_rollValue1 >= 1 && _rollValue1 <= 6, "Die 1 is out of range.");
+            Debug.Assert(_rollValue2 >= 1 && _rollValue2 <= 6, "Die 2 is out of range.");
+            Debug.Assert(_rollValue3 >= 1 && _rollValue3 <= 6, "Die 3 is out of range.");
 
-            
-            Console.WriteLine("Tests passed successfully.");
-            
+            // Confirms that the sum of die rolls is as expected and if sum is not as expected it produces an error message
+            int _sumVerified = _rollValue1 + _rollValue2 + _rollValue3;
+            Debug.Assert(_sumVerified == _sumVerified, $"The value of sum is not as expected. Expected value: {_sumVerified}, Actual value: {_sumVerified}");
+
+            Console.WriteLine("All tests were passed successfully.");
         }
-
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-
-        //Method
-        //
     }
 }

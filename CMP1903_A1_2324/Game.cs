@@ -6,50 +6,26 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// This code represents a game that involves rolling three dice and calculating the sum of their values.
+    /// </summary>
     internal class Game
     {
-        public readonly int Roll_Value1 = 0;
-        public readonly int Roll_Value2 = 0;
-        public readonly int Roll_Value3 = 0;
-        public int Sum = 0;
+        public int Sum_of_Rolls { get; private set; }
 
+        /// <summary>
+        /// Initialises the game with the sum of die rolls.
+        /// </summary>
 
-        
-        public Game()
+        public Game(int _rollValue1, int _rollValue2, int _rollValue3)
         {
-            
-
-            Die Die1 = new Die();
-            Roll_Value1 = Die1.Roll();
-            Console.WriteLine(Roll_Value1);
-
-            Die Die2 = new Die();
-            Roll_Value2 = Die2.Roll();
-            Console.WriteLine(Roll_Value2);
-
-            Die Die3 = new Die();
-            Roll_Value3 = Die3.Roll();
-            Console.WriteLine(Roll_Value3);
-
-            Sum = Roll_Value1 + Roll_Value2 + Roll_Value3;
-
-
-
+            Sum_of_Rolls = _rollValue1 + _rollValue2 + _rollValue3;
         }
-
     }
 }
-    /*
-     * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-     *
-     * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-     * rolls could be continous, and the totals and other statistics could be summarised for example.
-     */
-
-
-
-
-
-    //Methods
-
-
+/*
+ * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
+ *
+ * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
+ * rolls could be continuous, and the totals and other statistics could be summarized, for example.
+ */
