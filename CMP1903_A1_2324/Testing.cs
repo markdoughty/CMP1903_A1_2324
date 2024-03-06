@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903_A1_2324
+public class Tester
 {
-    internal class Testing
+    public static void PerformTest()
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
+        BoardGame boardGame = new BoardGame();
+        boardGame.RollDices();
 
-        //Method
+        // Verify that dice rolls are between 1 and 6
+        foreach (Dice dice in boardGame.dices)
+        {
+            Debug.Assert(dice.FaceValue >= 1 && dice.FaceValue <= 6, "Dice roll out of range");
+        }
+
+        // Verify that the sum of the three dice face values is as expected
+        int expectedTotalSum = 0;
+        foreach (Dice dice in boardGame.dices)
+        {
+            expectedTotalSum += dice.FaceValue;
+        }
+        Debug.Assert(expectedTotalSum >= 3 && expectedTotalSum <= 18, "Total sum of dice rolls out of range");
+
+        Console.WriteLine("Testing completed.");
     }
 }
