@@ -16,15 +16,17 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-            while(true)
-            {
-                Game game = new Game();
-                game.PlayGame();
-            }
-            /*Game game = new Game();
+
+            //Introduction to the program, tells the user what is going to happen
+            Console.WriteLine("This is a dice rolling program. First run will be the normal game. Second will run testing die objects.");
+
+            //Normal run of program
+            Game game = new Game();
             game.PlayGame();
 
-            Testing testing = new Testing();*/
+            //Testing run of program
+            Testing testing = new Testing();
+            testing.TestGame();
 
         }
     }
