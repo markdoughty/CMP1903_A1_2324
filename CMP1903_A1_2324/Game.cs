@@ -35,7 +35,7 @@ namespace CMP1903_A1_2324
             Roll1 = d1.Roll(); 
             Thread.Sleep(1); 
             Roll2 = d2.Roll(); 
-            Thread.Sleep(1);
+            Thread.Sleep(1); //Since randomness uses timestamps, sleeps for 1 millesecond to allow for a change in timestamp
             Roll3 = d3.Roll();
             Thread.Sleep(1);
             if (Roll1 == Roll2 && Roll2 == Roll3)
