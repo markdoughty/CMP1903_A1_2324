@@ -25,15 +25,14 @@ namespace CMP1903_A1_2324
         }
 
         //Method
-        //Randomly generates and returns random integers between 1 and 6. System must pause between generations otherwise all dice will be the same number.
+        //Randomly generates and returns random integers between 1 and 6.
+        //System must pause between generations otherwise all dice will be the same number.
         public int Generate()
         {
             Thread.Sleep(600);
             Random rnd = new Random();
-            int number = rnd.Next(1, 7);
-            return number;
+            int Roll = rnd.Next(1, 7);
+            return Roll;
         }
-
-
     }
 }

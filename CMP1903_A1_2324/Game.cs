@@ -15,9 +15,10 @@ namespace CMP1903_A1_2324
          * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
-        private int Sum = 0;
+        private int sum = 0;
         //Methods
-        //Use the die constructor to create 3 different die which then each generate a number which is stored in the new die class. These are then displayed to the console, summed, returned and the sum is also displayed.
+        //Use the die constructor to create 3 different die which each generate a random number
+        //These are then displayed to the console, summed, returned and the sum is also displayed.
         public int Build()
         {
             Die die1 = new Die();
@@ -33,10 +34,9 @@ namespace CMP1903_A1_2324
             int numberThree = die3.Generate();
             Console.WriteLine($"Dice Three: {numberThree}");
 
-            Sum = numberOne + numberTwo + numberThree;
+            sum = numberOne + numberTwo + numberThree;
 
-            return Sum;
+            return sum;
         }
-
     }
 }
