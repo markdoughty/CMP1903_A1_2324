@@ -1,5 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +19,16 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        public void Test()
+        {
+            Game game = new Game();
+
+            int sum = game.Sum();
+
+            Debug.Assert(sum >= 3 && sum <= 18);
+
+            Debug.Assert(game.die1.DiceRoll >= 1 && game.die1.DiceRoll <= 6);
+        }
+
     }
 }
