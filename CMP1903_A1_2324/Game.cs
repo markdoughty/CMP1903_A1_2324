@@ -16,6 +16,34 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        //handles creating die objects, calculating sum and displaying to console
+        public void PlayGame()
+        {
+            //Creates three die objects
+            Die one = new Die();
+            Die two = new Die();
+            Die three = new Die();
 
+            //old way of recording sum
+            //int sum = RollDie(one, 1) + RollDie(two, 2) + RollDie(three, 3);
+
+            //Tells user to press enter, done to make numbers random as time passes changing the random seed
+            Console.WriteLine("Press enter to roll each dice!");
+
+            //Calculates the sum by rolling each die individually, adding return values, showing resulting sum to user
+            Console.WriteLine("The sum is: " + (RollDie(one, 1) + RollDie(two, 2) + RollDie(three, 3)) + "!!! END\nPress enter to continue...");
+            Console.ReadLine();
+        }
+
+        //Used to report individual rolls, passing the current die object and its number
+        public int RollDie(Die die, int number)
+        {
+            int roll = die.Roll();
+
+            Console.Write("Die " + number + " rolled: " + roll);
+            Console.ReadLine();
+
+            return roll;
+        }
     }
 }

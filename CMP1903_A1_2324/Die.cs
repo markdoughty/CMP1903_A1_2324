@@ -13,11 +13,27 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        //Property
 
+        //This private integer holds the die's value
+        private int _value;
+
+        //Property
+        private int Value
+        {
+            get { return _value; }
+            set { _value = value; }
+        }
 
         //Method
-
+        //Changes the die's value and returns value of roll to be displayed
+        public int Roll()
+        {
+            //Creates new random with seed based on the computer's clock, to seemingly create random output each use
+            Random rand = new Random((int)DateTime.Now.Ticks);
+            //Randomly picks value between 1-6
+            Value = rand.Next(1, 7);
+            return Value;
+        }
 
     }
 }
