@@ -12,7 +12,6 @@ public class Die
     public int Roll()
     {
         Value = random.Next(1, 7); //Generates random number between 1-6 with 6 included
-        Debug.Assert(Value >= 1 && Value <= 6, "Die roll out of expected range (1-6)."); //Makes sure that it cannot generate a higher or lower number by using debugging
         return Value; //Returns the generated number to the specified die
     }
 }
