@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    public void Program()
-    {
+    public void Program(){
+        
         int total = 0; //Sets the initial total to 0 to have a value
 
         Console.WriteLine($"Rolling {numberOfDice} dice..."); //specifies the total number of dice to the user
 
-        for (int x = 0; x < num_Dice; x++) //For loop to make sure that it does not roll over or under the specified amount of dice
-        {
+        for (int x = 0; x < num_Dice; x++) //For loop to make sure that it does not roll over or under the specified amount of dice{
+            
             int rollValue = dice[x].Roll(); //Sets the roll value equal to the value that each die has been rolled
             Console.WriteLine($"Die {x + 1} Value: {rollValue}"); //Specifies to the user what each die rolled
             total += rollValue; //Totals up the value of all the dice combined and gives a accumulative sum
