@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CMP1903_A1_2324;
 
 namespace CMP1903_A1_2324
 {
@@ -14,15 +15,19 @@ namespace CMP1903_A1_2324
          */
 
         //Property
-        int die_value 
+        public int die_value //creates an integer veriable that we asign the roll to
 
 
 
         //Method
-        public roll()
+        public roll()        //creates a function and assigns the result to the variable I declared earlier
         {
-            rnd.next(1,7) 
+            die_value = rnd.next(1,7) //creates a random integer between 1 and 6 and assigns it to a variable
+
+            return die_value
         }
+
+        
 
 
     }
