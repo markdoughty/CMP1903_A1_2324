@@ -13,6 +13,7 @@ namespace CMP1903_A1_2324
         {
             Die die = new Die();
 
+Development
             // Test Roll method
             Debug.Assert(die.Roll() >= 1 && die.CurrentValue <= 6);
 
@@ -44,5 +45,9 @@ namespace CMP1903_A1_2324
             int sum = game.GetDiceRolls().Sum();
             Debug.Assert(sum >= 3 && sum <= 18, "Total sum out of range: " + sum);
         }
+
+        //Method
+        //
+Development
     }
 }
