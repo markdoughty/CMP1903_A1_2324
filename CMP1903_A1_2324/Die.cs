@@ -9,14 +9,14 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         //Property
-        
+
         static Random random = new Random():
         int dieroll;
 
         //Method
         public int Roll()
         {
-            currentRoll = random.Next(0,6);
+            dieroll = random.Next(0,6);
             return dieroll;
         }
     }
