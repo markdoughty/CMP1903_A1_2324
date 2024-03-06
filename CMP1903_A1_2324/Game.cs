@@ -6,16 +6,53 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Game
+    class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        public  Tuple<int, int, int> myMethod()
+        {
+                
+            int count = 0;
+                
+            List<int> RollList = new List<int>();
 
-        //Methods
+                
+            
+                //Created three die objects 
+                Die Die1 = new Die();
+               
 
+
+                    
+
+                // Roll all three and saved it in roll 1, 2, 3 
+                Console.WriteLine();
+                int Roll1 = Die1.Roll();
+                int Roll2 = Die1.Roll();
+                int Roll3 = Die1.Roll();
+
+                //Output what each die roll was
+                Console.WriteLine("Die 1: " + Roll1);
+                Console.WriteLine("Die 2: " + Roll2);
+                Console.WriteLine("Die 3: " + Roll3);
+
+                //Calculating the total
+                int rolltotal = Roll1 + Roll2 + Roll3;
+
+                //Displaying the total
+                Console.WriteLine("The total amount is " +rolltotal);
+
+                RollList.Add(Roll1);
+                RollList.Add(Roll2);
+                RollList.Add(Roll3);
+
+
+
+                return new Tuple<int, int, int>(RollList[0], RollList[1], RollList[2]);
+
+
+
+
+            
+        }
     }
 }
