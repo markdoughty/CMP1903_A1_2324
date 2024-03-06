@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,28 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        private void testDie()
+        {
+            Die die = new Die();
+            int DieResult = die.Roll();
+
+            Debug.Assert(DieResult >= 1 && DieResult <= 6, "invalid Die Value");
+
+            Console.WriteLine($" test die roll result: {DieResult}");
+        }
+
+        private void testGame()
+        {
+            Game game = new Game();
+            int Total = game.DiceTotal();
+            //int Total = 1;
+            Debug.Assert(Total >= 3 && Total <= 18, "invalid roll total");
+            Console.WriteLine($" test roll total is {Total}");
+        }
+        public Testing()
+        {
+            testDie();
+            testGame();
+        }
     }
 }
