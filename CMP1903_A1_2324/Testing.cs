@@ -26,6 +26,8 @@ namespace CMP1903_A1_2324
 
         //tests boundaries of the roll values to ensure all values are between 1 and 6
 
-        Debug.Assert((_roll1 + _roll2 + _roll3) == 
+        Debug.Assert((_roll1 + _roll2 + _roll3) == Game._dieTotal()); 
+
+        //tests that the sum of the die is as expected
     }
 }
