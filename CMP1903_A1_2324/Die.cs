@@ -4,20 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903_A1_2324
+public class Die
 {
-    internal class Die
+    private static Random random = new Random(); //Sets random as a new random in order to roll a number from 1-6 randomly
+    public int Value { get; private set; } //Sets a new integer value for the dice to store the random number
+
+    public int Roll()
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-
-        //Property
-
-
-        //Method
-
-
+        Value = random.Next(1, 7); //Generates random number between 1-6 with 6 included
+        Debug.Assert(Value >= 1 && Value <= 6, "Die roll out of expected range (1-6)."); //Makes sure that it cannot generate a higher or lower number by using debugging
+        return Value; //Returns the generated number to the specified die
     }
 }
