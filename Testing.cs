@@ -4,16 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CMP1903_A1_2324
 {
-    internal class Die
+    internal class Testing
     {
-        private static Random random = new Random();
-        public int die_Value = null; /// Stores the current die value
-        public int die_Roll(); /// Die roll method
+        private int sum
+        private int roll
+
+        public void test_Game(); /// Tests the game class
         {
-            die_Value = random.Next(1,7); /// Assigns a random integer between 1 and 6
-            return die_Value /// Returns the new die value
+            Game game = new Game(); /// Creates a new game object
+            sum = game.dice_Sum(); /// Calls the dice sum method and assigns it to sum
+            Debug.Assert(sum >= 3 && sum <= 18, 'Invalid die sum'); /// Checks that the sum is within range 
         }
+
+        public void test_Die(); /// Tests the die class
+        {
+            Die die = new Die(); /// Creates a new die object
+            roll = game.die_Roll(); /// Calls the die roll method and assigns it to roll
+            Debug.Assert(roll >=1 && roll <=6, 'Invalid die roll'); /// Checks that the roll is within range
+        }   
     }
 }
