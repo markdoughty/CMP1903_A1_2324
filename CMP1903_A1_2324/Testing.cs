@@ -1,20 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
+     class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
+        Game game = new Game(); //Instntiates the game class (creates an object of the game class)
+        public void TestRollDices() //Method to test the RollDices method
+        {
+            game.RollDices(); //Calls the RollDices method
 
-        //Method
+            int[] rolls = game.RollThree(); //Calls the RollThree method and stores the return value in the rolls array
+            int sumOfRolls = 0; //Variable to hold the sum of the rolls
+
+            for (int i = 0; i < rolls.Length; i++) //Loops through the rolls array
+            {
+                Debug.Assert(rolls[i] >= 1 && rolls[i] <= 6, $"Test Failed: {rolls[i]}. Roll should be between 1 and 6."); //Asserts that the roll of each dice object is between 1 and 6
+                sumOfRolls += rolls[i]; //Adds the roll of each dice object to the sum of the rolls
+            }
+
+            int exceptedSum = rolls.Sum(); //Calculates the sum of the rolls
+            Debug.Assert(sumOfRolls == exceptedSum, $"Test Failed: {sumOfRolls}. Sum of rolls should be {exceptedSum}."); //Asserts that the sum of the rolls is equal to the expected sum
+        }
     }
 }
