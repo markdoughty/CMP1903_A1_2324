@@ -37,6 +37,10 @@ namespace CMP1903_A1_2324
             sum = numberOne + numberTwo + numberThree;
 
             return sum;
+
+            //Proof of encapsulation being used as this line returns an error
+            //This is because _number cannot be modified outside the Die class.
+            //_number = 0;
         }
     }
 }

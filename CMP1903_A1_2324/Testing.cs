@@ -26,8 +26,8 @@ namespace CMP1903_A1_2324
         {
             try
             {
-                Die die = new Die();
-                number = die.Roll();
+                Die Dice = new Die();
+                number = Dice.Roll();
                 Debug.Assert(number >= 1 && number <= 6);
 
                 Game game = new Game();

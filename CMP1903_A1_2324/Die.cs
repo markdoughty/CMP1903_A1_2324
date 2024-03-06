@@ -15,13 +15,13 @@ namespace CMP1903_A1_2324
          */
 
         //Field
-        private int _Number;
+        private int _number;
 
         //Property
-        public int Number
+        public int number
         {
-            get { return _Number; }
-            set { _Number = value; }
+            get { return _number; }
+            set { _number = value; }
         }
 
         //Method
@@ -31,8 +31,8 @@ namespace CMP1903_A1_2324
         {
             Thread.Sleep(600);
             Random rnd = new Random();
-            int Generate = rnd.Next(1, 7);
-            return Generate;
+            _number = rnd.Next(1, 7);
+            return _number;
         }
     }
 }
