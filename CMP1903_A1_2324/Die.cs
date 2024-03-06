@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +8,33 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
+        private int current_Value;
+        
+        
+        public int CurrentValue
+        {
+            get => current_Value;
 
-        //Property
+            set => current_Value = value;
+        }
 
 
-        //Method
+        // setting random function
+        Random rnd = new Random();
 
+        //declaring new function roll()
+        public int Roll()
+        {
+            //rolling a number between 1 and 6
+            int newRoll = rnd.Next(1, 7);
+
+
+            //setting the roll to the current value
+            current_Value = newRoll;
+            //returning the roll
+            return newRoll;
+        }
 
     }
 }
+
