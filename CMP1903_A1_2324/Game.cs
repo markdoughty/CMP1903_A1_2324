@@ -23,11 +23,11 @@ namespace CMP1903_A1_2324
 
         private int _TotalRoll;
 
-        public int TotalRoll { get { return _TotalRoll; } set { _TotalRoll = TotalRoll } }
+        public int TotalRoll { get { return _TotalRoll; } set { _TotalRoll = TotalRoll; } }
 
         public int Sum()
         {
-            int _TotalRoll = die1 + die2 + die3 ;
+            int _TotalRoll = die1.Roll() + die2.Roll() + die3.Roll() ;
             return _TotalRoll; 
         }
 
