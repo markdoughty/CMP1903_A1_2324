@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,10 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+        private Die[] dice;
+
+
+
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
@@ -16,6 +20,31 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+        public Game()
+        {
+
+            dice = new Die[3];
+            for (int i = 0; i < 3; i++)
+            {
+                dice[i] = new Die();
+            }
+
+        }
+
+        public int DiceTotal()
+        {
+            int Total = 0;
+            foreach (Die die in dice)
+            {
+                //die.Roll();
+                //Total += die.DieTotal;
+                Total += die.Roll();
+            }
+
+            return Total;
+
+
+        }
 
     }
 }
