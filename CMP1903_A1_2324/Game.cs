@@ -24,7 +24,12 @@ namespace CMP1903_A1_2324
 
         //created the three die objects 
 
-        
+        private int _roll1 = _die1._roll();
+        private int _roll2 = _die2._roll();
+        private int _roll3 = _die3._roll(); 
+
+        //assigned the roll value to each die
+        //values assigned to private variables
         
 
 
