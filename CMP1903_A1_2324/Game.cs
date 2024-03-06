@@ -47,18 +47,24 @@ namespace CMP1903_A1_2324
 
             while (continueRolling) //loops while continueRolling is true
             {
-                string userInput = Console.ReadLine(); //Reads the user input
+                try
+                {
+                    string userInput = Console.ReadLine(); //Reads the user input
 
-                if (userInput.ToLower() == "exit") //Checks if the user input is "exit"
-                {
-                    continueRolling = false; //Sets continueRolling to false
+                    if (userInput.ToLower() == "exit") //Checks if the user input is "exit"
+                    {
+                        continueRolling = false; //Sets continueRolling to false
+                    }
+                    else
+                    {
+                        RollThree(); //Calls the RollThree method
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    RollThree(); //Calls the RollThree method
+                    Console.WriteLine($"An error occurred while processing user input: {ex.Message}");
                 }
             }
         }
-
     }
 }
