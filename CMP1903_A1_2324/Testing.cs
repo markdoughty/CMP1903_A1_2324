@@ -9,14 +9,8 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
 
-        //Method
+        /* the die test works the same way as the test game*/
         private void testDie()
         {
             Die die = new Die();
@@ -26,15 +20,19 @@ namespace CMP1903_A1_2324
 
             Console.WriteLine($" test die roll result: {DieResult}");
         }
-
+        /* this error handling works by using the Debug.assert to take the 
+         seperate roll's total value and checking against the min/max
+        roll if it is within the range it wil show the test total if its
+        not within the range it will throw up an error message*/
         private void testGame()
         {
             Game game = new Game();
             int Total = game.DiceTotal();
-            //int Total = 1;
+            //int Total = 1; <--this was used force an error allowing to check if the error handling worked properly
             Debug.Assert(Total >= 3 && Total <= 18, "invalid roll total");
             Console.WriteLine($" test roll total is {Total}");
         }
+        //calls the functions
         public Testing()
         {
             testDie();
