@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903_A1_2324
+public class Tester
 {
-    internal class Program
+    public static void PerformTest()
     {
-        static void Main(string[] args)
+        BoardGame boardGame = new BoardGame();
+        boardGame.RollDices();
+
+        // Verify that dice rolls are between 1 and 6
+        foreach (Dice dice in boardGame.dices)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Debug.Assert(dice.FaceValue >= 1 && dice.FaceValue <= 6, "Dice roll out of range");
         }
+
+        // Verify that the sum of the three dice face values is as expected
+        int expectedTotalSum = 0;
+        foreach (Dice dice in boardGame.dices)
+        {
+            expectedTotalSum += dice.FaceValue;
+        }
+        Debug.Assert(expectedTotalSum >= 3 && expectedTotalSum <= 18, "Total sum of dice rolls out of range");
+
+        Console.WriteLine("Testing completed.");
     }
 }
