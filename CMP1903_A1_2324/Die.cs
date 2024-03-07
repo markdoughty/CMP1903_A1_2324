@@ -28,7 +28,7 @@ namespace CMP1903_A1_2324
             Roll_Value = _dieFaces[i]; // Assign the rolled value to the Roll_Value property
             return Roll_Value; // Returns the rolled value
         }
-    }
+    }  
 
     /// <summary>
     /// Represents a dice roller that allows continuous rolling of dice.
