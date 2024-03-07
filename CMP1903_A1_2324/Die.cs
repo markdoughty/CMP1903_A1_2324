@@ -14,7 +14,7 @@ namespace CMP1903_A1_2324
 
         public int Roll()
         {
-            dieroll = random.Next(1,6);
+            dieroll = random.Next(1,7); //1-7 as it is not inclusive
             return dieroll;
         }
     }
