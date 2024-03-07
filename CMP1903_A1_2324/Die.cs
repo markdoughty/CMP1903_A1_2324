@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    
-    public class Die
+    internal class Die
     {
-        private readonly Random _randomValue;
-        public Die()
+         public class Die
         {
-            _randomValue = new Random();
-        }
-        public int Roll()
-        {  
-            return _randomValue.Next(1,7);
+            private readonly Random _randomValue;
+            public Die()
+            {
+                _randomValue = new Random();
+            }
+            public int Roll()
+            {  
+                return _randomValue.Next(1,7);
+            }
         }
     }
 }
