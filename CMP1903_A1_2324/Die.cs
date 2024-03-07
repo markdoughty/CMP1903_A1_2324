@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Die
+    internal class Dice
     {
         /*
          * The Die class should contain one property to hold the current die value,
@@ -15,12 +15,12 @@ namespace CMP1903_A1_2324
         
 
         //Property
-        public int value //Created a place to store dice values.
+        static Random rand = new();
 
         //Method
         public int dice_roll()
         {
-            value = rnd.next(1,7)
+            int value = rnd.next(1,7)
 
             return value
         }
