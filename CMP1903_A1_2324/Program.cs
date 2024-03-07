@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Program
+    
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                Game game = new Game();
-                game.PrintTotalValueOfDices();
+            Game game = new Game();
+            game.PrintTotalValueOfDices();
         
-                Testing testing = new Testing();
-                testing.TestDiceRolls();
-                testing.TestGameSum();
-            } 
-        }
+            Testing testing = new Testing();
+            testing.TestDiceRolls();
+            testing.TestGameSum();
+        } 
     }
+    
 }
