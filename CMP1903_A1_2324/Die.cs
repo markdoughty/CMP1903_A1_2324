@@ -8,17 +8,16 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-         public class Die
+        
+        private readonly Random _randomValue;
+        public Die()
         {
-            private readonly Random _randomValue;
-            public Die()
-            {
-                _randomValue = new Random();
-            }
-            public int Roll()
-            {  
-                return _randomValue.Next(1,7);
-            }  
+            _randomValue = new Random();
         }
+        public int Roll()
+        {  
+            return _randomValue.Next(1,7);
+        }  
+        
     }
 }
