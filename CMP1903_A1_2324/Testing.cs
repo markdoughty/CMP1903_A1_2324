@@ -13,28 +13,14 @@ namespace CMP1903_A1_2324
         {
             Die die = new Die();
             int roll = die.Roll();
-            if (roll < 1 || roll > 6) // checks if number is between 1 and 7
-            {
-                Console.WriteLine("Die roll is not between 1 and 6."); //outputs if not
-            }
-            else
-            {
-                Console.WriteLine("Die roll is between 1 and 6."); //ouputs if its correct
-            }   
+            Debug.Assert(Array.TrueForAll(rolls, roll => roll >= 1 && roll <= 6), "Die rolls are not between 1 and 6."); //checks if dice is rools between 1 and 6
         }
         public void TestGameSum()
         {
             Game game = new Game();
             int sum = game.TotalValueOfDices();
                 
-            if (sum < 3 || sum > 18) //checks if the sum is between 3 and 18
-            {
-                Console.WriteLine("The sum of the three values is not as expected.");//outputs if not
-            }
-            else
-            {
-                Console.WriteLine("The sum of the three values is as expected.");//ouputs if its correct
-            }
+            Debug.Assert(sum >= 3 && sum <= 18, "Sum of the three values is not as expected."); // checks if sum of dice is between 3 and 18
         }
     }
     
