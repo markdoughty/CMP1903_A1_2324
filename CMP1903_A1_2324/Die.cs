@@ -10,7 +10,10 @@ namespace CMP1903_A1_2324
     {
         private int current_Value;
         
-        
+        /// <summary>
+        /// exposes _current value whle not allowing it to be changed by anything 
+        /// other than the class or its children
+        /// </summary>
         public int CurrentValue
         {
             get => current_Value;
@@ -19,16 +22,15 @@ namespace CMP1903_A1_2324
         }
 
 
-        // setting random function
-        Random rnd = new Random();
 
-        //declaring new function roll()
+        /// <summary>
+        /// picks a random number between 1 and 6, sets that to the current value and returns the result
+        /// </summary>
+        /// <returns>the random number</returns>
         public int Roll()
         {
             //rolling a number between 1 and 6
-            int newRoll = rnd.Next(1, 7);
-
-
+            int newRoll = Program.RandomInstance.Next(1, 7);
             //setting the roll to the current value
             current_Value = newRoll;
             //returning the roll
