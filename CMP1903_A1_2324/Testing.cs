@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        // runs both methods
+        // runs both methods.
         public Testing() {
             TestDiceRollValue();
             TestDiceRollSum();

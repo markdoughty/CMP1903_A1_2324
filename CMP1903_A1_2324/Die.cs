@@ -32,7 +32,7 @@ namespace CMP1903_A1_2324
         {
             DieVal = random .Next(1,7);
 
-            // checks to make sure that the current value is between expected range
+            // checks to make sure that the current value is between expected range.
 
             return DieVal;
             

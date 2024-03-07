@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
         public int DiceGame()
         {
 
-            // 3 objects created from Die class
+            // 3 objects created from Die class.
             Die Die = new Die();
 
             // initiate roll
