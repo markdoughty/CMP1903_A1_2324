@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using CMP1903_A1_2324;
@@ -44,7 +46,7 @@ namespace CMP1903_A1_2324
         //private int dice3 = 0;
 
         Die DiceOne = new Die();
-        Die DiceTwo = new Die();
+        Die DiceTwo = new Die();    //created Three die objects
         Die DiceThree = new Die();
 
         //Methods
@@ -56,24 +58,23 @@ namespace CMP1903_A1_2324
             Console.WriteLine("You rolled a " + DiceOne);
             
             int RollTwo = DiceTwo.dice_roll();
-            Console.WriteLine("You rolled a " + DiceTwo);
+            Console.WriteLine("You rolled a " + DiceTwo);       //The three created die are rolled
 
             int RollThree = DiceTwo.dice_roll();
             Console.WriteLine("You rolled a " + DiceThree);
-
-            STotal();
+            
+            int RollTotal()
+            {
+                int Sum = RollOne + RollTwo + RollThree;
+                Console.WriteLine("The sum of the dice is:" + Sum);     //The totals of the die are added together and returned.
+                return Sum;
+            }
 
         }
-
-        int STotal()
-        {
-            int Sum = RollOne + RollTwo + RollThree;
-            Console.WriteLine("The sum of the dice is:" + Sum);
-            return Sum;
-        }
+  
     }
-    
-    class Program()
+
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -83,11 +84,13 @@ namespace CMP1903_A1_2324
              */
         
             Game newgame = new Game();
-            
+        
+
         }
     }
-    public class Testing
-    {
+
+   public class Testing
+   {
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.
@@ -97,6 +100,11 @@ namespace CMP1903_A1_2324
 
         //Method
 
-    }
+        for (int i = 0; i < 500; i++)
+        {
+            (int Sum, int RollOne, int RollTwo, int RollThree = Game.RollTotal())
+        }
 
+    }
+   
 }
