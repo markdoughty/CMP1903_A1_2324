@@ -20,11 +20,12 @@ namespace CMP1903_A1_2324
         /// <summary>
         /// Method to roll the die and return the roll value(s). 
         /// </summary>
+        /// <returns>The value rolled on the die.</returns>
         public int Roll()
         {
             int i = random.Next(_faces.Count);
             _RollsValues = _faces[i];
-            return _RollsValues;/// <returns>The value rolled on the die.</returns>
+            return _RollsValues;
         }
     }
 
