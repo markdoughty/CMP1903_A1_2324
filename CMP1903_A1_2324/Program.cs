@@ -14,6 +14,15 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
+            Game game = new Game(); 
+            string uInput = "";
+
+            while (uInput.ToLower() != "stop")
+            {
+                game.gameRoll();
+                uInput = Console.ReadLine();
+                
+            }
         }
     }
 }

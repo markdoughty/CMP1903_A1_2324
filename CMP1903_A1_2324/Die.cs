@@ -16,9 +16,9 @@ namespace CMP1903_A1_2324
 
         //Property
 
-        private var _gameDie;
+        private int _gameDie;
 
-        private static Random random = new Random();
+        static Random random = new Random();
 
         //Method
 

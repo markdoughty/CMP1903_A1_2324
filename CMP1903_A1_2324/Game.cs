@@ -20,15 +20,12 @@ namespace CMP1903_A1_2324
         private Die _die1 = new Die();
         private Die _die2 = new Die();
         private Die _die3 = new Die();
-        public int roll1;
-        public int roll2;
-        public int roll3;
 
-        public void ganeRoll()
+        public void gameRoll()
         {
-            roll1 = _die1.roll();
-            roll2 = _die2.roll();
-            roll3 = _die3.roll();
+            int roll1 = _die1.Roll();
+            int roll2 = _die2.Roll();
+            int roll3 = _die3.Roll();
             Console.WriteLine($"roll 1 = {roll1}\nroll 2 = {roll2}\nroll 3 = {roll3}\nsum = {roll1 + roll2 + roll3}");
         }
  
