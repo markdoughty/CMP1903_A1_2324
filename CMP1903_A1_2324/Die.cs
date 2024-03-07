@@ -11,7 +11,7 @@ namespace CMP1903_A1_2324
         //Property
 
         private int _DieVal;
-        private Random random = new Random();
+        private static Random random = new Random();
 
         public int DieVal
         {

@@ -7,8 +7,11 @@ namespace CMP1903_A1_2324
         // runs both methods.
         public Testing()
         {
+            // testing is run before the final output
+            Program.isTesting = true;
             TestDiceRollValue();
             TestDiceRollSum();
+            Program.isTesting = false;
         }
         public void TestDiceRollValue()
         {

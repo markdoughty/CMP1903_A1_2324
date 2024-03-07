@@ -10,30 +10,28 @@ namespace CMP1903_A1_2324
         {
 
             // 3 objects created from Die class.
-            Die Die = new Die();
+            Die die1 = new Die();
+            Die die2 = new Die();
+            Die die3 = new Die();
 
             // initiate roll
-            int Roll1 = Die.Roll();
-            int Roll2 = Die.Roll();
-            int Roll3 = Die.Roll();
+            int roll1 = die1.Roll();
+            int roll2 = die2.Roll();
+            int roll3 = die3.Roll();
 
-            // print result if test is active
-
-            if (globalTestActive.testActive == false)
+            // does not print result if test is active
+            if (Program.isTesting == false)
             {
-                Console.WriteLine("Die 1: " + Roll1);
-                Console.WriteLine("Die 2: " + Roll2);
-                Console.WriteLine("Die 3: " + Roll3);
-
-                globalTestActive.testActive = true;
+                Console.WriteLine("Die 1: " + roll1);
+                Console.WriteLine("Die 2: " + roll2);
+                Console.WriteLine("Die 3: " + roll3);
             }
 
             // sum of 3 dice rolls
-            int RollTotal = Roll1 + Roll2 + Roll3;
+            int RollTotal = roll1 + roll2 + roll3;
 
             // converts total to string so it can be printed
             RollTotal.ToString();
-
             return RollTotal;
 
 
