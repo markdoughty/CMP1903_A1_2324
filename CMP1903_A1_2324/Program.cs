@@ -17,6 +17,7 @@ namespace CMP1903_A1_2324
              Game game = new Game();
              string input = "";
 
+            Testing.StartTests();
              while (input.ToLower() != "exit")
              {
                 game.rollingDice();

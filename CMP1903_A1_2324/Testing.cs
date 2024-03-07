@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +19,16 @@ namespace CMP1903_A1_2324
 
         //properties
 
-        //Method
 
-    
+        //Method
+        public static void StartTests()
+        {
+            Die testingDie = new Die();
+            for (int i = 0; i < 1000; i++)
+            {
+                int var = testingDie.Roll();
+                Debug.Assert(var >= 1 && var <= 6, "roll out of range.");
+            }
+        }
     }
 }

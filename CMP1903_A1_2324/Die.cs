@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
         //Method
         public int Roll()
         {
-            currentRoll = random.Next(0, 7);
+            currentRoll = random.Next(1, 7);
             return currentRoll;
         }
 
