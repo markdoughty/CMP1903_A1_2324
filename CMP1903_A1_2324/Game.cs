@@ -16,16 +16,24 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        die value = new die();
 
-        list <int> result =new list<int>();
+        //creates 3 private variables for use ro store the items we roll
+        private int _value1;
+        private int _value2;
+        private int _value3; 
 
+        die die1 = new die();
+        die die2 = new die();
+        die die3 = new die();
         
-        public int game_start()
-        { 
+        public void game_start()
+        {
+            _value1 = die1.roll();
+            _value2 = die2.roll();
+            _value3 = die3.roll();
 
-            public int roll_total = value1 + value2 + value3;
-            return roll_total;
+            public int roll_total = _value1 + _value2 + _value3;
+            console.writeline("the numbers you have rolled are " + _value1 ", " + _value2 " and "+ _value3 " which comes to a total of " + roll_total)
         }
 
 

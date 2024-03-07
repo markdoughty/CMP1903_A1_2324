@@ -18,6 +18,10 @@ namespace CMP1903_A1_2324
 
             Game play = new Game();
 
+            play.game_start()
+
+
+
 
 
 
