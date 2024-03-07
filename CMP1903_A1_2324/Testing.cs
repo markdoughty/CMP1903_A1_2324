@@ -6,15 +6,22 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
+   
+    public class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-
-        //Method
+        public void TestDiceRolls() //test the rolls if are between 1 and 7
+        {
+            Die die = new Die();
+            int roll = die.Roll();
+            Debug.Assert(Array.TrueForAll(rolls, roll => roll >= 1 && roll <= 6), "Die rolls are not between 1 and 6."); //checks if dice is rools between 1 and 6
+        }
+        public void TestGameSum()
+        {
+            Game game = new Game();
+            int sum = game.TotalValueOfDices();
+                
+            Debug.Assert(sum >= 3 && sum <= 18, "Sum of the three values is not as expected."); // checks if sum of dice is between 3 and 18
+        }
     }
+    
 }
