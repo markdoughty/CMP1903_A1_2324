@@ -16,21 +16,9 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-        die value1 = new die()
-        {
-            int value = Die.roll()
-        }
+        die value = new die();
 
-        die value2 = new die()
-        {
-            int value = Die.roll()
-        }
-
-        die value3 = new die()
-        {
-            int value = Die.roll()
-        }
-
+        list <int> result =new list<int>();
 
         
         public int game_start()

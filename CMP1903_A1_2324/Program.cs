@@ -16,10 +16,8 @@ namespace CMP1903_A1_2324
              */
 
 
-            Game play = new Game()
-            {
-                
-            }
+            Game play = new Game();
+
 
 
 
