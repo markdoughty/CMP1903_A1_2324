@@ -23,6 +23,45 @@ namespace CMP1903_A1_2324 {
             _die3 = new Die();
         }
         /// <summary>
+        /// Allows external code to see the value of die 1, while also specifically not allowing 
+        /// them to set/tamper with the value of that die, protecting it so that its value is can
+        /// only determined by the methods in this class
+        /// </summary>
+        /// <returns>
+        /// Returns the value of die 1 (an interager between 1 and 6)
+        /// </returns>
+        public int Die1 {
+            get {
+                return _die1.Value;
+            }
+        }
+        /// <summary>
+        /// Allows external code to see the value of die 2, while also specifically not allowing 
+        /// them to set/tamper with the value of that die, protecting it so that its value is can
+        /// only determined by the methods in this class
+        /// </summary>
+        /// <returns>
+        /// Returns the value of die 2 (an interager between 1 and 6)
+        /// </returns>
+        public int Die2 {
+            get {
+                return _die2.Value;
+            }
+        }
+        /// <summary>
+        /// Allows external code to see the value of die 3, while also specifically not allowing 
+        /// them to set/tamper with the value of that die, protecting it so that its value is can
+        /// only determined by the methods in this class
+        /// </summary>
+        /// <returns>
+        /// Returns the value of die 3 (an interager between 1 and 6)
+        /// </returns>
+        public int Die3 {
+            get {
+                return _die3.Value;
+            }
+        }
+        /// <summary>
         /// Method rolls three die objects and returns the sum
         /// </summary>
         /// <returns>
@@ -34,9 +73,9 @@ namespace CMP1903_A1_2324 {
             sum += _die2.Roll();
             sum += _die3.Roll();
             // prints out all individual dice rolls
-            Console.WriteLine($"Dice 1 rolled {_die1.GetValue()}");
-            Console.WriteLine($"Dice 2 rolled {_die2.GetValue()}");
-            Console.WriteLine($"Dice 3 rolled {_die3.GetValue()}");
+            Console.WriteLine($"Dice 1 rolled {_die1.Value}");
+            Console.WriteLine($"Dice 2 rolled {_die2.Value}");
+            Console.WriteLine($"Dice 3 rolled {_die3.Value}");
             // prints out the sum of the dice rolls
             Console.WriteLine("Rolled 3 dice, total was "+sum);
             return sum;
@@ -88,20 +127,22 @@ namespace CMP1903_A1_2324 {
             if (reply == string.Empty) {            // throw an error if they give no reply
                 throw new ArgumentException("ERROR: Please give an input");
             }
-            reply = reply.ToLower();                // convert string to lower case letters to
-                                                    // simplify the coming "if" statements
+            reply = reply.Trim();                   // Cleans the input (reply) by removing any
+                                                    // white spaces before and after the input
+            reply = reply.ToLower();                // Converts reply string to lower case letters
+                                                    // to simplify the coming "if" statements
             if (                                    // if responce can be rounded to "yes" then
                 reply == "y" ||                     // return "yes"
                 reply == "yes"
                 ) {
-                    return "yes";
-                }
+                return "yes";
+            }
             else if (                               // if responce can be rounded to "no" then
                 reply == "n" ||                     // return "no"
                 reply == "no"
                 ) {
-                    return "no";
-                }
+                return "no";
+            }
             else {                                  // else it couldn't be rounded to anything, so
                                                     // return/throw an error
                 throw new ArgumentException("ERROR: Please input \"yes\" or \"no\"");

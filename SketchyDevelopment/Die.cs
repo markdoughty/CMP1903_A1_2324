@@ -18,18 +18,35 @@ namespace CMP1903_A1_2324 {
         /// </returns>
         public int Roll() {
             Random random = new Random();
-            _value = random.Next(1, 6);             // sets "_value" to a random number between 1
+            _value = random.Next(1, 7);             // sets "_value" to a random number between 1
                                                     // and 6
             return _value;
         }
         /// <summary>
-        /// Method for external classes to get the value of the dice
+        /// This is the get-set method for int "_value", allowing external code to access the die
+        /// value, but also protecting "_value" by making sure that any attempt to change the its
+        /// value is legal ("_value" is only allowed to be a number between 1 and 6)
         /// </summary>
         /// <returns>
-        /// Returns the value of the dice (an int between 1 and 6)
+        /// the get will return the value of "_value" (an intager between 1 and 6)
         /// </returns>
-        public int GetValue() {
-            return _value;
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// Will raise an "ArgumentOutOfRangeException" if you attempt to set "_value" to a number outside
+        /// the allowed 1 to 6 range
+        /// </exception>
+        public int Value {
+            get {
+                return _value;
+            }
+            set {
+                if (value >= 1 && value <= 6) {     // if the input value is between 1 and 6,
+                                                    // accept it (set "_value" to that value)
+                    _value = value;
+                }
+                else {                              // else raise an exception
+                    throw new ArgumentOutOfRangeException($"ERROR: the dice number can only be set to a number between 1 and 6, \"{value}\" was not accepted.");
+                }
+            }
         }
     }
 }

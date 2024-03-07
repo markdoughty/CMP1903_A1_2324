@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace CMP1903_A1_2324 {
     internal class Program {
         static void Main(string[] args) {
-            Console.WriteLine("this is text LOL 2");
             Game game = new Game();                 // Create a Game object and call its methods.
+            Console.WriteLine("Playing one game:");
             game.Play();
             Console.WriteLine("And now for a continuous game:");
             game.PlayContinuous();

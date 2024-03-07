@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324 {
                 int output = myDie.Roll();
                 // displays a message box that shows the call stack if the output of the die is
                 // outside the expected 1--6 range
-                System.Diagnostics.Debug.Assert( output >= 1 && output <= 6, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
+                System.Diagnostics.Debug.Assert( output >= 1 && output <= 6, $"Dice value is out of range, expected number from 1--6, instead got \"{output}\"");
             }
             Console.WriteLine($"After {loop} tests, no annomalous results were detected.");
         }
@@ -37,7 +37,16 @@ namespace CMP1903_A1_2324 {
                 int output = myGame.Play();
                 // displays a message box that shows the call stack if Game.Play() returns a sum
                 // outside the expected 3--18 range
-                System.Diagnostics.Debug.Assert( output >= 3 && output <= 12, "Dice value is out of range, expected number from 1--6, instead got \""+output+"\"");
+                System.Diagnostics.Debug.Assert( output >= 3 && output <= 12, $"ERROR: Dice value is out of range, expected number from 1--6, instead got \"{output}\"");
+                int testingSum = 0;                 // "testingSum" also calculates the sum of the
+                                                    // dice "myGame" rolled to check that the sum
+                                                    // it returned is correct
+                testingSum += myGame.Die1;
+                testingSum += myGame.Die2;
+                testingSum += myGame.Die3;
+                // displays a message box that shows the call stack if "Game.Play()" method returns
+                // a sum that is incorrect/not equal to the sum of all its dice
+                System.Diagnostics.Debug.Assert( output == testingSum, $"ERROR: the sum returned by \"Game.Play()\" Method was incorrect: Play returned \"{output}\", but testing calculated the sum to be \"{testingSum}\"");
             }
             Console.WriteLine($"After {loop} tests, no annomalous results were detected.");
         }
