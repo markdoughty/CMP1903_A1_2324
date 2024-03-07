@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
         
 
         //Property
-        static Random rand = new Random();
+        Random rand = new Random();
 
         //Method
         public int dice_roll
