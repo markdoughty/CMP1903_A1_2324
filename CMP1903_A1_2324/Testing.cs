@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
+    public class Testing
     {
         /*
          * This class should test the Game and the Die class.
@@ -16,5 +17,15 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-    }
+        for (int i = 0, i< 500, int++)
+        {
+            (int sum, int dice1, int dice2, int dice3 = Game.STotal())
+
+            Debug.Assert(sum >= 3 && sum <= 18);
+
+            Debug.Assert(dice1 >= 1 && dice1 <= 6);
+            Debug.Assert(dice2 >= 1 && dice2 <= 6);
+            Debug.Assert(dice3 >= 1 && dice3 <= 6);
+        }
+}
 }
