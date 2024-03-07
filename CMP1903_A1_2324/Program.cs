@@ -8,12 +8,14 @@ namespace CMP1903_A1_2324
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //Main program body
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            Game game = new Game(); //Instntiates new game object
+            game.RollDie(); //Calls method to roll die
+            Console.ReadKey(); //Keeps output window from closing until keystroke.
+
+            Testing test = new Testing(); //Creates testing object where tests run in constructor upon instantiation.
+            Console.ReadKey(); 
         }
     }
 }
