@@ -28,6 +28,8 @@ namespace CMP1903_A1_2324
             Debug.Assert(sum >= 3 && sum <= 18);
 
             Debug.Assert(game.die1.DiceRoll >= 1 && game.die1.DiceRoll <= 6);
+            Debug.Assert(game.die2.DiceRoll >= 1 && game.die2.DiceRoll <= 6);
+            Debug.Assert(game.die3.DiceRoll >= 1 && game.die3.DiceRoll <= 6);
         }
 
     }
