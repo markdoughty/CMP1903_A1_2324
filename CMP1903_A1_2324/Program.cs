@@ -1,19 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    // testActive created to stop console.WriteLine statements in Game class from running twice
+
     internal class Program
     {
-        static void Main(string[] args)
+        // new testing variable to check if it is being tested
+        public static bool isTesting = false;
+
+        public static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+
+            Testing testing = new Testing();
+
+            // creates play object and starts the game.
+
+            Game play = new Game();
+            Console.WriteLine("Total: " + play.DiceGame());
+            Console.ReadKey();
+
         }
     }
 }
+
+
