@@ -14,13 +14,13 @@ namespace CMP1903_A1_2324
          */
 
         //property
-        private static Random R = new Random();
+        static Random random = new Random();
         int currentRoll;
 
         //Method
-        int Roll()
+        public int Roll()
         {
-            currentRoll = R.Next(0, 7);
+            currentRoll = random.Next(0, 7);
             return currentRoll;
         }
 

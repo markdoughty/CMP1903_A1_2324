@@ -19,9 +19,8 @@ namespace CMP1903_A1_2324
         private Die dice1 = new Die();
         private Die dice2 = new Die();
         private Die dice3 = new Die();
-        private int sum = 0;
 
-        int rollingDice()
+        public void rollingDice()
         {
             int roll1 = dice1.Roll();
             int roll2 = dice2.Roll();
@@ -30,8 +29,6 @@ namespace CMP1903_A1_2324
             Console.WriteLine("roll one = " + roll1);
             Console.WriteLine("roll two = " + roll2);
             Console.WriteLine("roll three = " + roll3);
-
-            Console.WriteLine("the sum of the 3 rolls is = " + sum);
         }
     }
 }
