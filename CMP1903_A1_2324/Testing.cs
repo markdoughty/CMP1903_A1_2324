@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +19,22 @@ namespace CMP1903_A1_2324
 
         //Method
 
-        Game game_test = new Game()
+        Game test_game = new Game();
+
+        Die test_die = new Die();
+        
+
+        public void test()
         {
-            if (roll1.value > 6 or roll2.value > 6 or roll3.value > 6 or roll1.value < 1 or roll2.value < 1 or roll3.value < 1)
+            for (int i = 0; i < 50; i++);
+            {
+                int test_value1 = test_die.roll();
+
+                Debug.Assert(test_value1 < 7 && test_value1 > 1);
+            }
+
         }
+
+        
     }
 }
