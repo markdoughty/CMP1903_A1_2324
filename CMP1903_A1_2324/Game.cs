@@ -9,7 +9,7 @@ namespace Class2
 {
     public class Game
     {
-        public class dice
+        publi'c class dice
         {
             public int dice1Roll;
         }
