@@ -21,7 +21,7 @@ namespace CMP1903_A1_2324
                 else
                 {
                     Console.WriteLine("Die roll is between 1 and 6.");
-                } 
+                }   
             }
             public void TestGameSum()
             {
