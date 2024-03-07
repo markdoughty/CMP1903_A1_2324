@@ -18,10 +18,10 @@ namespace CMP1903_A1_2324
              Testing test = new Testing();
              string input = "";
 
-             while (input.Tolower() != "exit")
+             while (input.ToLower() != "exit")
              {
                 game.rollingDice();
-                input = Console.Readline;
+                input = Console.ReadLine();
              }
 
 

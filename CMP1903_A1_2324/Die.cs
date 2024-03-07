@@ -20,8 +20,8 @@ namespace CMP1903_A1_2324
         //Method
         int Roll()
         {
-            currentRoll = R.Next(0,7)
-            return currentRoll
+            currentRoll = R.Next(0, 7);
+            return currentRoll;
         }
 
     }
