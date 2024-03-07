@@ -25,7 +25,7 @@ namespace CMP1903_A1_2324
                 {
                     int _rollValue = _diceRoller.DiceRollOnce();
                     Console.WriteLine("The result of roll " + (i + 1) + " is: " + _rollValue);
-                }
+                } 
 
                 // This will output the sum of the three rolls
                 Console.WriteLine("The sum of all the rolls is: " + _diceRoller.ValueSum());
