@@ -36,5 +36,12 @@ namespace CMP1903_A1_2324
             dice3 = Dice3.Roll():
             Console.WriteLine("You rolled a " + dice3);
         }
+
+        public int STotal()
+        {
+            int Sum = dice1 + dice2 + dice3;
+            Console.WriteLine("The sum of the dice is:" + Sum);
+            return Sum;
+        }
     }
 }
