@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Die;
 
 namespace CMP1903_A1_2324
 {
-    internal class Game
+    public class Game
     {
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
@@ -27,14 +28,15 @@ namespace CMP1903_A1_2324
         
         public (int, int, int) Roll_1()
         {
-            dice1 = Dice1.Roll():
+            dice1 = Dice1.Roll();
             Console.WriteLine("You rolled a " + dice1);
             
-            dice2 = Dice2.Roll():
+            dice2 = Dice2.Roll();
             Console.WriteLine("You rolled a " + dice2);
 
-            dice3 = Dice3.Roll():
+            dice3 = Dice3.Roll();
             Console.WriteLine("You rolled a " + dice3);
+            
         }
 
         public int STotal()
