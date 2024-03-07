@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
 
             Testing testing = new Testing();
 
-            // creates play object and starts the game
+            // creates play object and starts the game.
 
             Game play = new Game();
             Console.WriteLine("Total: " + play.DiceGame());
