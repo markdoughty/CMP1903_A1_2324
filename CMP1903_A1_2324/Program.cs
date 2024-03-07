@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
@@ -18,17 +22,17 @@ namespace CMP1903_A1_2324
             if (userInput == "no" || userInput == "n")
             {
                 // Creates a new DiceRoller instance
-                DiceRoller _diceRoller = new DiceRoller();
+                DiceRoller diceRoller = new DiceRoller();
 
                 // Rolls the die three times
                 for (int i = 0; i < 3; i++)
                 {
-                    int _rollValue = _diceRoller.DiceRollOnce();
-                    Console.WriteLine("The result of roll " + (i + 1) + " is: " + _rollValue);
+                    int rollValue = diceRoller.DiceRollOnce();
+                    Console.WriteLine("The result of roll " + (i + 1) + " is: " + rollValue);
                 } 
 
                 // This will output the sum of the three rolls
-                Console.WriteLine("The sum of all the rolls is: " + _diceRoller.ValueSum());
+                Console.WriteLine("The sum of all the rolls is: " + diceRoller.ValueSum());
             }
             // Else If for if the user chooses to roll numeruous times
             else if (userInput == "yes" || userInput == "y")
