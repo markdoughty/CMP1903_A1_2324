@@ -8,6 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+        Console.WriteLine(2fdsaf)
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
