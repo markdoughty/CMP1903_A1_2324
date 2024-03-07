@@ -19,29 +19,38 @@ namespace CMP1903_A1_2324
             //sets the tested variable to the game being tested
             tested = _tested;
         }
-        //creating a private function that adds all of the numbers together and check for any inconcistencies
+        /// <summary>
+        /// creates 3 new dice objects and adds them together multiple times, checking for any errors in the sum function
+        /// </summary>
         private void ValidateSum()
         {
-            //declaring a new array of 3 dice
-            int[] DieList = tested.newDice(3);
-            //adding all of the numbers using SumDice function and setting them to sum1
-            int Sum1 = tested.SumDice(DieList);
-            //calling the sum function again
-            int Sum2 = tested.SumDice(DieList);
+            //creating 3 dice objects
+            int Die1 = tested.newDice();
+            int Die2 = tested.newDice();
+            int Die3 = tested.newDice();
+
+            //calcuating the sum of the dice twice
+            int Sum1 = tested.SumDice(Die1, Die2, Die3);
+
+            int Sum2 = tested.SumDice(Die1, Die2, Die3);
             //checking if the result is the same both times
             Debug.Assert(Sum1 == Sum2);
         }
-        //creating a private function to check the range of numbers on the dice
+        /// <summary>
+        /// checks that the dice have a valid range between 1 - 6 
+        /// </summary>
         private void ValidateRange()
         {
             //calling the newDice function while only rolling 1 dice
-            int[] DieList = tested.newDice(1);
+            int Die = tested.newDice();
             //calling the sum function to turn the DieList into an int
-            int num = tested.SumDice(DieList);
+            
             //checking if the returned number is within range
-            Debug.Assert(num > 0 && num < 7);
+            Debug.Assert(Die > 0 && Die < 7);
         }
-        //creating a public function that will run all of the test functions
+        /// <summary>
+        /// creating a public function that will run all of the tests
+        /// </summary>
         public void RunTest()
         {
             //Calling ValidateRange 

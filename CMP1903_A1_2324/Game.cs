@@ -12,27 +12,30 @@ namespace CMP1903_A1_2324
     {
         //calling the Die class
         
-        //creating a new function taking die as a perameter
-        public int[] newDice(int die)
+        /// <summary>
+        /// creates a new dice object and calls the roll function to assign it a random number
+        /// </summary>
+        /// <returns>the new dice value</returns>
+        public int newDice()
         {
             var Dice = new Die();
-            //declating a new List
-            var terms = new List<int>();
-            //creating a for loop that loops for the amount of die
-            for (int i = 0; i < die; i++)
-            {
-                //adds the rolls the dice item and adds it to the list
-                terms.Add(Dice.Roll());
-                
-            }
-            //returns the final array
-            return terms.ToArray();
+            //rolling the dice
+            int Die = Dice.Roll();
+
+            //returns the final number
+            return Die; 
         }
-        //declaring a new function SumDice, taking new list as a perameter
-        public int SumDice(int[] newList)
+        /// <summary>
+        /// adds all 3 of the dice together once called
+        /// </summary>
+        /// <param name="Die1">1st dice value</param>
+        /// <param name="Die2">2nd dice value</param>
+        /// <param name="Die3">3rd dice value</param>
+        /// <returns>the sum of all 3 dice</returns>
+        public int SumDice(int Die1, int Die2, int Die3)
         {
-            //adds all of the items in the array together
-            int sum = newList.Sum();
+            //adds all of the integers together
+            int sum = Die1 + Die2 + Die3;
             //returns the final result
             return sum;
 
