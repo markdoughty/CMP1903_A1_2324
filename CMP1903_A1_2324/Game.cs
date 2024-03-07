@@ -9,7 +9,7 @@ namespace CMP1903_A1_2324
     internal class Game
     {
         // Method to roll three dice and report the total
-        public void RollThreeDice()
+        public void  RollDiceAndReportTotal()
         {
             Die die1 = new Die();
             Die die2 = new Die();
@@ -28,7 +28,7 @@ namespace CMP1903_A1_2324
         public static void Main(string[] args)
         {
             Game game = new Game();
-            game.RollThreeDice();
+            game.RollDiceAndReportTotal();
         }
     }
 }
