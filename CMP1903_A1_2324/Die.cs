@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Die
+    class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
+        private int currentValue = 0; //Property to hold the current value of the dice
 
-        //Property
-
-
-        //Method
-
-
+        public int Roll() //Method to roll dice with no parameters and returns the current value of the dice
+        {
+            Random random = new Random(); //Random object to generate random numbers
+            currentValue = random.Next(1, 7); //Edit values for Testing in testing module. Choooses random number between 1 and 6
+            return currentValue; //Returns the current value of the dice
+        }
     }
 }

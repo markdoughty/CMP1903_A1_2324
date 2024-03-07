@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Program
+    class Program
     {
+
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            //Created objects of the Game and Testing classes
+            Game game = new Game();
+            Testing testing = new Testing();
+
+            //Roll three dices and intialise dice method call
+            Console.WriteLine("Rolling three dices");
+            game.RollDices();
+            game.RollThree();
+            Console.WriteLine();
+
+            //Continous rolling method call
+            Console.WriteLine("Press Enter to Roll again. Type 'exit' and press Enter to quit");
+            game.ContinousDice();
+
+            //Testing the RollDices and RollThree methods
+            Console.WriteLine("Tests for the rolling functionality:");
+            testing.TestRollDices();
         }
     }
 }
