@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 using CMP1903_A1_2324;
 
 namespace CMP1903_A1_2324
@@ -51,7 +53,7 @@ namespace CMP1903_A1_2324
 
         //Methods
 
-        public void DieRoll()
+        public int DieRoll()
         {
             
             int RollOne = DiceOne.dice_roll();
@@ -63,18 +65,15 @@ namespace CMP1903_A1_2324
             int RollThree = DiceTwo.dice_roll();
             Console.WriteLine("You rolled a " + DiceThree);
             
-            int RollTotal()
-            {
-                int Sum = RollOne + RollTwo + RollThree;
-                Console.WriteLine("The sum of the dice is:" + Sum);     //The totals of the die are added together and returned.
-                return Sum;
-            }
+            int Sum = RollOne + RollTwo + RollThree;
+            Console.WriteLine("The sum of the dice is:" + Sum);     //The totals of the die are added together and returned.
+            return Sum;
 
         }
   
     }
 
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -82,29 +81,32 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-        
-            Game newgame = new Game();
-        
+        Game Test = new Game();     //Game object created
+        Die TestDie = new Die();    //Test object created
 
         }
+
+
     }
 
-   public class Testing
+   internal class Testing
    {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-
-        //Method
-
-        for (int i = 0; i < 500; i++)
+        Game Test = new Game();     //Game object created
+        Die TestDie = new Die();    //Test object created
+        public void TestRolls()
         {
-            (int Sum, int RollOne, int RollTwo, int RollThree = Game.RollTotal())
-        }
+            for (int i = 0; i < 500; i++)
+            {
+                int testvalue = TestDie.dice_roll();
 
-    }
-   
+                Debug.Assert(testvalue < 7 && testvalue > 0);
+
+                int testsum = TestDie.dice_roll();
+
+                Debug.Assert(testsum < 19 && testsum > 2);
+            
+            }
+        }
+   }
+
 }
