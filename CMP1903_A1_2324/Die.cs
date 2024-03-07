@@ -15,14 +15,14 @@ namespace CMP1903_A1_2324
         
 
         //Property
-        static Random rand = new();
+        static Random rand = new Random();
 
         //Method
         public int dice_roll()
         {
-            int value = rnd.next(1,7)
+            int value = rand.Next(1,7);
 
-            return value
+            return value;
         }
 
     }
