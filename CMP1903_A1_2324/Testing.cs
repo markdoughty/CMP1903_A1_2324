@@ -28,7 +28,9 @@ namespace CMP1903_A1_2324
             {
                 int var = testingDie.Roll();
                 Debug.Assert(var >= 1 && var <= 6, "roll out of range.");
+                int testAmount = i;
             }
+            Console.WriteLine("1000 tests passed successfully. Continueing program");
         }
     }
 }
