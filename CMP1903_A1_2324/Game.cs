@@ -19,15 +19,22 @@ namespace CMP1903_A1_2324
         private int dice2 = 0;
         private int dice3 = 0;
 
-        Dice dice1 = new Dice();
-        Dice dice2 = new Dice();
-        Dice dice3 = new Dice();
+        Dice Dice1 = new Dice();
+        Dice Dice2 = new Dice();
+        Dice Dice3 = new Dice();
 
         //Methods
         
-        public (int, int, int) roll()
+        public (int, int, int) Roll()
         {
+            Dicevalue1 = Dice1.Roll():
+            Console.WriteLine("You rolled a " + Dicevalue1);
+            
+            Dicevalue2 = Dice2.Roll():
+            Console.WriteLine("You rolled a " + Dicevalue2);
 
+            Dicevalue3 = Dice3.Roll():
+            Console.WriteLine("You rolled a " + Dicevalue3);
         }
     }
 }
