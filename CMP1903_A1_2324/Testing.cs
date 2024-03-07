@@ -29,7 +29,7 @@ namespace CMP1903_A1_2324
             //Testing the die class
             Die die = new Die();
             int roll = die.Roll();
-            Debug.Assert(roll >= 1 && roll <= 6, "Total roll should be within 3 and 18");
+            Debug.Assert(roll >= 1 && roll <= 6, "Single roll should be within 1 and 6");
         }
     }
 }
