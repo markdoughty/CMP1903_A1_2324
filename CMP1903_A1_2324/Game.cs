@@ -25,7 +25,7 @@ namespace CMP1903_A1_2324
         { 
 
             public int roll_total = value1 + value2 + value3;
-            return roll_total
+            return roll_total;
         }
 
 
