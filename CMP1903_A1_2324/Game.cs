@@ -22,7 +22,7 @@ namespace CMP1903_A1_2324
             public int TotalValueOfDices() 
             {
                 return number1.Roll() + number2.Roll() + number3.Roll();
-            }
+            } 
             public void PrintTotalValueOfDices()
             {
                 int sum = TotalValueOfDices();

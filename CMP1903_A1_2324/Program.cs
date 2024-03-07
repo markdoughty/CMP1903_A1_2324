@@ -18,7 +18,7 @@ namespace CMP1903_A1_2324
                 Testing testing = new Testing();
                 testing.TestDiceRolls();
                 testing.TestGameSum();
-            }
+            } 
         }
     }
 }
