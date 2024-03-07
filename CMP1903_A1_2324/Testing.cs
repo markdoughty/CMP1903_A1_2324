@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
     internal class Testing
     {
         //Properties
-        private int total;
+        private int _total;
 
         public Testing() //Constructor method to test other classes
         {
@@ -21,8 +21,8 @@ namespace CMP1903_A1_2324
 
             Game game = new Game();
             game.RollDie();
-            total = game.roll1 + game.roll2 + game.roll3; //Ensures sum of rolls = the output of the game class.
-            Debug.Assert(total == game.total);
+            _total = game.roll1 + game.roll2 + game.roll3; //Ensures sum of rolls = the output of the game class.
+            Debug.Assert(_total == game.total);
         }
     }
 }

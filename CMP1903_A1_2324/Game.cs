@@ -11,13 +11,13 @@ namespace CMP1903_A1_2324
     {
 
         // Properties
-        private Die die1;
+        private Die _die1;
         public int roll1;
 
-        private Die die2;
+        private Die _die2;
         public int roll2;
 
-        private Die die3;
+        private Die _die3;
         public int roll3;
 
         public int total;
@@ -26,14 +26,14 @@ namespace CMP1903_A1_2324
         // Method
         public void RollDie()
         { 
-            die1 = new Die(); //Instantiates die objects
-            roll1 = die1.Roll(); 
+            _die1 = new Die(); //Instantiates die objects
+            roll1 = _die1.Roll(); 
 
-            die2 = new Die();
-            roll2 = die2.Roll();
+            _die2 = new Die();
+            roll2 = _die2.Roll();
 
-            die3 = new Die();
-            roll3 = die3.Roll();
+            _die3 = new Die();
+            roll3 = _die3.Roll();
 
             total = roll1 + roll2 + roll3;
             Console.WriteLine("Total roll = " + total); 
