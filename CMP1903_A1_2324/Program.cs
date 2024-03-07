@@ -12,7 +12,6 @@ namespace CMP1903_A1_2324
         {
 
             Game dicegame = new Game();
-            Testing test = new Testing();
             string userinput = "";
 
             while (userinput != "exit")
