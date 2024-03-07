@@ -12,11 +12,11 @@ namespace CMP1903_A1_2324
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.PrintTotalValueOfDices();
+            game.PrintTotalValueOfDices(); // runs the class
         
             Testing testing = new Testing();
-            testing.TestDiceRolls();
-            testing.TestGameSum();
+            testing.TestDiceRolls(); // runs the class
+            testing.TestGameSum(); // runs the class
         } 
     }
     
