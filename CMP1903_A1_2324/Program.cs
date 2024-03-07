@@ -11,9 +11,13 @@ namespace CMP1903_A1_2324
         static void Main(string[] args)
         {
             /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+             * Create a Game object and call its methods.*/
+             Game game = new Game();
+            int total = game.RollDiceAndReportTotal();
+            /* Create a Testing object to verify the output and operation of the other classes.
+            */
+            Testing testing = new Testing();
+            testing.Test(); // Call the method to test other classes
         }
     }
 }
