@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    class Testing
+    public class Testing
     {
         /*
          * This class should test the Game and the Die class.
@@ -17,7 +17,7 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        for (int i = 0, i < 500, int++)
+        for (int i = 0, i< 500, int++)
         {
             (int sum, int dice1, int dice2, int dice3 = Game.STotal())
 
@@ -27,5 +27,5 @@ namespace CMP1903_A1_2324
             Debug.Assert(dice2 >= 1 && dice2 <= 6);
             Debug.Assert(dice3 >= 1 && dice3 <= 6);
         }
-    }
+}
 }
