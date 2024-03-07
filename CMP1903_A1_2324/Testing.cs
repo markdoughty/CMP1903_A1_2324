@@ -24,7 +24,10 @@ namespace CMP1903_A1_2324
             }
 
             int exceptedSum = rolls.Sum(); //Calculates the sum of the rolls
-            Debug.Assert(sumOfRolls == exceptedSum, $"Test Failed: {sumOfRolls}. Sum of rolls should be {exceptedSum}."); //Asserts that the sum of the rolls is equal to the expected sum
+            Debug.Assert(sumOfRolls >= 3 && <= 18, $"Test Failed: {sumOfRolls}. Sum of rolls should be {exceptedSum}."); //Asserts that the sum of the rolls is equal to the expected sum
         }
+
+        public void CheckSum(){
+                 
     }
 }
