@@ -15,7 +15,19 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
 
-        //Methods
+        private int dice1 = 0;
+        private int dice2 = 0;
+        private int dice3 = 0;
 
+        Dice dice1 = new Dice();
+        Dice dice2 = new Dice();
+        Dice dice3 = new Dice();
+
+        //Methods
+        
+        public (int, int, int) roll()
+        {
+
+        }
     }
 }
