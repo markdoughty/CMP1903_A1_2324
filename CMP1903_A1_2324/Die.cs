@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CMP1903_A1_2324;
 
 namespace CMP1903_A1_2324
 
@@ -71,8 +72,8 @@ namespace CMP1903_A1_2324
             return Sum;
         }
     }
-    }
-    internal class Program
+    
+    class Program()
     {
         static void Main(string[] args)
         {
@@ -95,6 +96,7 @@ namespace CMP1903_A1_2324
          */
 
         //Method
-        for (int i = 0, i < 500, i++)
+
     }
+
 }
