@@ -28,13 +28,18 @@ namespace CMP1903_A1_2324
             Game testGame = new Game();
             testGame.PlayGame();
 
-            //Sees if each die value matches their recorded roll
-            Debug.Assert(testGame.one.Value == testGame.roll1);
-            Debug.Assert(testGame.two.Value == testGame.roll2);
-            Debug.Assert(testGame.three.Value == testGame.roll3);
+            //Checks each roll to see if between 1-6
+            Debug.Assert(1 <= testGame.roll1 && testGame.roll1 <= 6, "roll1 rand value not between 1-6");
+            Debug.Assert(1 <= testGame.roll2 && testGame.roll2 <= 6, "roll2 rand value not between 1-6");
+            Debug.Assert(1 <= testGame.roll3 && testGame.roll3 <= 6, "roll3 rand value not between 1-6");
+
+            //Sees if each die value matches their recorded roll (added custom error messages)
+            Debug.Assert(testGame.one.Value == testGame.roll1, "Die one value mismatch");
+            Debug.Assert(testGame.two.Value == testGame.roll2, "Die two value mismatch");
+            Debug.Assert(testGame.three.Value == testGame.roll3, "Die three value mismatch");
 
             //Sees if die values added up matches the recorded sum
-            Debug.Assert(testGame.one.Value + testGame.two.Value + testGame.three.Value == testGame.sum);
+            Debug.Assert(testGame.one.Value + testGame.two.Value + testGame.three.Value == testGame.sum, "Sum value mismatch");
         }
     }
 }

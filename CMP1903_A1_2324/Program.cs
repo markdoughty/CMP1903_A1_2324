@@ -8,8 +8,6 @@ namespace CMP1903_A1_2324
 {
     internal class Program
     {
-        //Random rand = new Random((int)DateTime.Now.Ticks);
-
         static void Main(string[] args)
         {
             /*
@@ -27,7 +25,31 @@ namespace CMP1903_A1_2324
             //Testing run of program
             Testing testing = new Testing();
             testing.TestGame();
+            
+            //Endless run
+            while (Choice() == true)
+            {
+                game.PlayGame();
+            }
+        }
 
+        // Function used to get user to pick whether or not they want to continue the program
+        static bool Choice()
+        {
+            string option = "";
+
+            //Loops until valid option is picked
+            while (true)
+            {
+                Console.WriteLine("Please type Y or N to choose whether or not to continue the program.\nPress enter to continue...");
+                option = Console.ReadLine();
+
+                if (option == "Y")
+                    return true;
+
+                if (option == "N")
+                    return false;
+            }
         }
     }
 }

@@ -13,8 +13,7 @@ namespace CMP1903_A1_2324
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-
-        //This private integer holds the die's value
+        //This private integer holds the die's value (private to avoid being changed by other classes)
         private int _value;
 
         //Property (needs to be public to be accessed by testing class)
@@ -30,6 +29,7 @@ namespace CMP1903_A1_2324
         {
             //Creates new random with seed based on the computer's clock, to seemingly create random output each use
             Random rand = new Random((int)DateTime.Now.Ticks);
+
             //Randomly picks value between 1-6
             Value = rand.Next(1, 7);
 
